@@ -20,11 +20,6 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    func getPriority(_ priority: Array<String>) {
-//        self.priority = priority
-//        print("resultPriority :",self.priority!)
-//    }
-    
     @IBAction func btnSignup(_ sender: UIButton) {
         print(priority)
         let alertService = AlertService()

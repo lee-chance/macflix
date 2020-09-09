@@ -14,9 +14,9 @@ class PriorityQueryModel: NSObject {
     var urlPath = CS_TOMCAT_ADDRESS + "selectPriorityBeer.jsp?"
     var urlPath2 = CS_TOMCAT_ADDRESS + "getPriorityList.jsp?"
     
-    func getPriorityList(email: String, completion: @escaping ([String])->()) -> [String] {
+    func getPriorityList(seq: Int, completion: @escaping ([String])->()) -> [String] {
         var result: [String] = []
-        urlPath2 += "email=\(email)"
+        urlPath2 += "seq=\(seq)"
         // 한글 url encoding
         urlPath2 = urlPath2.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
