@@ -83,6 +83,7 @@ class TableViewController: UITableViewController, QueryModelProtocol {
         if(feedItem.count > 0) {
             let item: Beer = feedItem[indexPath.row] as! Beer
             cell.textLabel?.text = item.beer_name
+            cell.detailTextLabel?.text = item.beer_abv
         }
         
         return cell
