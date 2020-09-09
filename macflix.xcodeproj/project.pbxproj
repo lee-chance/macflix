@@ -26,7 +26,7 @@
 		2E80498925089E5D00F59E14 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498625089E5D00F59E14 /* Review.swift */; };
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
-		2E80498D25089E8C00F59E14 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498C25089E8C00F59E14 /* QueryModel.swift */; };
+		2E80498F2508AC6200F59E14 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* QueryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		2E80498625089E5D00F59E14 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		2E80498C25089E8C00F59E14 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
+		2E80498E2508AC6200F59E14 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,19 +100,19 @@
 		2E80498525089E3800F59E14 /* CSLEE */ = {
 			isa = PBXGroup;
 			children = (
-				2E80498C25089E8C00F59E14 /* QueryModel.swift */,
 				2E80498825089E5D00F59E14 /* Beer.swift */,
 				2E80498625089E5D00F59E14 /* Review.swift */,
 				2E80498725089E5D00F59E14 /* User.swift */,
-				2E80497525089E3000F59E14 /* AlertService.swift */,
+				2E80498E2508AC6200F59E14 /* QueryModel.swift */,
 				2E80497925089E3000F59E14 /* LoginModel.swift */,
-				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
 				2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */,
-				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
 				2E80497725089E3000F59E14 /* SignupModel.swift */,
+				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
+				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
 				2E80497625089E3000F59E14 /* SignupViewController.swift */,
-				2E80497325089E3000F59E14 /* Static.swift */,
 				2E80497425089E3000F59E14 /* TableViewController.swift */,
+				2E80497325089E3000F59E14 /* Static.swift */,
+				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
-				2E80498D25089E8C00F59E14 /* QueryModel.swift in Sources */,
+				2E80498F2508AC6200F59E14 /* QueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
@@ -350,6 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = macflix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,6 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = macflix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

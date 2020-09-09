@@ -15,7 +15,7 @@ protocol QueryModelProtocol: class {
 class QueryModel: NSObject {
     
     var delegate: QueryModelProtocol!
-    let urlPath = "http://localhost:8080/Test/selectSampleBeer.jsp"
+    let urlPath = CS_TOMCAT_ADDRESS + "selectSampleBeer.jsp"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
