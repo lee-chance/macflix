@@ -10,7 +10,7 @@ import Foundation
 
 class PriorityQueryModel: NSObject {
     
-    var delegate: QueryModelProtocol!
+    var delegate: CSQueryModelProtocol!
     var urlPath = CS_TOMCAT_ADDRESS + "selectPriorityBeer.jsp?"
     var urlPath2 = CS_TOMCAT_ADDRESS + "getPriorityList.jsp?"
     

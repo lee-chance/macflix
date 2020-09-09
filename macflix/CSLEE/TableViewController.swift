@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, QueryModelProtocol {
+class TableViewController: UITableViewController, CSQueryModelProtocol {
 
     @IBOutlet var listView: UITableView!
     
@@ -49,7 +49,7 @@ class TableViewController: UITableViewController, QueryModelProtocol {
                 queryModel.delegate = self
                 let _ = queryModel.getPriorityList(email: LOGGED_IN_EMAIL) { returnList in
                     if returnList.count < 2 {
-                        let queryModel = QueryModel()
+                        let queryModel = CSQueryModel()
                         queryModel.delegate = self
                         queryModel.downloadItems()
                     } else {
