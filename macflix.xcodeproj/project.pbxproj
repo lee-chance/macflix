@@ -27,6 +27,10 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* QueryModel.swift */; };
+		F46BFF1B2508D200007746F8 /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BFF1A2508D200007746F8 /* DBModel.swift */; };
+		F46BFF1D2508D220007746F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BFF1C2508D220007746F8 /* DetailViewController.swift */; };
+		F46BFF1F2508D22C007746F8 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BFF1E2508D22C007746F8 /* QueryModel.swift */; };
+		F46BFF212508D244007746F8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BFF202508D244007746F8 /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
+		F46BFF1A2508D200007746F8 /* DBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
+		F46BFF1C2508D220007746F8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F46BFF1E2508D22C007746F8 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
+		F46BFF202508D244007746F8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,10 @@
 				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
 				2E80496025089D4900F59E14 /* ViewController.swift */,
 				2E80496225089D4900F59E14 /* Main.storyboard */,
+				F46BFF1A2508D200007746F8 /* DBModel.swift */,
+				F46BFF1E2508D22C007746F8 /* QueryModel.swift */,
+				F46BFF202508D244007746F8 /* SearchTableViewController.swift */,
+				F46BFF1C2508D220007746F8 /* DetailViewController.swift */,
 				2E80496825089D4B00F59E14 /* Assets.xcassets */,
 				2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */,
 				2E80496D25089D4B00F59E14 /* Info.plist */,
@@ -193,13 +205,17 @@
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
+				F46BFF1B2508D200007746F8 /* DBModel.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				2E80496125089D4900F59E14 /* ViewController.swift in Sources */,
+				F46BFF212508D244007746F8 /* SearchTableViewController.swift in Sources */,
+				F46BFF1D2508D220007746F8 /* DetailViewController.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
+				F46BFF1F2508D22C007746F8 /* QueryModel.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
