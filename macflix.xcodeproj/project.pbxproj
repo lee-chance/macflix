@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495C25089D4900F59E14 /* AppDelegate.swift */; };
+		2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495E25089D4900F59E14 /* SceneDelegate.swift */; };
+		2E80496125089D4900F59E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80496025089D4900F59E14 /* ViewController.swift */; };
+		2E80496425089D4900F59E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496225089D4900F59E14 /* Main.storyboard */; };
+		2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E80496525089D4900F59E14 /* macflix.xcdatamodeld */; };
+		2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496825089D4B00F59E14 /* Assets.xcassets */; };
+		2E80496C25089D4B00F59E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */; };
+		2E80497C25089E3000F59E14 /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497325089E3000F59E14 /* Static.swift */; };
+		2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497425089E3000F59E14 /* TableViewController.swift */; };
+		2E80497E25089E3000F59E14 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497525089E3000F59E14 /* AlertService.swift */; };
+		2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497625089E3000F59E14 /* SignupViewController.swift */; };
+		2E80498025089E3000F59E14 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497725089E3000F59E14 /* SignupModel.swift */; };
+		2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497825089E3000F59E14 /* PriorityTableViewController.swift */; };
+		2E80498225089E3000F59E14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497925089E3000F59E14 /* LoginModel.swift */; };
+		2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497A25089E3000F59E14 /* LoginViewController.swift */; };
+		2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */; };
+		2E80498925089E5D00F59E14 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498625089E5D00F59E14 /* Review.swift */; };
+		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
+		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
+		2E80498D25089E8C00F59E14 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498C25089E8C00F59E14 /* QueryModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E80495925089D4900F59E14 /* macflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E80495C25089D4900F59E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E80495E25089D4900F59E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2E80496025089D4900F59E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E80496325089D4900F59E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E80496625089D4900F59E14 /* macflix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = macflix.xcdatamodel; sourceTree = "<group>"; };
+		2E80496825089D4B00F59E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E80496B25089D4B00F59E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E80496D25089D4B00F59E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E80497325089E3000F59E14 /* Static.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
+		2E80497425089E3000F59E14 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2E80497525089E3000F59E14 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		2E80497625089E3000F59E14 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		2E80497725089E3000F59E14 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		2E80497825089E3000F59E14 /* PriorityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityTableViewController.swift; sourceTree = "<group>"; };
+		2E80497925089E3000F59E14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		2E80497A25089E3000F59E14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueryModel.swift; sourceTree = "<group>"; };
+		2E80498625089E5D00F59E14 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		2E80498C25089E8C00F59E14 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E80495625089D4900F59E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E80495025089D4900F59E14 = {
+			isa = PBXGroup;
+			children = (
+				2E80495B25089D4900F59E14 /* macflix */,
+				2E80495A25089D4900F59E14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E80495A25089D4900F59E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E80495925089D4900F59E14 /* macflix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E80495B25089D4900F59E14 /* macflix */ = {
+			isa = PBXGroup;
+			children = (
+				2E80498525089E3800F59E14 /* CSLEE */,
+				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
+				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
+				2E80496025089D4900F59E14 /* ViewController.swift */,
+				2E80496225089D4900F59E14 /* Main.storyboard */,
+				2E80496825089D4B00F59E14 /* Assets.xcassets */,
+				2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */,
+				2E80496D25089D4B00F59E14 /* Info.plist */,
+				2E80496525089D4900F59E14 /* macflix.xcdatamodeld */,
+			);
+			path = macflix;
+			sourceTree = "<group>";
+		};
+		2E80498525089E3800F59E14 /* CSLEE */ = {
+			isa = PBXGroup;
+			children = (
+				2E80498C25089E8C00F59E14 /* QueryModel.swift */,
+				2E80498825089E5D00F59E14 /* Beer.swift */,
+				2E80498625089E5D00F59E14 /* Review.swift */,
+				2E80498725089E5D00F59E14 /* User.swift */,
+				2E80497525089E3000F59E14 /* AlertService.swift */,
+				2E80497925089E3000F59E14 /* LoginModel.swift */,
+				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
+				2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */,
+				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
+				2E80497725089E3000F59E14 /* SignupModel.swift */,
+				2E80497625089E3000F59E14 /* SignupViewController.swift */,
+				2E80497325089E3000F59E14 /* Static.swift */,
+				2E80497425089E3000F59E14 /* TableViewController.swift */,
+			);
+			path = CSLEE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E80495825089D4900F59E14 /* macflix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E80497025089D4B00F59E14 /* Build configuration list for PBXNativeTarget "macflix" */;
+			buildPhases = (
+				2E80495525089D4900F59E14 /* Sources */,
+				2E80495625089D4900F59E14 /* Frameworks */,
+				2E80495725089D4900F59E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macflix;
+			productName = macflix;
+			productReference = 2E80495925089D4900F59E14 /* macflix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E80495125089D4900F59E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Changsu Lee";
+				TargetAttributes = {
+					2E80495825089D4900F59E14 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+				};
+			};
+			buildConfigurationList = 2E80495425089D4900F59E14 /* Build configuration list for PBXProject "macflix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E80495025089D4900F59E14;
+			productRefGroup = 2E80495A25089D4900F59E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E80495825089D4900F59E14 /* macflix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E80495725089D4900F59E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E80496C25089D4B00F59E14 /* LaunchScreen.storyboard in Resources */,
+				2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */,
+				2E80496425089D4900F59E14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E80495525089D4900F59E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
+				2E80498D25089E8C00F59E14 /* QueryModel.swift in Sources */,
+				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
+				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
+				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
+				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
+				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
+				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
+				2E80496125089D4900F59E14 /* ViewController.swift in Sources */,
+				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
+				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
+				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
+				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
+				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
+				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
+				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
+				2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2E80496225089D4900F59E14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E80496325089D4900F59E14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E80496B25089D4B00F59E14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E80496E25089D4B00F59E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E80496F25089D4B00F59E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E80497125089D4B00F59E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = macflix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chance.macflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2E80497225089D4B00F59E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = macflix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chance.macflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E80495425089D4900F59E14 /* Build configuration list for PBXProject "macflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E80496E25089D4B00F59E14 /* Debug */,
+				2E80496F25089D4B00F59E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E80497025089D4B00F59E14 /* Build configuration list for PBXNativeTarget "macflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E80497125089D4B00F59E14 /* Debug */,
+				2E80497225089D4B00F59E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E80496525089D4900F59E14 /* macflix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E80496625089D4900F59E14 /* macflix.xcdatamodel */,
+			);
+			currentVersion = 2E80496625089D4900F59E14 /* macflix.xcdatamodel */;
+			path = macflix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E80495125089D4900F59E14 /* Project object */;
+}
