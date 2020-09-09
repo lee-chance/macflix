@@ -21,21 +21,30 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func btnSignup(_ sender: UIButton) {
-        print(priority)
         let alertService = AlertService()
         
         guard lblEmail.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "You have to fill E-MAIL field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out E-MAIL field!", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            return
+        }
+        
+        guard validateEmail(email: lblEmail.text!) else {
+            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Invalid E-MAIL.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
             return
         }
         
         guard lblPassword.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "You have to fill PASSWORD field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out PASSWORD field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
             return
         }
         
+//        guard validPassword(password: lblPassword.text!) else {
+//            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Invalid PASSWORD.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+//            return
+//        }
+        
         guard lblNickname.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "You have to fill NICKNAME field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out NICKNAME field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
             return
         }
         
@@ -54,6 +63,18 @@ class SignupViewController: UIViewController {
             }
         }
     }
+    
+    func validateEmail(email: String) -> Bool {
+        let emailRegEx = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
+        
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return predicate.evaluate(with: email)
+    }
+    
+//    public func validPassword(password: String) -> Bool {
+//        let passwordRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{8,}$"
+//        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
+//    }
     
     @IBAction func btnLogin(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
