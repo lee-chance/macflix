@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
-let CS_TOMCAT_ADDRESS = "http://172.30.1.58:8080/Macflix/"
+//"http://172.30.1.58:8080/Macflix/" 창수 아이피
+let CS_TOMCAT_ADDRESS = "http://192.168.0.8:8080/test/"
 
 let USER_DEFAULT_AUTO_LOGIN_SEQ = "auto login seq string"
 let USER_DEFAULT_QUERY_STATE = "query state int"

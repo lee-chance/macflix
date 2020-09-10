@@ -41,13 +41,15 @@ class KimDetailViewController: UIViewController {
         overall.text = receiveOverall
         review.text = receiveReview
         // Do any additional setup after loading the view.
+        sdFell.maximumValue = 5
+        
         }
     @IBAction func beerReview(_ sender: UIButton) {
     }
     @IBAction func feelSd(_ sender: UISlider) {
         
         if Int(sdFell.value*10) % 10 >= 0 && Int(sdFell.value*10) % 10 < 5{
-            feelNum.text = String(format: "%.1f",sdFell.value*10)
+            feelNum.text = String(format: "%.1f",sdFell.value)
             print(feelNum.text!)
         }
     }
