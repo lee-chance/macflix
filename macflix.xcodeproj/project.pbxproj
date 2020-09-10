@@ -36,7 +36,7 @@
 		542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3F250A216D00B74075 /* SBTableViewController.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
-		F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */; };
+		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
 		F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */; };
 		F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,7 @@
 		542D5D3F250A216D00B74075 /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
-		F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimTableViewCell.swift; sourceTree = "<group>"; };
 		F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 		F4D0F2BB250A0B3300D2F51E /* KSS */ = {
 			isa = PBXGroup;
 			children = (
-				F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */,
+				F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */,
 				F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */,
 				F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */,
 				F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */,
@@ -249,7 +249,7 @@
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
-				F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */,
+				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
