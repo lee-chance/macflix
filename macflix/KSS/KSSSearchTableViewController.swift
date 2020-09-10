@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, KimQueryModelProtocol {
+class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol {
 
     
 
