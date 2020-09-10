@@ -12,8 +12,8 @@ class SignupModel: NSObject {
     
     var urlPath = CS_TOMCAT_ADDRESS + "insertAccount.jsp"
     
-    func actionSignup(email: String, password: String, nickname: String, priority: [String]) -> Bool {
-        var result: Bool = true
+    func actionSignup(email: String, password: String, nickname: String, priority: [String], completion: @escaping (Bool)->()) {
+        
         let strPriority = priority.joined(separator: ", ")
         let urlAdd = "?email=\(email)&password=\(password)&nickname=\(nickname)&priority=\(strPriority)"
         urlPath += urlAdd
@@ -25,10 +25,8 @@ class SignupModel: NSObject {
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) {(data, respone, error) in
-            result = (error == nil)
+            completion(error == nil)
         }
         task.resume()
-        
-        return result
     }
 }

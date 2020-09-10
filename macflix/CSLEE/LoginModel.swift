@@ -17,7 +17,7 @@ class LoginModel: NSObject {
     var delegate: LoginModelProtocol!
     var urlPath = CS_TOMCAT_ADDRESS + "checkLogin.jsp"
     
-    func actionLogin(email: String, password: String, completion: @escaping (Bool)->()) {
+    func actionLogin(email: String, password: String, completion: @escaping (Int)->()) {
         let urlAdd = "?email=\(email)&password=\(password)"
         urlPath += urlAdd
         // 한글 url encoding
@@ -29,28 +29,30 @@ class LoginModel: NSObject {
         let task = defaultSession.dataTask(with: url) {(data, respone, error) in
             
             if error != nil {
-                completion(false)
+                completion(0)
             } else {
-                if(self.parseJSON(data!)) {
-                    completion(true)
+                let result = self.parseJSON(data!)
+                if result != 0 {
+                    completion(result)
                 } else {
-                    completion(false)
+                    completion(0)
                 }
             }
         }
         task.resume()
-        
     }
     
-    func parseJSON(_ data: Data) -> Bool {
-        var jsonResult = false
-        do {
-            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Bool
-        } catch let error as NSError {
-            print(error)
-        }
+    func parseJSON(_ data: Data) -> Int {
+        var jsonResult = String(data: data, encoding: .utf8)!
+//        do {
+//            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Bool
+//        } catch let error as NSError {
+//            print(error)
+//        }
+        jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
+        jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         
-        return jsonResult
+        return Int(jsonResult) ?? 0
         
 //        DispatchQueue.main.async(execute: {() -> Void in
 //            self.delegate.checkLogin()

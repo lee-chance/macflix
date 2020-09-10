@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, QueryModelProtocol {
+class TableViewController: UITableViewController, CSQueryModelProtocol {
 
     @IBOutlet var listView: UITableView!
     
@@ -19,12 +19,6 @@ class TableViewController: UITableViewController, QueryModelProtocol {
         
         self.listView.delegate = self
         self.listView.dataSource = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func itemDownloaded(items: NSArray) {
@@ -33,7 +27,7 @@ class TableViewController: UITableViewController, QueryModelProtocol {
     }
     
     @IBAction func btnRemoveAutoLogin(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.removeObject(forKey: USER_DEFAULT_AUTO_LOGIN_EMAIL)
+        UserDefaults.standard.set(0, forKey: USER_DEFAULT_AUTO_LOGIN_SEQ)
         navigationController?.popViewController(animated: true)
     }
     
@@ -47,9 +41,9 @@ class TableViewController: UITableViewController, QueryModelProtocol {
             case PRIORITY_QUERY:
                 let queryModel = PriorityQueryModel()
                 queryModel.delegate = self
-                let _ = queryModel.getPriorityList(email: LOGGED_IN_EMAIL) { returnList in
+                let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
                     if returnList.count < 2 {
-                        let queryModel = QueryModel()
+                        let queryModel = CSQueryModel()
                         queryModel.delegate = self
                         queryModel.downloadItems()
                     } else {

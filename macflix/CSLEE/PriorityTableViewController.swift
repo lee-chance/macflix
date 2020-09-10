@@ -30,21 +30,9 @@ class PriorityTableViewController: UITableViewController {
         
         let alertService = AlertService()
         present(alertService.mAlert(alertTitle: "", alertMessage: "Set up!", actionTitle: "Ok", handler: {Void in
-            //SignupViewController().getPriority(self.priority)
             self.navigationController?.popViewController(animated: true)
         }), animated: true)
         
-        //        let settingModel = SettingModel()
-        //        let result = settingModel.setItems(first: priority[0], second: priority[1], third: priority[2], fourth: priority[3])
-        //
-        //        if result {
-        //            navigationController?.popViewController(animated: true)
-//        } else {
-//            let resultAlert = UIAlertController(title: "Error", message: "An error has occurred", preferredStyle: UIAlertController.Style.alert)
-//            let onAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-//            resultAlert.addAction(onAction)
-//            present(resultAlert, animated: true, completion: nil)
-//        }
     }
     
     // MARK: - Table view data source

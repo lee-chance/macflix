@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol QueryModelProtocol: class {
+protocol CSQueryModelProtocol: class {
     func itemDownloaded(items: NSArray)
 }
 
-class QueryModel: NSObject {
+class CSQueryModel: NSObject {
     
-    var delegate: QueryModelProtocol!
+    var delegate: CSQueryModelProtocol!
     let urlPath = CS_TOMCAT_ADDRESS + "selectSampleBeer.jsp"
     
     func downloadItems() {

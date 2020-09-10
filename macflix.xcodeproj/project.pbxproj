@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495C25089D4900F59E14 /* AppDelegate.swift */; };
 		2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495E25089D4900F59E14 /* SceneDelegate.swift */; };
-		2E80496125089D4900F59E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80496025089D4900F59E14 /* ViewController.swift */; };
 		2E80496425089D4900F59E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496225089D4900F59E14 /* Main.storyboard */; };
 		2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E80496525089D4900F59E14 /* macflix.xcdatamodeld */; };
 		2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496825089D4B00F59E14 /* Assets.xcassets */; };
@@ -26,14 +25,13 @@
 		2E80498925089E5D00F59E14 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498625089E5D00F59E14 /* Review.swift */; };
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
-		2E80498F2508AC6200F59E14 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* QueryModel.swift */; };
+		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E80495925089D4900F59E14 /* macflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E80495C25089D4900F59E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E80495E25089D4900F59E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E80496025089D4900F59E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E80496325089D4900F59E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E80496625089D4900F59E14 /* macflix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = macflix.xcdatamodel; sourceTree = "<group>"; };
 		2E80496825089D4B00F59E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +49,7 @@
 		2E80498625089E5D00F59E14 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		2E80498E2508AC6200F59E14 /* QueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
+		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
 				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
-				2E80496025089D4900F59E14 /* ViewController.swift */,
 				2E80496225089D4900F59E14 /* Main.storyboard */,
 				2E80496825089D4B00F59E14 /* Assets.xcassets */,
 				2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */,
@@ -103,7 +100,7 @@
 				2E80498825089E5D00F59E14 /* Beer.swift */,
 				2E80498625089E5D00F59E14 /* Review.swift */,
 				2E80498725089E5D00F59E14 /* User.swift */,
-				2E80498E2508AC6200F59E14 /* QueryModel.swift */,
+				2E80498E2508AC6200F59E14 /* CSQueryModel.swift */,
 				2E80497925089E3000F59E14 /* LoginModel.swift */,
 				2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */,
 				2E80497725089E3000F59E14 /* SignupModel.swift */,
@@ -189,14 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
-				2E80498F2508AC6200F59E14 /* QueryModel.swift in Sources */,
+				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
-				2E80496125089D4900F59E14 /* ViewController.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,

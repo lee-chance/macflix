@@ -21,16 +21,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         btnFindPassword.addTarget(self, action: #selector(defaultAlert(_:)), for: .touchUpInside)
-
+        
         // Do any additional setup after loading the view.
-        if let autoLoginEmail = UserDefaults.standard.string(forKey: USER_DEFAULT_AUTO_LOGIN_EMAIL) {
-            loginWithStaticDatas(email: autoLoginEmail)
+        let autoLoginSeq = UserDefaults.standard.integer(forKey: USER_DEFAULT_AUTO_LOGIN_SEQ)
+        if autoLoginSeq != 0 {
+            loginWithStaticDatas(user_seq: autoLoginSeq)
         }
     }
     
-    func loginWithStaticDatas(email: String) {
+    func loginWithStaticDatas(user_seq: Int) {
         self.performSegue(withIdentifier: "sgLogin", sender: self)
-        LOGGED_IN_EMAIL = email
+        LOGGED_IN_SEQ = user_seq
         UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
     }
     
@@ -38,13 +39,13 @@ class LoginViewController: UIViewController {
         if let email = lblEmail.text,
             let password = lblPassword.text {
             let loginModel = LoginModel()
-            loginModel.actionLogin(email: email, password: password) { isValid in
+            loginModel.actionLogin(email: email, password: password) { resultSeq in
                 DispatchQueue.main.async { () -> Void in
-                    if isValid {
+                    if resultSeq != 0 {
                         if self.autoLogin {
-                            UserDefaults.standard.set(email, forKey: USER_DEFAULT_AUTO_LOGIN_EMAIL)
+                            UserDefaults.standard.set(resultSeq, forKey: USER_DEFAULT_AUTO_LOGIN_SEQ)
                         }
-                        self.loginWithStaticDatas(email: email)
+                        self.loginWithStaticDatas(user_seq: resultSeq)
                     } else {
                         let alertService = AlertService()
                         self.present(alertService.mAlert(alertTitle: "Login Failed", alertMessage: "Check your e-mail or password.", actionTitle: "Ok", handler: nil), animated: true)
