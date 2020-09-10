@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchBearViewController: UIViewController {
     
 
     @IBOutlet var tfSerarch: UITextField!
