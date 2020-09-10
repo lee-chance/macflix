@@ -26,6 +26,11 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
+		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
+		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
+		F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */; };
+		F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */; };
+		F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
+		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
+		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
+		F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimTableViewCell.swift; sourceTree = "<group>"; };
+		F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				F4D0F2BB250A0B3300D2F51E /* KSS */,
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
 				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
@@ -112,6 +123,18 @@
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
+			sourceTree = "<group>";
+		};
+		F4D0F2BB250A0B3300D2F51E /* KSS */ = {
+			isa = PBXGroup;
+			children = (
+				F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */,
+				F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */,
+				F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */,
+				F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */,
+				F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */,
+			);
+			path = KSS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
+				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
+				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
+				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
+				F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
