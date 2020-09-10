@@ -26,6 +26,14 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
+		542D5D40250A216E00B74075 /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D38250A216D00B74075 /* PreferenceModel.swift */; };
+		542D5D41250A216E00B74075 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D39250A216D00B74075 /* LikeTableViewCell.swift */; };
+		542D5D42250A216E00B74075 /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */; };
+		542D5D43250A216E00B74075 /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3B250A216D00B74075 /* SBTableViewCell.swift */; };
+		542D5D44250A216E00B74075 /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3C250A216D00B74075 /* LikeTableViewController.swift */; };
+		542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3D250A216D00B74075 /* SBQueryModel.swift */; };
+		542D5D46250A216E00B74075 /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3E250A216D00B74075 /* DBModelBeer.swift */; };
+		542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3F250A216D00B74075 /* SBTableViewController.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */; };
@@ -55,6 +63,14 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
+		542D5D38250A216D00B74075 /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceModel.swift; sourceTree = "<group>"; };
+		542D5D39250A216D00B74075 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
+		542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceQueryModel.swift; sourceTree = "<group>"; };
+		542D5D3B250A216D00B74075 /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewCell.swift; sourceTree = "<group>"; };
+		542D5D3C250A216D00B74075 /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
+		542D5D3D250A216D00B74075 /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBQueryModel.swift; sourceTree = "<group>"; };
+		542D5D3E250A216D00B74075 /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelBeer.swift; sourceTree = "<group>"; };
+		542D5D3F250A216D00B74075 /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +108,7 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				542D5D37250A215C00B74075 /* SSB */,
 				F4D0F2BB250A0B3300D2F51E /* KSS */,
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
@@ -123,6 +140,21 @@
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
+			sourceTree = "<group>";
+		};
+		542D5D37250A215C00B74075 /* SSB */ = {
+			isa = PBXGroup;
+			children = (
+				542D5D3F250A216D00B74075 /* SBTableViewController.swift */,
+				542D5D3C250A216D00B74075 /* LikeTableViewController.swift */,
+				542D5D3B250A216D00B74075 /* SBTableViewCell.swift */,
+				542D5D39250A216D00B74075 /* LikeTableViewCell.swift */,
+				542D5D3E250A216D00B74075 /* DBModelBeer.swift */,
+				542D5D3D250A216D00B74075 /* SBQueryModel.swift */,
+				542D5D38250A216D00B74075 /* PreferenceModel.swift */,
+				542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */,
+			);
+			path = SSB;
 			sourceTree = "<group>";
 		};
 		F4D0F2BB250A0B3300D2F51E /* KSS */ = {
@@ -208,26 +240,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				542D5D44250A216E00B74075 /* LikeTableViewController.swift in Sources */,
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
+				542D5D43250A216E00B74075 /* SBTableViewCell.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* SearchTableViewController.swift in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
+				542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
+				542D5D41250A216E00B74075 /* LikeTableViewCell.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
+				542D5D42250A216E00B74075 /* PreferenceQueryModel.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
+				542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
+				542D5D46250A216E00B74075 /* DBModelBeer.swift in Sources */,
+				542D5D40250A216E00B74075 /* PreferenceModel.swift in Sources */,
 				2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

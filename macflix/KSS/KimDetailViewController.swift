@@ -50,8 +50,6 @@ class KimDetailViewController: UIViewController {
             feelNum.text = String(format: "%.1f",sdFell.value*10)
             print(feelNum.text!)
         }
-        
-        
     }
     @IBAction func lookSd(_ sender: UISlider) {
     }
