@@ -26,6 +26,11 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
+		FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */; };
+		FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */; };
+		FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */; };
+		FAE5BAA4250A0FDC00B62852 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9F250A0FDC00B62852 /* SearchViewController.swift */; };
+		FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
+		FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeTableViewController.swift; sourceTree = "<group>"; };
+		FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinDBModel.swift; sourceTree = "<group>"; };
+		FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FAE5BA9F250A0FDC00B62852 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinQueryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5BA9B250A077200B62852 /* KHSHIN */,
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
 				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
@@ -112,6 +123,18 @@
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
+			sourceTree = "<group>";
+		};
+		FAE5BA9B250A077200B62852 /* KHSHIN */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */,
+				FAE5BA9F250A0FDC00B62852 /* SearchViewController.swift */,
+				FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */,
+				FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */,
+				FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */,
+			);
+			path = KHSHIN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,18 +210,23 @@
 			files = (
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
+				FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
+				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
+				FAE5BAA4250A0FDC00B62852 /* SearchViewController.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
+				FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
+				FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
 				2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */,
 			);
