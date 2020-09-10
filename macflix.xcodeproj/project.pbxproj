@@ -39,6 +39,10 @@
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
 		F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */; };
 		F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */; };
+		FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */; };
+		FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */; };
+		FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */; };
+		FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimTableViewCell.swift; sourceTree = "<group>"; };
 		F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDetailViewController.swift; sourceTree = "<group>"; };
+		FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeTableViewController.swift; sourceTree = "<group>"; };
+		FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinDBModel.swift; sourceTree = "<group>"; };
+		FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinQueryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5BA9B250A077200B62852 /* KHSHIN */,
 				542D5D37250A215C00B74075 /* SSB */,
 				F4D0F2BB250A0B3300D2F51E /* KSS */,
 				2E80498525089E3800F59E14 /* CSLEE */,
@@ -167,6 +176,17 @@
 				F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */,
 			);
 			path = KSS;
+			sourceTree = "<group>";
+		};
+		FAE5BA9B250A077200B62852 /* KHSHIN */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */,
+				FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */,
+				FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */,
+				FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */,
+			);
+			path = KHSHIN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,11 +266,13 @@
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
 				542D5D43250A216E00B74075 /* SBTableViewCell.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
+				FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
+				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
@@ -261,9 +283,11 @@
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
+				FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
 				542D5D42250A216E00B74075 /* PreferenceQueryModel.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
+				FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */,
 				542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
 				542D5D46250A216E00B74075 /* DBModelBeer.swift in Sources */,
