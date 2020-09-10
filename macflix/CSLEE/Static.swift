@@ -18,3 +18,5 @@ let PRIORITY_QUERY = 1
 
 //var LOGGED_IN_EMAIL = ""
 var LOGGED_IN_SEQ = 0
+
+var sampleStatic = 0
