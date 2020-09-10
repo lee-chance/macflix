@@ -52,14 +52,17 @@ class SignupViewController: UIViewController {
            let password = lblPassword.text,
            let nickname = lblNickname.text {
             let signupModel = SignupModel()
-            let result = signupModel.actionSignup(email: email, password: password, nickname: nickname, priority: priority)
             
-            if result {
-                present(alertService.mAlert(alertTitle: "Signed up!", alertMessage: "Signed up successfully.", actionTitle: "Ok", handler: {Void in
-                    self.navigationController?.popViewController(animated: true)
-                }), animated: true, completion: nil)
-            } else {
-                present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            signupModel.actionSignup(email: email, password: password, nickname: nickname, priority: priority) { isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        self.present(alertService.mAlert(alertTitle: "Signed up!", alertMessage: "Signed up successfully.", actionTitle: "Ok", handler: {Void in
+                            self.navigationController?.popViewController(animated: true)
+                        }), animated: true, completion: nil)
+                    } else {
+                        self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                    }
+                }
             }
         }
     }
