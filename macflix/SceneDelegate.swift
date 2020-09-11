@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "macflix_splash.PNG")!, iconInitialSize: CGSize(width: 414, height: 389), backgroundColor: UIColor(red: 1, green: 222/255, blue: 31/255, alpha: 1))
+    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "macflix_splash.PNG"), iconInitialSize: CGSize(width: 414, height: 389), backgroundColor: UIColor(red: 1, green: 222/255, blue: 31/255, alpha: 1))
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

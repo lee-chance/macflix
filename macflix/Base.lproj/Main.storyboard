@@ -77,7 +77,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.2030424736" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dR-6in">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macflix_title" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dR-6in">
                                 <rect key="frame" x="50" y="143" width="315" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="518.84057971014499" y="-752.00892857142856"/>
         </scene>
-        <!--Sign in-->
+        <!--Sign up-->
         <scene sceneID="Lmi-zI-6af">
             <objects>
                 <viewController id="sp8-4L-0Bm" customClass="SignupViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.2030424736" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="8O7-fs-ICz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macflix_title" translatesAutoresizingMaskIntoConstraints="NO" id="8O7-fs-ICz">
                                 <rect key="frame" x="50" y="143" width="315" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -171,7 +171,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Yvb-Vc-Vah"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign in" id="YXF-SG-CuU"/>
+                    <navigationItem key="navigationItem" title="Sign up" id="YXF-SG-CuU"/>
                     <connections>
                         <outlet property="lblEmail" destination="UhZ-In-gJU" id="gCi-Nr-1dq"/>
                         <outlet property="lblNickname" destination="M3X-5P-sKj" id="Azf-2A-en6"/>
@@ -265,7 +265,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="35V-of-hUP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer_off" translatesAutoresizingMaskIntoConstraints="NO" id="35V-of-hUP">
                                             <rect key="frame" x="357" y="13" width="37" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.83949637440000002" green="0.23836869939999999" blue="0.31982252480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -631,7 +631,7 @@
                                             <rect key="frame" x="365" y="15" width="29" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="beer_on.PNG"/>
+                                            <state key="normal" image="beer_on"/>
                                             <connections>
                                                 <action selector="btnLikeAction:" destination="Yk4-jk-prW" eventType="touchUpInside" id="SO6-cA-whP"/>
                                             </connections>
@@ -881,11 +881,11 @@
     </scenes>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
-        <image name="beer_off.png" width="88.800003051757812" height="117.12000274658203"/>
-        <image name="beer_on.PNG" width="88.800003051757812" height="117.12000274658203"/>
+        <image name="beer_off" width="185" height="244"/>
+        <image name="beer_on" width="185" height="244"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
-        <image name="mac_gold.png" width="369.60000610351562" height="108"/>
+        <image name="macflix_title" width="770" height="225"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="r.circle" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
