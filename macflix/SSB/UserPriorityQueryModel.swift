@@ -63,11 +63,6 @@ class UserPriorityQueryModel: NSObject{
 
             }
             
-            
-            
-            
-            
-            
             locations.add(query)
         }
             DispatchQueue.main.async(execute: {() -> Void in

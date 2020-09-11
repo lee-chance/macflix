@@ -77,6 +77,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             let indexPath = self.listTableView.indexPath(for : cell)
             let detailView = segue.destination as! KimDetailViewController
             let item: KimDBModel = feedItem[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            detailView.receiveId = item.beerId!
             detailView.receiveName = item.beerName!
             detailView.receiveStyle = item.beerStyle!
             detailView.receiveAbv = "Abv : \(item.beerAbv!)"

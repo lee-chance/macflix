@@ -8,7 +8,9 @@
 
 import UIKit
 
-class KimDetailViewController: UIViewController {
+class KimDetailViewController: UIViewController{
+
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var style: UILabel!
@@ -31,8 +33,9 @@ class KimDetailViewController: UIViewController {
     var receiveAbv = ""
     var receiveOverall = ""
     var receiveReview = ""
-    
-    
+    var receiveId = ""
+    var checkReview = 0
+    var feedItem : NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = receiveName
@@ -41,11 +44,64 @@ class KimDetailViewController: UIViewController {
         overall.text = receiveOverall
         review.text = receiveReview
         // Do any additional setup after loading the view.
-        sdFell.maximumValue = 5
-        
         }
+
+
     @IBAction func beerReview(_ sender: UIButton) {
+        let alertService = AlertService()
+        if checkReview != 0{
+            
+            let feel =  Double(feelNum.text!)
+            let smell = Double(smellNum.text!)
+            let look = Double(lookNum.text!)
+            let taste = Double(tasteNum.text!)
+            let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
+            let updateReview = ReviewUpdateModel()
+            updateReview.actionReviewUpdate(seq: String(checkReview), aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        self.present(alertService.mAlert(alertTitle: "ReviewUpdate!", alertMessage: "ReviewUpdate successfully.", actionTitle: "Ok", handler: {Void in
+                            self.navigationController?.popViewController(animated: true)
+                        }), animated: true, completion: nil)
+                    } else {
+                        self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                    }
+                }
+            }
+        }else{
+            let feel =  Double(feelNum.text!)
+            let smell = Double(smellNum.text!)
+            let look = Double(lookNum.text!)
+            let taste = Double(tasteNum.text!)
+            let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
+            let reviewInsert = ReviewInsertModel()
+            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: "zzz", aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
+                            self.navigationController?.popViewController(animated: true)
+                        }), animated: true, completion: nil)
+                    } else {
+                        self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
+        func reviewCheck() {
+                let checkReviewModel = CheckReviewModel()
+                checkReviewModel.actioncheckReview(seq: String(LOGGED_IN_SEQ), beerid: receiveId) { resultSeq in
+                    DispatchQueue.main.async { () -> Void in
+                        if resultSeq != 0 {
+                            self.checkReview = resultSeq
+                            print(resultSeq)
+                        } else {
+                            self.checkReview = resultSeq
+                            print(resultSeq)
+                        }
+                    }
+                }
+            }
     @IBAction func feelSd(_ sender: UISlider) {
         if Int(sdFell.value*10) % 10 >= 0 && Int(sdFell.value*10) % 10 < 5{
             feelNum.text = String(format: "%.1f",sdFell.value)

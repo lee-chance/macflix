@@ -19,3 +19,4 @@ let QUERY = 0
 let PRIORITY_QUERY = 1
 
 var LOGGED_IN_SEQ = 0
+var LOGGED_IN_PROFILNAME = ""

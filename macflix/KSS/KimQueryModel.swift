@@ -106,7 +106,8 @@ class KimQueryModel: NSObject{
             
             let query = KimDBModel()
             
-            if  let beerName = jsonElement["beer_name"] as? String,
+            if  let beerId = jsonElement["beer_id"] as? String,
+                let beerName = jsonElement["beer_name"] as? String,
                 let beerStyle = jsonElement["beer_style"] as? String,
                 let beerAbv = jsonElement["beer_abv"] as? String,
                 let reviewSmell = jsonElement["aroma"] as? String,
@@ -114,15 +115,16 @@ class KimQueryModel: NSObject{
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
                 let reviewOverall = jsonElement["overall"] as? String{
-                
-                query.beerName = beerName
-                query.beerStyle = beerStyle
-                query.beerAbv = beerAbv
-                query.reviewFeel = reviewFeel
-                query.reviewLook = reviewLook
-                query.reviewSmell = reviewSmell
-                query.reviewTaste = reviewTaste
-                query.reviewOverall = reviewOverall
+
+                    query.beerId = beerId
+                    query.beerName = beerName
+                    query.beerStyle = beerStyle
+                    query.beerAbv = beerAbv
+                    query.reviewFeel = reviewFeel
+                    query.reviewLook = reviewLook
+                    query.reviewSmell = reviewSmell
+                    query.reviewTaste = reviewTaste
+                    query.reviewOverall = reviewOverall
             }
             
             // 배열에 넣어줌
