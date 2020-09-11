@@ -15,7 +15,7 @@ protocol PriorityModelProtocol: class {
 class UserPriorityQueryModel: NSObject{
     
     var delegate: PriorityModelProtocol!
-    let urlPath = "http://localhost:8080/IOS/getPriorityList.jsp?seq=\(LOGGED_IN_SEQ)"
+    let urlPath = URL_PATH + "IOS/getPriorityList.jsp?seq=\(LOGGED_IN_SEQ)"
     
     func getPriorityList() {
         

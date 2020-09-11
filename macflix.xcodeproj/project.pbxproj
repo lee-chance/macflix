@@ -152,10 +152,10 @@
 				54FDCCB7250BBF67002E717B /* PreferenceModel.swift */,
 				54FDCCB6250BBF66002E717B /* PreferenceQueryModel.swift */,
 				54FDCCB8250BBF67002E717B /* SBQueryModel.swift */,
+				54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */,
 				54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */,
 				54FDCCB3250BBF66002E717B /* SBTableViewController.swift */,
 				54FDCCBC250BBF67002E717B /* UpdateUserInfoViewController.swift */,
-				54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */,
 				54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */,
 			);
 			path = SSB;

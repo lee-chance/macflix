@@ -17,7 +17,7 @@ protocol PreferenceQueryModelProtocol: class {
 // 모든 클래스 중 가장 상위 클래스
 class PreferenceQueryModel: NSObject{
     var delegate: PreferenceQueryModelProtocol!
-    let urlPath = "http://localhost:8080/IOS/preference_query_ios.jsp?seq=\(LOGGED_IN_SEQ)"
+    let urlPath = URL_PATH + "IOS/preference_query_ios.jsp?seq=\(LOGGED_IN_SEQ)"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!

@@ -11,7 +11,7 @@ import Foundation
 class PreferenceModel: NSObject{
 
     func insertItems(beer_id: Int, completion: @escaping (Bool)->()) {
-        var urlPath = "http://localhost:8080/IOS/beer_preferenceInsert_ios.jsp"
+        var urlPath = URL_PATH + "IOS/beer_preferenceInsert_ios.jsp"
         let urlAdd = "?User_seq=\(LOGGED_IN_SEQ)&beer_id=\(beer_id)"
         urlPath += urlAdd
         // 한글 url encoding
@@ -31,7 +31,7 @@ class PreferenceModel: NSObject{
     }
     
     func deleteItems(beer_id: Int, completion: @escaping (Bool)->()) {
-        var urlPath = "http://localhost:8080/IOS/beer_preferenceDelete_ios.jsp"
+        var urlPath = URL_PATH + "IOS/beer_preferenceDelete_ios.jsp"
         let urlAdd = "?User_seq=\(LOGGED_IN_SEQ)&beer_id=\(beer_id)"
         urlPath += urlAdd
         // 한글 url encoding
@@ -52,7 +52,7 @@ class PreferenceModel: NSObject{
     
     
     func updateUserPriorityItems(user_priority: String, completion: @escaping (Bool)->()) {
-        var urlPath = "http://localhost:8080/IOS/priorityUpdate_ios.jsp"
+        var urlPath = URL_PATH + "IOS/priorityUpdate_ios.jsp"
         let urlAdd = "?user_priority=\(user_priority)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
             // 한글 url encoding
