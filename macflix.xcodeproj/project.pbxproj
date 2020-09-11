@@ -14,7 +14,6 @@
 		2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496825089D4B00F59E14 /* Assets.xcassets */; };
 		2E80496C25089D4B00F59E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496A25089D4B00F59E14 /* LaunchScreen.storyboard */; };
 		2E80497C25089E3000F59E14 /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497325089E3000F59E14 /* Static.swift */; };
-		2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497425089E3000F59E14 /* TableViewController.swift */; };
 		2E80497E25089E3000F59E14 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497525089E3000F59E14 /* AlertService.swift */; };
 		2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497625089E3000F59E14 /* SignupViewController.swift */; };
 		2E80498025089E3000F59E14 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497725089E3000F59E14 /* SignupModel.swift */; };
@@ -55,7 +54,6 @@
 		2E80496B25089D4B00F59E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E80496D25089D4B00F59E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E80497325089E3000F59E14 /* Static.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
-		2E80497425089E3000F59E14 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2E80497525089E3000F59E14 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		2E80497625089E3000F59E14 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2E80497725089E3000F59E14 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
 				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
 				2E80497625089E3000F59E14 /* SignupViewController.swift */,
-				2E80497425089E3000F59E14 /* TableViewController.swift */,
 				2E80497325089E3000F59E14 /* Static.swift */,
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
@@ -271,7 +268,6 @@
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
-				2E80497D25089E3000F59E14 /* TableViewController.swift in Sources */,
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
