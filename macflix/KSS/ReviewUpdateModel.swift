@@ -1,5 +1,5 @@
 //
-//  ReviewInsertModel.swift
+//  ReviewUpdateModel.swift
 //  macflix
 //
 //  Created by Kim_MAC on 2020/09/11.
@@ -7,13 +7,13 @@
 //
 
 import Foundation
-class ReviewInsertModel: NSObject {
+class ReviewUpdateModel: NSObject {
     
-    var urlPath = CS_TOMCAT_ADDRESS + "insertReview.jsp"
+    var urlPath = CS_TOMCAT_ADDRESS + "UpdateReview.jsp"
     
-    func actionReview(seq: String, beerid : String, profilename: String, aroma: String, appearance : String, palate : String, taste : String ,overall : String , completion: @escaping (Bool)->()) {
+    func actionReviewUpdate(seq: String,aroma: String, appearance : String, palate : String, taste : String ,overall : String , completion: @escaping (Bool)->()) {
         
-        let urlAdd = "?user_seq=\(seq)&beerid=\(beerid)&profilename=\(profilename)&aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)&overall=\(overall)"
+        let urlAdd = "?user_seq=\(seq)&aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)&overall=\(overall)"
         urlPath += urlAdd
         print(urlPath)
         // 한글 url encoding

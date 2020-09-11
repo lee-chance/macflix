@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
     func loginWithStaticDatas(user_seq: Int) {
         self.performSegue(withIdentifier: "sgLogin", sender: self)
         LOGGED_IN_SEQ = user_seq
+        
         UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
     }
     

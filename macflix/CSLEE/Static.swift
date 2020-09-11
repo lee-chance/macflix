@@ -8,8 +8,8 @@
 
 import Foundation
 //"http://172.30.1.58:8080/Macflix/" 창수 아이피
-//"http://192.168.0.8:8080/test/"
-let CS_TOMCAT_ADDRESS = "http://172.30.1.58:8080/Macflix/"
+//"http://192.168.0.9:8080/test/"
+let CS_TOMCAT_ADDRESS = "http://192.168.0.9:8080/test/"
 
 let USER_DEFAULT_AUTO_LOGIN_SEQ = "auto login seq string"
 let USER_DEFAULT_QUERY_STATE = "query state int"
@@ -18,3 +18,4 @@ let QUERY = 0
 let PRIORITY_QUERY = 1
 
 var LOGGED_IN_SEQ = 0
+var LOGGED_IN_PROFILNAME = ""

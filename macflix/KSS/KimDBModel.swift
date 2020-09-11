@@ -10,6 +10,7 @@ import Foundation
 class KimDBModel: NSObject{
     
     // Properties
+    var beerId : String?
     var beerName: String?
     var beerStyle: String?
     var beerAbv: String?
@@ -25,7 +26,8 @@ class KimDBModel: NSObject{
     }
     
     // Constructor
-    init(beerName: String, beerStyle:String, beerAbv:String,reviewSmell: String,reviewFeel: String,reviewLook: String,reviewTaste: String,reviewOverall: String) {
+    init(beerId: String, beerName: String, beerStyle:String, beerAbv:String,reviewSmell: String,reviewFeel: String,reviewLook: String,reviewTaste: String,reviewOverall: String) {
+        self.beerId = beerId
         self.beerName = beerName
         self.beerStyle = beerStyle
         self.beerAbv = beerAbv

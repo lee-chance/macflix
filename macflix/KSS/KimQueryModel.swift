@@ -13,7 +13,7 @@ protocol KimQueryModelProtocol: class{
 class KimQueryModel: NSObject{
     
     var delegate: KimQueryModelProtocol!
-    let urlPath = CS_TOMCAT_ADDRESS + "beer_query.jsp"
+    let urlPath = CS_TOMCAT_ADDRESS + "beer_query_ios.jsp"
     
     func downloadItems(){
         let url: URL = URL(string: urlPath)!
@@ -50,7 +50,8 @@ class KimQueryModel: NSObject{
             
             let query = KimDBModel()
             
-            if  let beerName = jsonElement["beer_name"] as? String,
+            if  let beerId = jsonElement["beer_id"] as? String,
+                let beerName = jsonElement["beer_name"] as? String,
                 let beerStyle = jsonElement["beer_style"] as? String,
                 let beerAbv = jsonElement["beer_abv"] as? String,
                 let reviewSmell = jsonElement["aroma"] as? String,
@@ -59,6 +60,7 @@ class KimQueryModel: NSObject{
                 let reviewTaste = jsonElement["taste"] as? String,
                 let reviewOverall = jsonElement["overall"] as? String{
             
+                    query.beerId = beerId
                     query.beerName = beerName
                     query.beerStyle = beerStyle
                     query.beerAbv = beerAbv

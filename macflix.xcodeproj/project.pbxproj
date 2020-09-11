@@ -41,12 +41,16 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
+		F425AA85250B729D00626E38 /* ReviewUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
 		F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */; };
 		F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */; };
 		F4F9FADE250B14F8009F3D55 /* ReviewInsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */; };
+		F4F9FAE2250B416C009F3D55 /* heart.fill.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F9FAE0250B416C009F3D55 /* heart.fill.png */; };
+		F4F9FAE3250B416C009F3D55 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F9FAE1250B416C009F3D55 /* heart.png */; };
+		F4F9FAE5250B4648009F3D55 /* checkReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9FAE4250B4648009F3D55 /* checkReview.swift */; };
 		FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */; };
 		FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */; };
 		FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */; };
@@ -90,12 +94,16 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
+		F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewUpdateModel.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimTableViewCell.swift; sourceTree = "<group>"; };
 		F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDetailViewController.swift; sourceTree = "<group>"; };
 		F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInsertModel.swift; sourceTree = "<group>"; };
+		F4F9FAE0250B416C009F3D55 /* heart.fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.fill.png; sourceTree = "<group>"; };
+		F4F9FAE1250B416C009F3D55 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		F4F9FAE4250B4648009F3D55 /* checkReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkReview.swift; sourceTree = "<group>"; };
 		FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeTableViewController.swift; sourceTree = "<group>"; };
 		FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinDBModel.swift; sourceTree = "<group>"; };
 		FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				F4F9FADF250B415C009F3D55 /* img */,
 				2E57EE57250B2263000540BD /* SSB */,
 				FAE5BA9B250A077200B62852 /* KHSHIN */,
 				F4D0F2BB250A0B3300D2F51E /* KSS */,
@@ -197,9 +206,20 @@
 				F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */,
 				F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */,
 				F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */,
+				F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */,
 				F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */,
+				F4F9FAE4250B4648009F3D55 /* checkReview.swift */,
 			);
 			path = KSS;
+			sourceTree = "<group>";
+		};
+		F4F9FADF250B415C009F3D55 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9FAE0250B416C009F3D55 /* heart.fill.png */,
+				F4F9FAE1250B416C009F3D55 /* heart.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 		FAE5BA9B250A077200B62852 /* KHSHIN */ = {
@@ -272,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E80496C25089D4B00F59E14 /* LaunchScreen.storyboard in Resources */,
+				F4F9FAE3250B416C009F3D55 /* heart.png in Resources */,
 				2E57EEA3250B2686000540BD /* macflix_splash.PNG in Resources */,
+				F4F9FAE2250B416C009F3D55 /* heart.fill.png in Resources */,
 				2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */,
 				2E80496425089D4900F59E14 /* Main.storyboard in Resources */,
 				2E57EEA1250B2673000540BD /* macflix_name.PNG in Resources */,
@@ -288,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F425AA85250B729D00626E38 /* ReviewUpdateModel.swift in Sources */,
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
@@ -306,6 +329,7 @@
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				2E57EE9F250B238F000540BD /* PreferenceModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
+				F4F9FAE5250B4648009F3D55 /* checkReview.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,

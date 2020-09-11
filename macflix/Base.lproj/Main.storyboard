@@ -57,7 +57,7 @@
                                         </state>
                                         <connections>
                                             <action selector="btnLogin:" destination="cjS-hh-bxb" eventType="touchUpInside" id="XoW-if-y27"/>
-                                            <segue destination="jeQ-ag-QNV" kind="show" id="5q3-rV-FMo"/>
+                                            <segue destination="jeQ-ag-QNV" kind="show" identifier="sgLogin" id="5q3-rV-FMo"/>
                                         </connections>
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OYs-FQ-zz3">
@@ -498,9 +498,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DP-2y-7yK">
-                                <rect key="frame" x="184" y="542" width="46" height="30"/>
+                                <rect key="frame" x="181" y="542" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="점수주기"/>
                                 <connections>
                                     <action selector="beerReview:" destination="jpQ-xd-fad" eventType="touchUpInside" id="Fsz-ff-TBA"/>
                                 </connections>
@@ -539,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="1"/>
+            <point key="canvasLocation" x="2380" y="1"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KvT-hi-QRc">
