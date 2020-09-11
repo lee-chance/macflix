@@ -22,7 +22,6 @@ class LoginModel: NSObject {
         urlPath += urlAdd
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        print(urlPath)
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
@@ -52,8 +51,6 @@ class LoginModel: NSObject {
 //        }
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
-        
-        print(jsonResult)
         
         return Int(jsonResult) ?? 0
         
