@@ -1,23 +1,23 @@
 //
-//  QueryModel.swift
+//  UserPriorityQueryModel.swift
 //  ProjectDraw
 //
-//  Created by SSB on 09/09/2020.
+//  Created by SSB on 10/09/2020.
 //  Copyright © 2020 SSB. All rights reserved.
 //
 
 import Foundation
 
-protocol SBQueryModelProtocol: class {
+protocol UserPriorityQueryModelProtocol: class {
     func itemDownloaded(items: NSArray)
 }
 
 // NSObject : Class Type, 선언을 마음대로 할 수 있다
 // 그림도 포함되어 있는 클래스를 생성할 때 사용되는 Object(class)
 // 모든 클래스 중 가장 상위 클래스
-class SBQueryModel: NSObject{
-    var delegate: SBQueryModelProtocol!
-    let urlPath = "http://localhost:8080/IOS/beer_query_ios.jsp"
+class UserPriorityQueryModel: NSObject{
+    var delegate: UserPriorityQueryModelProtocol!
+    let urlPath = "http://localhost:8080/IOS/priority_query_ios.jsp"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
@@ -50,32 +50,23 @@ class SBQueryModel: NSObject{
 
         for i in 0..<jsonResult.count {
             jsonElement = jsonResult[i] as! NSDictionary
-            let query = DBModelBeer()
+            let query = DBModelPriority()
             
-            if let beer_id = jsonElement["beer_id"] as? String,
-                let beer_name = jsonElement["beer_name"] as? String,
-                let beer_style = jsonElement["beer_style"] as? String,
-                let beer_abv = jsonElement["beer_abv"] as? String,
-                let calc = jsonElement["calc"] as? String,
-                let aroma = jsonElement["aroma"] as? String,
-                let appearance = jsonElement["appearance"] as? String,
-                let palate = jsonElement["palate"] as? String,
-                let taste = jsonElement["taste"] as? String,
-                let overall = jsonElement["overall"] as? String,
-                let heart = jsonElement["heart"] as? String {
-                query.beer_id = Int(beer_id)!
-                query.beer_name = beer_name
-                query.beer_style = beer_style
-                query.beer_abv = Double(beer_abv)!
-                query.calc = calc
-                query.aroma = aroma
-                query.appearance = appearance
-                query.palate = palate
-                query.taste = taste
-                query.overall = overall
-                query.heart = Int(heart)!
-                
+            if let user_email = jsonElement["user_email"] as? String,
+                let user_password = jsonElement["user_password"] as? String,
+                let user_profilename = jsonElement["user_profilename"] as? String,
+                let user_priority = jsonElement["user_priority"] as? String{
+                query.user_email = user_email
+                query.user_password = user_password
+                query.user_profilename = user_profilename
+                query.user_priority = user_priority
+
             }
+            
+            
+            
+            
+            
             
             locations.add(query)
         }
@@ -86,4 +77,3 @@ class SBQueryModel: NSObject{
         }
         
 }
-    

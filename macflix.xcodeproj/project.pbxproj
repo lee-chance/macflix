@@ -25,14 +25,18 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
-		542D5D40250A216E00B74075 /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D38250A216D00B74075 /* PreferenceModel.swift */; };
-		542D5D41250A216E00B74075 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D39250A216D00B74075 /* LikeTableViewCell.swift */; };
-		542D5D42250A216E00B74075 /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */; };
-		542D5D43250A216E00B74075 /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3B250A216D00B74075 /* SBTableViewCell.swift */; };
-		542D5D44250A216E00B74075 /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3C250A216D00B74075 /* LikeTableViewController.swift */; };
-		542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3D250A216D00B74075 /* SBQueryModel.swift */; };
-		542D5D46250A216E00B74075 /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3E250A216D00B74075 /* DBModelBeer.swift */; };
-		542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5D3F250A216D00B74075 /* SBTableViewController.swift */; };
+		5461C842250B1A7F00627FB4 /* DBModelPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C836250B1A7D00627FB4 /* DBModelPriority.swift */; };
+		5461C843250B1A7F00627FB4 /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C837250B1A7D00627FB4 /* PreferenceModel.swift */; };
+		5461C844250B1A7F00627FB4 /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */; };
+		5461C845250B1A7F00627FB4 /* PriorityStringToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */; };
+		5461C846250B1A7F00627FB4 /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */; };
+		5461C847250B1A7F00627FB4 /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */; };
+		5461C848250B1A7F00627FB4 /* MypageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */; };
+		5461C849250B1A7F00627FB4 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */; };
+		5461C84A250B1A7F00627FB4 /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */; };
+		5461C84B250B1A7F00627FB4 /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */; };
+		5461C84C250B1A7F00627FB4 /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */; };
+		5461C84D250B1A7F00627FB4 /* UserPriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
@@ -65,14 +69,18 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
-		542D5D38250A216D00B74075 /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceModel.swift; sourceTree = "<group>"; };
-		542D5D39250A216D00B74075 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
-		542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceQueryModel.swift; sourceTree = "<group>"; };
-		542D5D3B250A216D00B74075 /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewCell.swift; sourceTree = "<group>"; };
-		542D5D3C250A216D00B74075 /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
-		542D5D3D250A216D00B74075 /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBQueryModel.swift; sourceTree = "<group>"; };
-		542D5D3E250A216D00B74075 /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelBeer.swift; sourceTree = "<group>"; };
-		542D5D3F250A216D00B74075 /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
+		5461C836250B1A7D00627FB4 /* DBModelPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelPriority.swift; sourceTree = "<group>"; };
+		5461C837250B1A7D00627FB4 /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/PreferenceModel.swift; sourceTree = "<group>"; };
+		5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTableViewCell.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBTableViewCell.swift; sourceTree = "<group>"; };
+		5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityStringToArray.swift; sourceTree = "<group>"; };
+		5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeTableViewController.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/LikeTableViewController.swift; sourceTree = "<group>"; };
+		5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBModelBeer.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/DBModelBeer.swift; sourceTree = "<group>"; };
+		5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageTableViewController.swift; sourceTree = "<group>"; };
+		5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeTableViewCell.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/LikeTableViewCell.swift; sourceTree = "<group>"; };
+		5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBQueryModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBQueryModel.swift; sourceTree = "<group>"; };
+		5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTableViewController.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBTableViewController.swift; sourceTree = "<group>"; };
+		5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceQueryModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/PreferenceQueryModel.swift; sourceTree = "<group>"; };
+		5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -151,14 +159,18 @@
 		542D5D37250A215C00B74075 /* SSB */ = {
 			isa = PBXGroup;
 			children = (
-				542D5D3F250A216D00B74075 /* SBTableViewController.swift */,
-				542D5D3C250A216D00B74075 /* LikeTableViewController.swift */,
-				542D5D3B250A216D00B74075 /* SBTableViewCell.swift */,
-				542D5D39250A216D00B74075 /* LikeTableViewCell.swift */,
-				542D5D3E250A216D00B74075 /* DBModelBeer.swift */,
-				542D5D3D250A216D00B74075 /* SBQueryModel.swift */,
-				542D5D38250A216D00B74075 /* PreferenceModel.swift */,
-				542D5D3A250A216D00B74075 /* PreferenceQueryModel.swift */,
+				5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */,
+				5461C836250B1A7D00627FB4 /* DBModelPriority.swift */,
+				5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */,
+				5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */,
+				5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */,
+				5461C837250B1A7D00627FB4 /* PreferenceModel.swift */,
+				5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */,
+				5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */,
+				5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */,
+				5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */,
+				5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */,
+				5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */,
 			);
 			path = SSB;
 			sourceTree = "<group>";
@@ -257,37 +269,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542D5D44250A216E00B74075 /* LikeTableViewController.swift in Sources */,
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
+				5461C845250B1A7F00627FB4 /* PriorityStringToArray.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
+				5461C847250B1A7F00627FB4 /* DBModelBeer.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
-				542D5D43250A216E00B74075 /* SBTableViewCell.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */,
+				5461C84C250B1A7F00627FB4 /* PreferenceQueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
+				5461C843250B1A7F00627FB4 /* PreferenceModel.swift in Sources */,
+				5461C84A250B1A7F00627FB4 /* SBQueryModel.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
-				542D5D45250A216E00B74075 /* SBQueryModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
-				542D5D41250A216E00B74075 /* LikeTableViewCell.swift in Sources */,
+				5461C844250B1A7F00627FB4 /* SBTableViewCell.swift in Sources */,
+				5461C84D250B1A7F00627FB4 /* UserPriorityQueryModel.swift in Sources */,
+				5461C848250B1A7F00627FB4 /* MypageTableViewController.swift in Sources */,
+				5461C842250B1A7F00627FB4 /* DBModelPriority.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
+				5461C846250B1A7F00627FB4 /* LikeTableViewController.swift in Sources */,
 				FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */,
+				5461C849250B1A7F00627FB4 /* LikeTableViewCell.swift in Sources */,
+				5461C84B250B1A7F00627FB4 /* SBTableViewController.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
-				542D5D42250A216E00B74075 /* PreferenceQueryModel.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
 				FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */,
-				542D5D47250A216E00B74075 /* SBTableViewController.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
-				542D5D46250A216E00B74075 /* DBModelBeer.swift in Sources */,
-				542D5D40250A216E00B74075 /* PreferenceModel.swift in Sources */,
 				2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
