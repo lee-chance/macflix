@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E57EE94250B238F000540BD /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE88250B238F000540BD /* DBModelBeer.swift */; };
+		2E57EE95250B238F000540BD /* MypageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE89250B238F000540BD /* MypageTableViewController.swift */; };
+		2E57EE96250B238F000540BD /* PriorityStringToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8A250B238F000540BD /* PriorityStringToArray.swift */; };
+		2E57EE97250B238F000540BD /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8B250B238F000540BD /* PreferenceQueryModel.swift */; };
+		2E57EE98250B238F000540BD /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8C250B238F000540BD /* LikeTableViewController.swift */; };
+		2E57EE99250B238F000540BD /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8D250B238F000540BD /* SBTableViewController.swift */; };
+		2E57EE9A250B238F000540BD /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8E250B238F000540BD /* LikeTableViewCell.swift */; };
+		2E57EE9B250B238F000540BD /* DBModelPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8F250B238F000540BD /* DBModelPriority.swift */; };
+		2E57EE9C250B238F000540BD /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE90250B238F000540BD /* SBQueryModel.swift */; };
+		2E57EE9D250B238F000540BD /* UserPriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE91250B238F000540BD /* UserPriorityQueryModel.swift */; };
+		2E57EE9E250B238F000540BD /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE92250B238F000540BD /* SBTableViewCell.swift */; };
+		2E57EE9F250B238F000540BD /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE93250B238F000540BD /* PreferenceModel.swift */; };
 		2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495C25089D4900F59E14 /* AppDelegate.swift */; };
 		2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495E25089D4900F59E14 /* SceneDelegate.swift */; };
 		2E80496425089D4900F59E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496225089D4900F59E14 /* Main.storyboard */; };
@@ -25,18 +37,6 @@
 		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
 		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
 		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
-		5461C842250B1A7F00627FB4 /* DBModelPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C836250B1A7D00627FB4 /* DBModelPriority.swift */; };
-		5461C843250B1A7F00627FB4 /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C837250B1A7D00627FB4 /* PreferenceModel.swift */; };
-		5461C844250B1A7F00627FB4 /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */; };
-		5461C845250B1A7F00627FB4 /* PriorityStringToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */; };
-		5461C846250B1A7F00627FB4 /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */; };
-		5461C847250B1A7F00627FB4 /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */; };
-		5461C848250B1A7F00627FB4 /* MypageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */; };
-		5461C849250B1A7F00627FB4 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */; };
-		5461C84A250B1A7F00627FB4 /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */; };
-		5461C84B250B1A7F00627FB4 /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */; };
-		5461C84C250B1A7F00627FB4 /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */; };
-		5461C84D250B1A7F00627FB4 /* UserPriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
@@ -49,6 +49,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E57EE88250B238F000540BD /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelBeer.swift; sourceTree = "<group>"; };
+		2E57EE89250B238F000540BD /* MypageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageTableViewController.swift; sourceTree = "<group>"; };
+		2E57EE8A250B238F000540BD /* PriorityStringToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityStringToArray.swift; sourceTree = "<group>"; };
+		2E57EE8B250B238F000540BD /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceQueryModel.swift; sourceTree = "<group>"; };
+		2E57EE8C250B238F000540BD /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
+		2E57EE8D250B238F000540BD /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
+		2E57EE8E250B238F000540BD /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
+		2E57EE8F250B238F000540BD /* DBModelPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelPriority.swift; sourceTree = "<group>"; };
+		2E57EE90250B238F000540BD /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBQueryModel.swift; sourceTree = "<group>"; };
+		2E57EE91250B238F000540BD /* UserPriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityQueryModel.swift; sourceTree = "<group>"; };
+		2E57EE92250B238F000540BD /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewCell.swift; sourceTree = "<group>"; };
+		2E57EE93250B238F000540BD /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceModel.swift; sourceTree = "<group>"; };
 		2E80495925089D4900F59E14 /* macflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E80495C25089D4900F59E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E80495E25089D4900F59E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,18 +81,6 @@
 		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
-		5461C836250B1A7D00627FB4 /* DBModelPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelPriority.swift; sourceTree = "<group>"; };
-		5461C837250B1A7D00627FB4 /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/PreferenceModel.swift; sourceTree = "<group>"; };
-		5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTableViewCell.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBTableViewCell.swift; sourceTree = "<group>"; };
-		5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityStringToArray.swift; sourceTree = "<group>"; };
-		5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeTableViewController.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/LikeTableViewController.swift; sourceTree = "<group>"; };
-		5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBModelBeer.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/DBModelBeer.swift; sourceTree = "<group>"; };
-		5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageTableViewController.swift; sourceTree = "<group>"; };
-		5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeTableViewCell.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/LikeTableViewCell.swift; sourceTree = "<group>"; };
-		5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBQueryModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBQueryModel.swift; sourceTree = "<group>"; };
-		5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTableViewController.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/SBTableViewController.swift; sourceTree = "<group>"; };
-		5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceQueryModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/PreferenceQueryModel.swift; sourceTree = "<group>"; };
-		5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E57EE57250B2263000540BD /* SSB */ = {
+			isa = PBXGroup;
+			children = (
+				2E57EE88250B238F000540BD /* DBModelBeer.swift */,
+				2E57EE8F250B238F000540BD /* DBModelPriority.swift */,
+				2E57EE8E250B238F000540BD /* LikeTableViewCell.swift */,
+				2E57EE8C250B238F000540BD /* LikeTableViewController.swift */,
+				2E57EE89250B238F000540BD /* MypageTableViewController.swift */,
+				2E57EE93250B238F000540BD /* PreferenceModel.swift */,
+				2E57EE8B250B238F000540BD /* PreferenceQueryModel.swift */,
+				2E57EE8A250B238F000540BD /* PriorityStringToArray.swift */,
+				2E57EE90250B238F000540BD /* SBQueryModel.swift */,
+				2E57EE92250B238F000540BD /* SBTableViewCell.swift */,
+				2E57EE8D250B238F000540BD /* SBTableViewController.swift */,
+				2E57EE91250B238F000540BD /* UserPriorityQueryModel.swift */,
+			);
+			path = SSB;
+			sourceTree = "<group>";
+		};
 		2E80495025089D4900F59E14 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +141,8 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
+				2E57EE57250B2263000540BD /* SSB */,
 				FAE5BA9B250A077200B62852 /* KHSHIN */,
-				542D5D37250A215C00B74075 /* SSB */,
 				F4D0F2BB250A0B3300D2F51E /* KSS */,
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
@@ -154,25 +173,6 @@
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
-			sourceTree = "<group>";
-		};
-		542D5D37250A215C00B74075 /* SSB */ = {
-			isa = PBXGroup;
-			children = (
-				5461C83B250B1A7E00627FB4 /* DBModelBeer.swift */,
-				5461C836250B1A7D00627FB4 /* DBModelPriority.swift */,
-				5461C83D250B1A7E00627FB4 /* LikeTableViewCell.swift */,
-				5461C83A250B1A7E00627FB4 /* LikeTableViewController.swift */,
-				5461C83C250B1A7E00627FB4 /* MypageTableViewController.swift */,
-				5461C837250B1A7D00627FB4 /* PreferenceModel.swift */,
-				5461C840250B1A7E00627FB4 /* PreferenceQueryModel.swift */,
-				5461C839250B1A7E00627FB4 /* PriorityStringToArray.swift */,
-				5461C83E250B1A7E00627FB4 /* SBQueryModel.swift */,
-				5461C838250B1A7E00627FB4 /* SBTableViewCell.swift */,
-				5461C83F250B1A7E00627FB4 /* SBTableViewController.swift */,
-				5461C841250B1A7F00627FB4 /* UserPriorityQueryModel.swift */,
-			);
-			path = SSB;
 			sourceTree = "<group>";
 		};
 		F4D0F2BB250A0B3300D2F51E /* KSS */ = {
@@ -270,36 +270,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
-				5461C845250B1A7F00627FB4 /* PriorityStringToArray.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
-				5461C847250B1A7F00627FB4 /* DBModelBeer.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
 				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */,
-				5461C84C250B1A7F00627FB4 /* PreferenceQueryModel.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
+				2E57EE97250B238F000540BD /* PreferenceQueryModel.swift in Sources */,
+				2E57EE9E250B238F000540BD /* SBTableViewCell.swift in Sources */,
+				2E57EE99250B238F000540BD /* SBTableViewController.swift in Sources */,
+				2E57EE9B250B238F000540BD /* DBModelPriority.swift in Sources */,
+				2E57EE96250B238F000540BD /* PriorityStringToArray.swift in Sources */,
+				2E57EE9C250B238F000540BD /* SBQueryModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
-				5461C843250B1A7F00627FB4 /* PreferenceModel.swift in Sources */,
-				5461C84A250B1A7F00627FB4 /* SBQueryModel.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
+				2E57EE9F250B238F000540BD /* PreferenceModel.swift in Sources */,
 				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
-				5461C844250B1A7F00627FB4 /* SBTableViewCell.swift in Sources */,
-				5461C84D250B1A7F00627FB4 /* UserPriorityQueryModel.swift in Sources */,
-				5461C848250B1A7F00627FB4 /* MypageTableViewController.swift in Sources */,
-				5461C842250B1A7F00627FB4 /* DBModelPriority.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
+				2E57EE95250B238F000540BD /* MypageTableViewController.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
+				2E57EE9A250B238F000540BD /* LikeTableViewCell.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
-				5461C846250B1A7F00627FB4 /* LikeTableViewController.swift in Sources */,
+				2E57EE94250B238F000540BD /* DBModelBeer.swift in Sources */,
+				2E57EE98250B238F000540BD /* LikeTableViewController.swift in Sources */,
+				2E57EE9D250B238F000540BD /* UserPriorityQueryModel.swift in Sources */,
 				FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */,
-				5461C849250B1A7F00627FB4 /* LikeTableViewCell.swift in Sources */,
-				5461C84B250B1A7F00627FB4 /* SBTableViewController.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
 				FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */,
