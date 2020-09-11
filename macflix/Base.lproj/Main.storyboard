@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -553,7 +553,7 @@
                     <connections>
                         <segue destination="eih-VF-gJf" kind="relationship" relationship="viewControllers" id="2SM-vn-Cuc"/>
                         <segue destination="Yk4-jk-prW" kind="relationship" relationship="viewControllers" id="O0g-an-0iv"/>
-                        <segue destination="U8X-aF-2cI" kind="relationship" relationship="viewControllers" id="AB3-dN-3FY"/>
+                        <segue destination="dwM-7a-P0N" kind="relationship" relationship="viewControllers" id="4ZM-B0-mAq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qL-8t-ypP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -699,93 +699,195 @@
             </objects>
             <point key="canvasLocation" x="2012" y="733"/>
         </scene>
-        <!--Preference for Beer-->
-        <scene sceneID="gwa-kg-MbF">
+        <!--내정보-->
+        <scene sceneID="YnJ-ah-VqA">
             <objects>
-                <tableViewController id="U8X-aF-2cI" customClass="MypageTableViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c5r-R7-rY9">
+                <viewController id="O92-k9-iLN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kR-ZR-DBP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdf-sA-0Qt">
+                                <rect key="frame" x="20" y="173" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="회원정보 수정"/>
+                                <connections>
+                                    <segue destination="umh-vT-78x" kind="show" id="1vm-s9-OxK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ7-uN-p4a">
+                                <rect key="frame" x="20" y="211" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Preference for Beer"/>
+                                <connections>
+                                    <segue destination="hIg-m1-824" kind="show" id="4Bg-oQ-6Dd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v6-a8-BV4">
+                                <rect key="frame" x="20" y="249" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="로그아웃"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-7j-cfC">
+                                <rect key="frame" x="20" y="287" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="회원탈퇴"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mJF-41-drE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="내정보" id="16b-7r-jS0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDE-6C-k3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475" y="733"/>
+        </scene>
+        <!--회원정보 수정-->
+        <scene sceneID="MIB-3q-nPy">
+            <objects>
+                <viewController id="umh-vT-78x" customClass="UpdateUserInfoViewController" customModule="ProjectDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JVm-hW-zfW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5A-ns-yur">
+                                <rect key="frame" x="42" y="137" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.40270136439999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUP-7W-MPE">
+                                <rect key="frame" x="42" y="179" width="330" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="변경"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기존 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyY-UC-nWZ">
+                                <rect key="frame" x="42" y="267" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.40358164610000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신규 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-xE-Ihn">
+                                <rect key="frame" x="42" y="309" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.40358164610000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신규 비밀번호 재확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-lA-9jC">
+                                <rect key="frame" x="42" y="351" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.40358164610000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6il-BS-Zjz">
+                                <rect key="frame" x="42" y="393" width="330" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="변경"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoJ-cF-Lzu">
+                                <rect key="frame" x="42" y="111" width="39" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-98-qoh">
+                                <rect key="frame" x="42" y="241" width="52" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zKP-Iw-RRp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="회원정보 수정" id="leD-Ct-OVz"/>
+                    <connections>
+                        <outlet property="lblUserNewPassword" destination="fd8-xE-Ihn" id="qnK-Tj-7ca"/>
+                        <outlet property="lblUserNewPasswordCheck" destination="TLl-lA-9jC" id="dgj-pR-7gm"/>
+                        <outlet property="lblUserNickname" destination="K5A-ns-yur" id="tN5-eg-vAA"/>
+                        <outlet property="lblUserPassword" destination="tyY-UC-nWZ" id="w4g-QG-1Q3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7M-ys-cG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475" y="1501"/>
+        </scene>
+        <!--Preference for Beer-->
+        <scene sceneID="oi3-Ci-rMP">
+            <objects>
+                <tableViewController id="hIg-m1-824" customClass="UserPriorityTableViewController" customModule="ProjectDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="048-YV-oCb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RmU-Bq-0B7">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i98-Fp-a8X">
                             <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Set up"/>
+                            <connections>
+                                <action selector="btnSubmit:" destination="hIg-m1-824" eventType="touchUpInside" id="2kx-ae-gUK"/>
+                            </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myPageCell" id="1Dw-jP-hFM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myPriorityCell" id="yy5-L7-JFo">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dw-jP-hFM" id="Uud-GG-Rtb">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yy5-L7-JFo" id="9C9-80-6It">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="U8X-aF-2cI" id="mQl-8o-OZX"/>
-                            <outlet property="delegate" destination="U8X-aF-2cI" id="XhK-yf-Vdx"/>
+                            <outlet property="dataSource" destination="hIg-m1-824" id="ICR-EJ-XXk"/>
+                            <outlet property="delegate" destination="hIg-m1-824" id="oQx-kH-vwl"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="BKW-K7-b2C"/>
-                    <navigationItem key="navigationItem" title="Preference for Beer" id="UuX-uL-sPh">
-                        <barButtonItem key="rightBarButtonItem" title="Item" landscapeImage="beer_off.png" id="lbq-rx-FAt">
-                            <connections>
-                                <segue destination="lir-jM-tw5" kind="show" id="3si-Y3-R1h"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Preference for Beer" id="Pto-Y4-riO"/>
                     <connections>
-                        <outlet property="listTableView" destination="c5r-R7-rY9" id="UrQ-ZB-IkB"/>
+                        <outlet property="listTableView" destination="048-YV-oCb" id="ZEC-ag-m0C"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xbs-6g-mgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AON-TH-0w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="733"/>
+            <point key="canvasLocation" x="351" y="733"/>
         </scene>
-        <!--내 정보-->
-        <scene sceneID="Gr5-J2-CfK">
+        <!--마이페이지-->
+        <scene sceneID="hkF-JC-DDj">
             <objects>
-                <viewController id="lir-jM-tw5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mbG-7E-1dE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-Nm-e1y">
-                                <rect key="frame" x="20" y="106" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3F-L4-0hL">
-                                <rect key="frame" x="20" y="135" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="lqW-vg-76v"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="내 정보" id="XtX-dK-zBc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sW2-hH-67J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dwM-7a-P0N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="FXu-nO-Tat"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z76-3l-82w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O92-k9-iLN" kind="relationship" relationship="rootViewController" id="0iw-Yb-Qix"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0H-lt-S9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="733"/>
+            <point key="canvasLocation" x="-1386" y="733"/>
         </scene>
     </scenes>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
-        <image name="beer_off.png" width="88.800003051757812" height="117.12000274658203"/>
         <image name="beer_on.PNG" width="88.800003051757812" height="117.12000274658203"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="mac_gold.png" width="369.60000610351562" height="108"/>
-        <image name="person" catalog="system" width="128" height="117"/>
-        <image name="r.circle" catalog="system" width="128" height="121"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="r.circle" catalog="system" width="64" height="60"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="suit.heart" catalog="system" width="64" height="54"/>
     </resources>
 </document>

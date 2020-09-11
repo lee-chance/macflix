@@ -17,7 +17,7 @@ protocol PreferenceQueryModelProtocol: class {
 // 모든 클래스 중 가장 상위 클래스
 class PreferenceQueryModel: NSObject{
     var delegate: PreferenceQueryModelProtocol!
-    let urlPath = URL_PATH + "IOS/preference_query_ios.jsp"
+    let urlPath = "http://localhost:8080/IOS/preference_query_ios.jsp?seq=\(LOGGED_IN_SEQ)"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
@@ -34,9 +34,6 @@ class PreferenceQueryModel: NSObject{
     }
     
     func parseJSON(_ data: Data){
-        // NSMutableArray()을 사용해야 할 때를 제외하고는 대부분 NSArray()를 사용한다
-        // NSArray() : 데이터 추가 불가능
-        // NSMutableArray() : 데이터 추가 가능
         var jsonResult = NSArray()
         
         do {

@@ -8,27 +8,56 @@
 
 import UIKit
 
-var items: [String] = []
-class MypageTableViewController: UITableViewController, UserPriorityQueryModelProtocol {
+class UserPriorityTableViewController: UITableViewController, PriorityModelProtocol {
 
     @IBOutlet var listTableView: UITableView!
-    var priorityArray: NSArray = NSArray()
+    
+    var priority: [String] = []
+    var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
+        
+    }
+    
+    @IBAction func btnSubmit(_ sender: UIButton) {
+        items.removeAll()
+        for i in 0..<priority.count {
+            items.append(((listTableView.visibleCells[i].textLabel?.text)! as String))
+        }
+        
+        let preferenceModel = PreferenceModel()
+        let items2 = items.joined(separator: ", ")
+        preferenceModel.updateUserPriorityItems(user_priority: items2){isValid in
+            DispatchQueue.main.async { () -> Void in
+                if isValid {
+                    self.alert()}
+            }
+        }
+    }
+    
+    func alert() {
+        let alert = UIAlertController(title: nil, message: "Set up!", preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {ACTION in
+            self.navigationController?.popViewController(animated: true)
+        })
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let queryModel = UserPriorityQueryModel()
         queryModel.delegate = self
-        queryModel.downloadItems()
+        queryModel.getPriorityList()
     }
     
-    func itemDownloaded(items: NSArray) {
-        priorityArray = items
+    func itemDownloaded(items: [String]) {
+        priority = items
         self.listTableView.reloadData()
     }
         
@@ -41,24 +70,19 @@ class MypageTableViewController: UITableViewController, UserPriorityQueryModelPr
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             // #warning Incomplete implementation, return the number of rows
-        return items.count
+        
+        return priority.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myPageCell", for: indexPath)
-
-        let item: DBModelPriority = priorityArray[indexPath.row] as! DBModelPriority
-        items = (item.user_priority?.components(separatedBy: ","))!
-        print(item.user_priority!)
-        print(items)
-        
-        cell.textLabel?.text = items[(indexPath as NSIndexPath).row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myPriorityCell", for: indexPath)
+        cell.textLabel?.text = priority[(indexPath as NSIndexPath).row].replacingOccurrences(of: " ", with: "")
 
         return cell
     }
-        
-
+    
+    
         /*
         // Override to support conditional editing of the table view.
         override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -79,7 +103,6 @@ class MypageTableViewController: UITableViewController, UserPriorityQueryModelPr
         }
         */
 
-    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 

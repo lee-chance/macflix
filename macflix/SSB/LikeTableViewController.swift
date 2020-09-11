@@ -13,8 +13,8 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
     @IBOutlet var listTableView: UITableView!
         var beerArray: NSArray = NSArray()
         
-        let heart : UIImage = UIImage(named:"beer_on.PNG")!
-        let no_heart : UIImage = UIImage(named:"beer_off.png")!
+        let heart : UIImage = UIImage(named:"heart.fill.png")!
+        let no_heart : UIImage = UIImage(named:"heart.png")!
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -49,7 +49,7 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             let preferenceModel = PreferenceModel()
             
             if item.heart == 1 {
-                preferenceModel.deleteItems(User_seq: 1, beer_id: item.beer_id) {isValid in
+                preferenceModel.deleteItems(beer_id: item.beer_id) {isValid in
                     DispatchQueue.main.async { () -> Void in
                         if isValid {
                             self.viewWillAppear(true)

@@ -49,7 +49,7 @@ class SBTableViewController: UITableViewController, SBQueryModelProtocol {
         let preferenceModel = PreferenceModel()
         
         if item.heart == 0 {
-            preferenceModel.insertItems(User_seq: 1, beer_id: item.beer_id) {isValid in
+            preferenceModel.insertItems(beer_id: item.beer_id) {isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.viewWillAppear(true)
@@ -57,7 +57,7 @@ class SBTableViewController: UITableViewController, SBQueryModelProtocol {
                 }
             }
         } else {
-            preferenceModel.deleteItems(User_seq: 1, beer_id: item.beer_id) {isValid in
+            preferenceModel.deleteItems(beer_id: item.beer_id) {isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.viewWillAppear(true)
