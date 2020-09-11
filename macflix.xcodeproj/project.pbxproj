@@ -38,6 +38,7 @@
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
 		F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */; };
 		F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */; };
+		F4F9FADE250B14F8009F3D55 /* ReviewInsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */; };
 		FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */; };
 		FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */; };
 		FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */; };
@@ -78,6 +79,7 @@
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
 		F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimTableViewCell.swift; sourceTree = "<group>"; };
 		F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDetailViewController.swift; sourceTree = "<group>"; };
+		F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInsertModel.swift; sourceTree = "<group>"; };
 		FAE5BA9C250A0FDC00B62852 /* BeforeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeTableViewController.swift; sourceTree = "<group>"; };
 		FAE5BA9D250A0FDC00B62852 /* ShinDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShinDBModel.swift; sourceTree = "<group>"; };
 		FAE5BA9E250A0FDC00B62852 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */,
 				F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */,
 				F4D0F2C8250A0D1400D2F51E /* KimDetailViewController.swift */,
+				F4F9FADD250B14F8009F3D55 /* ReviewInsertModel.swift */,
 				F4D0F2C6250A0D0C00D2F51E /* KimTableViewCell.swift */,
 				F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */,
 			);
@@ -278,6 +281,7 @@
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
+				F4F9FADE250B14F8009F3D55 /* ReviewInsertModel.swift in Sources */,
 				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
 				FAE5BAA2250A0FDC00B62852 /* ShinDBModel.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,

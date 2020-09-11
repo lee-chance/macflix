@@ -519,7 +519,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9L4-tF-1An"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mc1-Rx-OTo"/>
+                    <navigationItem key="navigationItem" id="Mc1-Rx-OTo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="5YV-nv-5EN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="abv" destination="knh-sk-fq1" id="5hB-bl-2m7"/>
                         <outlet property="feelNum" destination="w7B-X5-cKk" id="DIy-yE-lPH"/>
