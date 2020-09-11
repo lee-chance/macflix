@@ -71,7 +71,7 @@ class KimQueryModel: NSObject{
     }
     
     func downloadItems(){
-        let urlPath = URL_PATH + "KSSJSP/beer_query_ios.jsp"
+        let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp"
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         

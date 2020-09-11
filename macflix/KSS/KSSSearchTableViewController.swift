@@ -21,9 +21,8 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             self.listTableView.delegate = self
             self.listTableView.dataSource = self
             
-//            let queryModel = KimQueryModel()
-//            queryModel.delegate = self
-//            queryModel.downloadItems()
+            // 백버튼 지우기
+            //self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
     
             listTableView.rowHeight = 164
     }
@@ -41,7 +40,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             
             // 창수 추가
             let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
-                if returnList.count < 2 {
+                if returnList.count < 4 {
                     queryModel.downloadItems()
                 } else {
                     queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
