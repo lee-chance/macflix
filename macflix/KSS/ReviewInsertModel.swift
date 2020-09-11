@@ -9,7 +9,7 @@
 import Foundation
 class ReviewInsertModel: NSObject {
     
-    var urlPath = CS_TOMCAT_ADDRESS + "insertReview.jsp"
+    var urlPath = URL_PATH + "KSSJSP/insertReview.jsp"
     
     func actionReview(seq: String, beerid : String, profilename: String, aroma: String, appearance : String, palate : String, taste : String ,overall : String , completion: @escaping (Bool)->()) {
         

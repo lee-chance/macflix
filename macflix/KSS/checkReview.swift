@@ -14,7 +14,7 @@ protocol CheckReviewModelProtocol: class {
 class CheckReviewModel: NSObject {
     
     var delegate: CheckReviewModelProtocol!
-    var urlPath = CS_TOMCAT_ADDRESS + "checkReview.jsp"
+    var urlPath = URL_PATH + "KSSJSP/checkReview.jsp"
     
     func actioncheckReview(seq: String, beerid: String, completion: @escaping (Int)->()) {
         let urlAdd = "?user_seq=\(seq)&beerid=\(beerid)"
