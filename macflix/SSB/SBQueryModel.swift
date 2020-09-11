@@ -17,7 +17,7 @@ protocol SBQueryModelProtocol: class {
 // 모든 클래스 중 가장 상위 클래스
 class SBQueryModel: NSObject{
     var delegate: SBQueryModelProtocol!
-    let urlPath = "http://localhost:8080/IOS/beer_query_ios.jsp"
+    let urlPath = URL_PATH + "IOS/beer_query_ios.jsp"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!

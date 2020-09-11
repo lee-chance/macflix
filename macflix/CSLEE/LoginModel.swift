@@ -15,7 +15,7 @@ protocol LoginModelProtocol: class {
 class LoginModel: NSObject {
     
     var delegate: LoginModelProtocol!
-    var urlPath = CS_TOMCAT_ADDRESS + "checkLogin.jsp"
+    var urlPath = URL_PATH + "CSJSP/checkLogin.jsp"
     
     func actionLogin(email: String, password: String, completion: @escaping (Int)->()) {
         let urlAdd = "?email=\(email)&password=\(password)"
@@ -51,6 +51,8 @@ class LoginModel: NSObject {
 //        }
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
+        
+        print(jsonResult)
         
         return Int(jsonResult) ?? 0
         

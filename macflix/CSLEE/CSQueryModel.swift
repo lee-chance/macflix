@@ -15,7 +15,7 @@ protocol CSQueryModelProtocol: class {
 class CSQueryModel: NSObject {
     
     var delegate: CSQueryModelProtocol!
-    let urlPath = CS_TOMCAT_ADDRESS + "selectSampleBeer.jsp"
+    let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!

@@ -17,7 +17,7 @@ protocol UserPriorityQueryModelProtocol: class {
 // 모든 클래스 중 가장 상위 클래스
 class UserPriorityQueryModel: NSObject{
     var delegate: UserPriorityQueryModelProtocol!
-    let urlPath = "http://localhost:8080/IOS/priority_query_ios.jsp"
+    let urlPath = URL_PATH + "IOS/priority_query_ios.jsp"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!

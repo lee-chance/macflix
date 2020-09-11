@@ -10,7 +10,7 @@ import Foundation
 
 class SignupModel: NSObject {
     
-    var urlPath = CS_TOMCAT_ADDRESS + "insertAccount.jsp"
+    var urlPath = URL_PATH + "CSJSP/insertAccount.jsp"
     
     func actionSignup(email: String, password: String, nickname: String, priority: [String], completion: @escaping (Bool)->()) {
         

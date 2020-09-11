@@ -11,8 +11,8 @@ import Foundation
 class PriorityQueryModel: NSObject {
     
     var delegate: CSQueryModelProtocol!
-    var urlPath = CS_TOMCAT_ADDRESS + "selectPriorityBeer.jsp?"
-    var urlPath2 = CS_TOMCAT_ADDRESS + "getPriorityList.jsp?"
+    var urlPath = URL_PATH + "CSJSP/selectPriorityBeer.jsp?"
+    var urlPath2 = URL_PATH + "CSJSP/getPriorityList.jsp?"
     
     func getPriorityList(seq: Int, completion: @escaping ([String])->()) -> [String] {
         var result: [String] = []

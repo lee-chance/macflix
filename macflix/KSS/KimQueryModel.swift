@@ -13,7 +13,7 @@ protocol KimQueryModelProtocol: class{
 class KimQueryModel: NSObject{
     
     var delegate: KimQueryModelProtocol!
-    let urlPath = CS_TOMCAT_ADDRESS + "beer_query.jsp"
+    let urlPath = URL_PATH + "KSSJSP/beer_query.jsp"
     
     func downloadItems(){
         let url: URL = URL(string: urlPath)!

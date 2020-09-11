@@ -13,8 +13,8 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
     @IBOutlet var listTableView: UITableView!
         var beerArray: NSArray = NSArray()
         
-        let heart : UIImage = UIImage(named:"heart.fill.png")!
-        let no_heart : UIImage = UIImage(named:"heart.png")!
+        let heart : UIImage = UIImage(named:"beer_on.PNG")!
+        let no_heart : UIImage = UIImage(named:"beer_off.png")!
 
         override func viewDidLoad() {
             super.viewDidLoad()

@@ -23,6 +23,8 @@
 		2E57EEA3250B2686000540BD /* macflix_splash.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA2250B2686000540BD /* macflix_splash.PNG */; };
 		2E57EEA5250B2909000540BD /* mac_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA4250B2909000540BD /* mac_gold.png */; };
 		2E57EEA7250B2A79000540BD /* 그림4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA6250B2A79000540BD /* 그림4.png */; };
+		2E57EEAA250B4CBC000540BD /* beer_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA8250B4CBC000540BD /* beer_off.png */; };
+		2E57EEAB250B4CBC000540BD /* beer_on.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA9250B4CBC000540BD /* beer_on.PNG */; };
 		2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495C25089D4900F59E14 /* AppDelegate.swift */; };
 		2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495E25089D4900F59E14 /* SceneDelegate.swift */; };
 		2E80496425089D4900F59E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496225089D4900F59E14 /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		2E57EEA2250B2686000540BD /* macflix_splash.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macflix_splash.PNG; sourceTree = "<group>"; };
 		2E57EEA4250B2909000540BD /* mac_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac_gold.png; sourceTree = "<group>"; };
 		2E57EEA6250B2A79000540BD /* 그림4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "그림4.png"; sourceTree = "<group>"; };
+		2E57EEA8250B4CBC000540BD /* beer_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer_off.png; sourceTree = "<group>"; };
+		2E57EEA9250B4CBC000540BD /* beer_on.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer_on.PNG; sourceTree = "<group>"; };
 		2E80495925089D4900F59E14 /* macflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E80495C25089D4900F59E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E80495E25089D4900F59E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				F4D0F2BB250A0B3300D2F51E /* KSS */,
 				2E80498525089E3800F59E14 /* CSLEE */,
 				2E80495C25089D4900F59E14 /* AppDelegate.swift */,
+				2E80497325089E3000F59E14 /* Static.swift */,
 				2E80495E25089D4900F59E14 /* SceneDelegate.swift */,
 				2E80496225089D4900F59E14 /* Main.storyboard */,
 				2E80496825089D4B00F59E14 /* Assets.xcassets */,
@@ -164,6 +169,8 @@
 				2E57EEA2250B2686000540BD /* macflix_splash.PNG */,
 				2E57EEA4250B2909000540BD /* mac_gold.png */,
 				2E57EEA6250B2A79000540BD /* 그림4.png */,
+				2E57EEA8250B4CBC000540BD /* beer_off.png */,
+				2E57EEA9250B4CBC000540BD /* beer_on.PNG */,
 			);
 			path = macflix;
 			sourceTree = "<group>";
@@ -181,7 +188,6 @@
 				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
 				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
 				2E80497625089E3000F59E14 /* SignupViewController.swift */,
-				2E80497325089E3000F59E14 /* Static.swift */,
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
@@ -275,6 +281,8 @@
 				2E57EEA1250B2673000540BD /* macflix_name.PNG in Resources */,
 				2E57EEA7250B2A79000540BD /* 그림4.png in Resources */,
 				2E57EEA5250B2909000540BD /* mac_gold.png in Resources */,
+				2E57EEAA250B4CBC000540BD /* beer_off.png in Resources */,
+				2E57EEAB250B4CBC000540BD /* beer_on.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
