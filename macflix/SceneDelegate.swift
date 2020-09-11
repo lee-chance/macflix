@@ -7,17 +7,34 @@
 //
 
 import UIKit
+import RevealingSplashView
+
+let heartAttackNotificationName = Notification.Name("heartAttack")
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+
+    let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "macflix_splash.PNG")!, iconInitialSize: CGSize(width: 414, height: 389), backgroundColor: UIColor(red: 1, green: 222/255, blue: 31/255, alpha: 1))
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        window?.makeKeyAndVisible()
+        
+        revealingSplashView.animationType = .twitter
+        window?.addSubview(revealingSplashView)
+        revealingSplashView.startAnimation()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleHeartAttack), name: heartAttackNotificationName, object: nil)
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    @objc func handleHeartAttack() {
+        revealingSplashView.heartAttack = true
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

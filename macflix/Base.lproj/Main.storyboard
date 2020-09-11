@@ -727,7 +727,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="BKW-K7-b2C"/>
                     <navigationItem key="navigationItem" title="Preference for Beer" id="UuX-uL-sPh">
-                        <barButtonItem key="rightBarButtonItem" title="Item" landscapeImage="cogwheel.png" id="lbq-rx-FAt">
+                        <barButtonItem key="rightBarButtonItem" title="Item" landscapeImage="beer_off.png" id="lbq-rx-FAt">
                             <connections>
                                 <segue destination="lir-jM-tw5" kind="show" id="3si-Y3-R1h"/>
                             </connections>
@@ -776,8 +776,8 @@
     </scenes>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
+        <image name="beer_off.png" width="88.800003051757812" height="117.12000274658203"/>
         <image name="beer_on.PNG" width="88.800003051757812" height="117.12000274658203"/>
-        <image name="cogwheel.png" width="16" height="16"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="mac_gold.png" width="369.60000610351562" height="108"/>

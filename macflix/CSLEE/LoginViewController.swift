@@ -27,6 +27,10 @@ class LoginViewController: UIViewController {
         if autoLoginSeq != 0 {
             loginWithStaticDatas(user_seq: autoLoginSeq)
         }
+        
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (timer) in
+            NotificationCenter.default.post(name: heartAttackNotificationName, object: nil)
+        }
     }
     
     func loginWithStaticDatas(user_seq: Int) {

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E046AFF250BAA2C00E5120F /* Pods_macflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */; };
+		2E046B00250BAA2C00E5120F /* Pods_macflix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E57EE94250B238F000540BD /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE88250B238F000540BD /* DBModelBeer.swift */; };
 		2E57EE95250B238F000540BD /* MypageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE89250B238F000540BD /* MypageTableViewController.swift */; };
 		2E57EE96250B238F000540BD /* PriorityStringToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57EE8A250B238F000540BD /* PriorityStringToArray.swift */; };
@@ -37,11 +39,6 @@
 		2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497825089E3000F59E14 /* PriorityTableViewController.swift */; };
 		2E80498225089E3000F59E14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497925089E3000F59E14 /* LoginModel.swift */; };
 		2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497A25089E3000F59E14 /* LoginViewController.swift */; };
-		2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */; };
-		2E80498925089E5D00F59E14 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498625089E5D00F59E14 /* Review.swift */; };
-		2E80498A25089E5D00F59E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498725089E5D00F59E14 /* User.swift */; };
-		2E80498B25089E5D00F59E14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498825089E5D00F59E14 /* Beer.swift */; };
-		2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80498E2508AC6200F59E14 /* CSQueryModel.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
@@ -53,7 +50,22 @@
 		FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5BAA0250A0FDC00B62852 /* ShinQueryModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E046B01250BAA2C00E5120F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E046B00250BAA2C00E5120F /* Pods_macflix.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F7966410B478E32E7189DD3 /* Pods-macflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macflix.debug.xcconfig"; path = "Target Support Files/Pods-macflix/Pods-macflix.debug.xcconfig"; sourceTree = "<group>"; };
 		2E57EE88250B238F000540BD /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelBeer.swift; sourceTree = "<group>"; };
 		2E57EE89250B238F000540BD /* MypageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageTableViewController.swift; sourceTree = "<group>"; };
 		2E57EE8A250B238F000540BD /* PriorityStringToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityStringToArray.swift; sourceTree = "<group>"; };
@@ -86,11 +98,8 @@
 		2E80497825089E3000F59E14 /* PriorityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityTableViewController.swift; sourceTree = "<group>"; };
 		2E80497925089E3000F59E14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2E80497A25089E3000F59E14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueryModel.swift; sourceTree = "<group>"; };
-		2E80498625089E5D00F59E14 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		2E80498725089E5D00F59E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		2E80498E2508AC6200F59E14 /* CSQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSQueryModel.swift; sourceTree = "<group>"; };
+		72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8618DA7BE4D0AC5A9043F72C /* Pods-macflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macflix.release.xcconfig"; path = "Target Support Files/Pods-macflix/Pods-macflix.release.xcconfig"; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E046AFF250BAA2C00E5120F /* Pods_macflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +159,8 @@
 			children = (
 				2E80495B25089D4900F59E14 /* macflix */,
 				2E80495A25089D4900F59E14 /* Products */,
+				96077A37D5F033A88444F5C1 /* Pods */,
+				3C5BA353D82BEE649375EDF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,12 +195,7 @@
 		2E80498525089E3800F59E14 /* CSLEE */ = {
 			isa = PBXGroup;
 			children = (
-				2E80498825089E5D00F59E14 /* Beer.swift */,
-				2E80498625089E5D00F59E14 /* Review.swift */,
-				2E80498725089E5D00F59E14 /* User.swift */,
-				2E80498E2508AC6200F59E14 /* CSQueryModel.swift */,
 				2E80497925089E3000F59E14 /* LoginModel.swift */,
-				2E80497B25089E3000F59E14 /* PriorityQueryModel.swift */,
 				2E80497725089E3000F59E14 /* SignupModel.swift */,
 				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
 				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
@@ -196,6 +203,23 @@
 				2E80497525089E3000F59E14 /* AlertService.swift */,
 			);
 			path = CSLEE;
+			sourceTree = "<group>";
+		};
+		3C5BA353D82BEE649375EDF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96077A37D5F033A88444F5C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F7966410B478E32E7189DD3 /* Pods-macflix.debug.xcconfig */,
+				8618DA7BE4D0AC5A9043F72C /* Pods-macflix.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		F4D0F2BB250A0B3300D2F51E /* KSS */ = {
@@ -228,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E80497025089D4B00F59E14 /* Build configuration list for PBXNativeTarget "macflix" */;
 			buildPhases = (
+				FEE21BBB577CF62CC03B8E2D /* [CP] Check Pods Manifest.lock */,
 				2E80495525089D4900F59E14 /* Sources */,
 				2E80495625089D4900F59E14 /* Frameworks */,
 				2E80495725089D4900F59E14 /* Resources */,
+				950095FB58B63E81CA479635 /* [CP] Embed Pods Frameworks */,
+				2E046B01250BAA2C00E5120F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +319,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		950095FB58B63E81CA479635 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-macflix/Pods-macflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-macflix/Pods-macflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-macflix/Pods-macflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE21BBB577CF62CC03B8E2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-macflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E80495525089D4900F59E14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,7 +369,6 @@
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
-				2E80498F2508AC6200F59E14 /* CSQueryModel.swift in Sources */,
 				FAE5BAA1250A0FDC00B62852 /* BeforeTableViewController.swift in Sources */,
 				2E80496725089D4900F59E14 /* macflix.xcdatamodeld in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
@@ -314,16 +382,13 @@
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				2E57EE9F250B238F000540BD /* PreferenceModel.swift in Sources */,
-				2E80498B25089E5D00F59E14 /* Beer.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				2E57EE95250B238F000540BD /* MypageTableViewController.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
-				2E80498A25089E5D00F59E14 /* User.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				2E57EE9A250B238F000540BD /* LikeTableViewCell.swift in Sources */,
-				2E80498925089E5D00F59E14 /* Review.swift in Sources */,
 				2E57EE94250B238F000540BD /* DBModelBeer.swift in Sources */,
 				2E57EE98250B238F000540BD /* LikeTableViewController.swift in Sources */,
 				2E57EE9D250B238F000540BD /* UserPriorityQueryModel.swift in Sources */,
@@ -332,7 +397,6 @@
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
 				FAE5BAA5250A0FDC00B62852 /* ShinQueryModel.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,
-				2E80498425089E3000F59E14 /* PriorityQueryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +538,7 @@
 		};
 		2E80497125089D4B00F59E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7966410B478E32E7189DD3 /* Pods-macflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +557,7 @@
 		};
 		2E80497225089D4B00F59E14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8618DA7BE4D0AC5A9043F72C /* Pods-macflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
