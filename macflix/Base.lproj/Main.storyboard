@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,13 +77,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.2030424736" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3J9-La-CQn">
-                                <rect key="frame" x="143" y="167" width="129" height="72"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dR-6in">
+                                <rect key="frame" x="50" y="143" width="315" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dIB-SJ-gH0"/>
@@ -549,6 +546,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ft5-4d-vkq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QCJ-DQ-XJh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -565,13 +563,13 @@
         <!--좋아요-->
         <scene sceneID="T3X-LA-sel">
             <objects>
-                <tableViewController id="Yk4-jk-prW" customClass="LikeTableViewController" customModule="ProjectDraw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Yk4-jk-prW" customClass="LikeTableViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xsj-lW-x6M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myLikeCell" rowHeight="175" id="aFU-wQ-c7E" customClass="LikeTableViewCell" customModule="ProjectDraw" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myLikeCell" rowHeight="175" id="aFU-wQ-c7E" customClass="LikeTableViewCell" customModule="macflix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aFU-wQ-c7E" id="Gdm-mo-Xjw">
@@ -704,7 +702,7 @@
         <!--Preference for Beer-->
         <scene sceneID="gwa-kg-MbF">
             <objects>
-                <tableViewController id="U8X-aF-2cI" customClass="MypageTableViewController" customModule="ProjectDraw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="U8X-aF-2cI" customClass="MypageTableViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c5r-R7-rY9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -781,11 +779,12 @@
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
         <image name="cogwheel.png" width="16" height="16"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="r.circle" catalog="system" width="64" height="60"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="suit.heart" catalog="system" width="64" height="54"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="mac_gold.png" width="369.60000610351562" height="108"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="r.circle" catalog="system" width="128" height="121"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
     </resources>
 </document>
