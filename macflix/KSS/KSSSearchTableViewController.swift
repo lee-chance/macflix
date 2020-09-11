@@ -21,9 +21,9 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             self.listTableView.delegate = self
             self.listTableView.dataSource = self
             
-            let queryModel = KimQueryModel()
-            queryModel.delegate = self
-            queryModel.downloadItems()
+//            let queryModel = KimQueryModel()
+//            queryModel.delegate = self
+//            queryModel.downloadItems()
     
             listTableView.rowHeight = 164
     }
@@ -36,7 +36,17 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         override func viewWillAppear(_ animated: Bool) {
           let queryModel = KimQueryModel()
           queryModel.delegate = self
-          queryModel.downloadItems()
+//          queryModel.downloadItems()
+            
+            
+            // 창수 추가
+            let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
+                if returnList.count < 2 {
+                    queryModel.downloadItems()
+                } else {
+                    queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+                }
+            }
 
         }
     // MARK: - Table view data source
