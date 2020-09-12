@@ -22,10 +22,10 @@
 		2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497825089E3000F59E14 /* PriorityTableViewController.swift */; };
 		2E80498225089E3000F59E14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497925089E3000F59E14 /* LoginModel.swift */; };
 		2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497A25089E3000F59E14 /* LoginViewController.swift */; };
-		542E29C7250CC30C00DF5E72 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C3250CC30A00DF5E72 /* UpdateUserInfoViewController.swift */; };
-		542E29C8250CC30C00DF5E72 /* UserProfilenameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C4250CC30A00DF5E72 /* UserProfilenameModel.swift */; };
 		542E29C9250CC30C00DF5E72 /* UpdateUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */; };
 		542E29CA250CC30C00DF5E72 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */; };
+		542E29D1250CF6D700DF5E72 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */; };
+		542E29D2250CF6D700DF5E72 /* UserProfilenameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */; };
 		54FDCCC0250BBF67002E717B /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB3250BBF66002E717B /* SBTableViewController.swift */; };
 		54FDCCC1250BBF67002E717B /* DBModelPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB4250BBF66002E717B /* DBModelPriority.swift */; };
 		54FDCCC2250BBF67002E717B /* UserPriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */; };
@@ -85,10 +85,10 @@
 		2E80497925089E3000F59E14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2E80497A25089E3000F59E14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		542E29C3250CC30A00DF5E72 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateUserInfoViewController.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
-		542E29C4250CC30A00DF5E72 /* UserProfilenameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfilenameModel.swift; path = ../../../../Documents/Swift/Project/ProjectDraw/ProjectDraw/SSB/UserProfilenameModel.swift; sourceTree = "<group>"; };
 		542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoModel.swift; sourceTree = "<group>"; };
 		542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
+		542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilenameModel.swift; sourceTree = "<group>"; };
 		54FDCCB3250BBF66002E717B /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
 		54FDCCB4250BBF66002E717B /* DBModelPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelPriority.swift; sourceTree = "<group>"; };
 		54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityQueryModel.swift; sourceTree = "<group>"; };
@@ -141,6 +141,8 @@
 		2E57EE57250B2263000540BD /* SSB */ = {
 			isa = PBXGroup;
 			children = (
+				542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */,
+				542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */,
 				54FDCCB9250BBF67002E717B /* DBModelBeer.swift */,
 				54FDCCB4250BBF66002E717B /* DBModelPriority.swift */,
 				54FDCCB7250BBF67002E717B /* PreferenceModel.swift */,
@@ -153,9 +155,7 @@
 				54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */,
 				542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */,
 				542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */,
-				542E29C4250CC30A00DF5E72 /* UserProfilenameModel.swift */,
 				54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */,
-				542E29C3250CC30A00DF5E72 /* UpdateUserInfoViewController.swift */,
 			);
 			path = SSB;
 			sourceTree = "<group>";
@@ -400,12 +400,12 @@
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,
 				F4F9FAE5250B4648009F3D55 /* checkReview.swift in Sources */,
 				2E80497F25089E3000F59E14 /* SignupViewController.swift in Sources */,
-				542E29C8250CC30C00DF5E72 /* UserProfilenameModel.swift in Sources */,
+				542E29D2250CF6D700DF5E72 /* UserProfilenameModel.swift in Sources */,
 				2E80498225089E3000F59E14 /* LoginModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				54FDCCC5250BBF67002E717B /* SBQueryModel.swift in Sources */,
-				542E29C7250CC30C00DF5E72 /* UpdateUserInfoViewController.swift in Sources */,
 				54FDCCC0250BBF67002E717B /* SBTableViewController.swift in Sources */,
+				542E29D1250CF6D700DF5E72 /* UpdateUserInfoViewController.swift in Sources */,
 				542E29C9250CC30C00DF5E72 /* UpdateUserInfoModel.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
 				54FDCCC7250BBF67002E717B /* LikeTableViewController.swift in Sources */,
