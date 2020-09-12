@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -321,10 +321,19 @@
                                             <rect key="frame" x="20" y="11" width="90" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-EK-5J5">
+                                            <rect key="frame" x="364" y="11" width="30" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="beer_off.png"/>
+                                            <connections>
+                                                <action selector="btnLikeAction:" destination="eih-VF-gJf" eventType="touchUpInside" id="l16-3D-We1"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="abv" destination="OZa-ca-4Hn" id="8nz-Cl-vZg"/>
+                                    <outlet property="btnLike" destination="KDn-EK-5J5" id="lgY-Sn-pH6"/>
                                     <outlet property="imgView" destination="Kyu-cJ-nSM" id="pgg-Vr-clB"/>
                                     <outlet property="name" destination="7lV-5f-xDs" id="vfO-fO-MaR"/>
                                     <outlet property="overall" destination="eZu-AJ-XFb" id="M9B-Uh-Ue3"/>
@@ -628,7 +637,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQi-aj-FGx">
-                                            <rect key="frame" x="365" y="15" width="29" height="35"/>
+                                            <rect key="frame" x="364" y="11" width="30" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="beer_on"/>
@@ -864,6 +873,7 @@
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
         <image name="beer_off" width="185" height="244"/>
+        <image name="beer_off.png" width="128" height="128"/>
         <image name="beer_on" width="185" height="244"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
