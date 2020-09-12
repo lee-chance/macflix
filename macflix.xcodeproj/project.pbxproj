@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E046AFF250BAA2C00E5120F /* Pods_macflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */; };
 		2E046B00250BAA2C00E5120F /* Pods_macflix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2E57EEA3250B2686000540BD /* macflix_splash.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA2250B2686000540BD /* macflix_splash.PNG */; };
-		2E57EEA5250B2909000540BD /* mac_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA4250B2909000540BD /* mac_gold.png */; };
-		2E57EEA7250B2A79000540BD /* 그림4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA6250B2A79000540BD /* 그림4.png */; };
-		2E57EEAA250B4CBC000540BD /* beer_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA8250B4CBC000540BD /* beer_off.png */; };
-		2E57EEAB250B4CBC000540BD /* beer_on.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2E57EEA9250B4CBC000540BD /* beer_on.PNG */; };
 		2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495C25089D4900F59E14 /* AppDelegate.swift */; };
 		2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80495E25089D4900F59E14 /* SceneDelegate.swift */; };
 		2E80496425089D4900F59E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E80496225089D4900F59E14 /* Main.storyboard */; };
@@ -71,11 +66,6 @@
 
 /* Begin PBXFileReference section */
 		1F7966410B478E32E7189DD3 /* Pods-macflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macflix.debug.xcconfig"; path = "Target Support Files/Pods-macflix/Pods-macflix.debug.xcconfig"; sourceTree = "<group>"; };
-		2E57EEA2250B2686000540BD /* macflix_splash.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macflix_splash.PNG; sourceTree = "<group>"; };
-		2E57EEA4250B2909000540BD /* mac_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac_gold.png; sourceTree = "<group>"; };
-		2E57EEA6250B2A79000540BD /* 그림4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "그림4.png"; path = "../그림4.png"; sourceTree = "<group>"; };
-		2E57EEA8250B4CBC000540BD /* beer_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer_off.png; sourceTree = "<group>"; };
-		2E57EEA9250B4CBC000540BD /* beer_on.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer_on.PNG; sourceTree = "<group>"; };
 		2E80495925089D4900F59E14 /* macflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E80495C25089D4900F59E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E80495E25089D4900F59E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,18 +151,6 @@
 			path = SSB;
 			sourceTree = "<group>";
 		};
-		2E57EEAD250B6347000540BD /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				2E57EEA2250B2686000540BD /* macflix_splash.PNG */,
-				2E57EEA4250B2909000540BD /* mac_gold.png */,
-				2E57EEA6250B2A79000540BD /* 그림4.png */,
-				2E57EEA8250B4CBC000540BD /* beer_off.png */,
-				2E57EEA9250B4CBC000540BD /* beer_on.PNG */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		2E80495025089D4900F59E14 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +173,6 @@
 		2E80495B25089D4900F59E14 /* macflix */ = {
 			isa = PBXGroup;
 			children = (
-				2E57EEAD250B6347000540BD /* Images */,
 				F4F9FADF250B415C009F3D55 /* img */,
 				2E57EE57250B2263000540BD /* SSB */,
 				FAE5BA9B250A077200B62852 /* KHSHIN */,
@@ -341,14 +318,9 @@
 			files = (
 				2E80496C25089D4B00F59E14 /* LaunchScreen.storyboard in Resources */,
 				F4F9FAE3250B416C009F3D55 /* heart.png in Resources */,
-				2E57EEA3250B2686000540BD /* macflix_splash.PNG in Resources */,
 				F4F9FAE2250B416C009F3D55 /* heart.fill.png in Resources */,
 				2E80496925089D4B00F59E14 /* Assets.xcassets in Resources */,
 				2E80496425089D4900F59E14 /* Main.storyboard in Resources */,
-				2E57EEA7250B2A79000540BD /* 그림4.png in Resources */,
-				2E57EEA5250B2909000540BD /* mac_gold.png in Resources */,
-				2E57EEAA250B4CBC000540BD /* beer_off.png in Resources */,
-				2E57EEAB250B4CBC000540BD /* beer_on.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

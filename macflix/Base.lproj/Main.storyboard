@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +77,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.2030424736" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dR-6in">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macflix_title" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dR-6in">
                                 <rect key="frame" x="50" y="143" width="315" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="518.84057971014499" y="-752.00892857142856"/>
         </scene>
-        <!--Sign in-->
+        <!--Sign up-->
         <scene sceneID="Lmi-zI-6af">
             <objects>
                 <viewController id="sp8-4L-0Bm" customClass="SignupViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.2030424736" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="8O7-fs-ICz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macflix_title" translatesAutoresizingMaskIntoConstraints="NO" id="8O7-fs-ICz">
                                 <rect key="frame" x="50" y="143" width="315" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -171,7 +171,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Yvb-Vc-Vah"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign in" id="YXF-SG-CuU"/>
+                    <navigationItem key="navigationItem" title="Sign up" id="YXF-SG-CuU"/>
                     <connections>
                         <outlet property="lblEmail" destination="UhZ-In-gJU" id="gCi-Nr-1dq"/>
                         <outlet property="lblNickname" destination="M3X-5P-sKj" id="Azf-2A-en6"/>
@@ -265,7 +265,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="35V-of-hUP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer_off" translatesAutoresizingMaskIntoConstraints="NO" id="35V-of-hUP">
                                             <rect key="frame" x="357" y="13" width="37" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.83949637440000002" green="0.23836869939999999" blue="0.31982252480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -553,7 +553,7 @@
                     <connections>
                         <segue destination="eih-VF-gJf" kind="relationship" relationship="viewControllers" id="2SM-vn-Cuc"/>
                         <segue destination="Yk4-jk-prW" kind="relationship" relationship="viewControllers" id="O0g-an-0iv"/>
-                        <segue destination="dwM-7a-P0N" kind="relationship" relationship="viewControllers" id="4ZM-B0-mAq"/>
+                        <segue destination="O92-k9-iLN" kind="relationship" relationship="viewControllers" id="hFC-RB-Fph"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qL-8t-ypP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -631,7 +631,7 @@
                                             <rect key="frame" x="365" y="15" width="29" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="beer_on.PNG"/>
+                                            <state key="normal" image="beer_on"/>
                                             <connections>
                                                 <action selector="btnLikeAction:" destination="Yk4-jk-prW" eventType="touchUpInside" id="SO6-cA-whP"/>
                                             </connections>
@@ -737,6 +737,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mJF-41-drE"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="xxD-zu-ML2"/>
                     <navigationItem key="navigationItem" title="내정보" id="16b-7r-jS0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDE-6C-k3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -859,33 +860,14 @@
             </objects>
             <point key="canvasLocation" x="351" y="733"/>
         </scene>
-        <!--마이페이지-->
-        <scene sceneID="hkF-JC-DDj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dwM-7a-P0N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="FXu-nO-Tat"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z76-3l-82w">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="O92-k9-iLN" kind="relationship" relationship="rootViewController" id="0iw-Yb-Qix"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q0H-lt-S9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1386" y="733"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
-        <image name="beer_off.png" width="88.800003051757812" height="117.12000274658203"/>
-        <image name="beer_on.PNG" width="88.800003051757812" height="117.12000274658203"/>
+        <image name="beer_off" width="185" height="244"/>
+        <image name="beer_on" width="185" height="244"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
-        <image name="mac_gold.png" width="369.60000610351562" height="108"/>
+        <image name="macflix_title" width="770" height="225"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="r.circle" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

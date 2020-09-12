@@ -52,7 +52,11 @@ class PriorityTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "preferenceCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = items[(indexPath as NSIndexPath).row]
+        if priority.isEmpty {
+            cell.textLabel?.text = items[(indexPath as NSIndexPath).row]
+        } else {
+            cell.textLabel?.text = priority[(indexPath as NSIndexPath).row]
+        }
 
         return cell
     }
