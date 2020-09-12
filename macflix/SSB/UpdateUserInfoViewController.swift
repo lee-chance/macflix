@@ -104,7 +104,8 @@ class UpdateUserInfoViewController: UIViewController {
                             DispatchQueue.main.async { () -> Void in
                                 if isValid {
                                     self.present(alertService.mAlert(alertTitle: "", alertMessage: "Password change complete.", actionTitle: "Ok", handler: {Void in
-                                        self.navigationController?.popViewController(animated: true)
+                                        UserDefaults.standard.removeObject(forKey: USER_DEFAULT_AUTO_LOGIN_SEQ)
+                                        self.navigationController?.popToRootViewController(animated: true)
                                     }), animated: true, completion: nil)
                                 } else {
                                     self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)}

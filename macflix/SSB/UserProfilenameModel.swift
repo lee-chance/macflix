@@ -15,8 +15,7 @@ protocol ProfilenameModelProtocol: class {
 class UserProfilenameModel: NSObject {
     
     var delegate: ProfilenameModelProtocol!
-    // ***** urlPath 수정해야됨
-    var urlPath = "http://localhost:8080/IOS/getUserProfilename.jsp?seq=\(LOGGED_IN_SEQ)"
+    var urlPath = URL_PATH + "IOS/getUserProfilename.jsp?seq=\(LOGGED_IN_SEQ)"
     
     func getProfilename() {
         

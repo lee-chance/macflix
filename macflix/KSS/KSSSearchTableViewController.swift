@@ -22,7 +22,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             self.listTableView.dataSource = self
             
             // 백버튼 지우기
-            //self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
+            self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
     
             listTableView.rowHeight = 164
     }

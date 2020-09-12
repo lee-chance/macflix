@@ -15,7 +15,7 @@ protocol CheckUserPassword: class {
 class UpdateUserInfoModel: NSObject {
     
     var delegate: CheckUserPassword!
-    var urlPath = "http://localhost:8080/IOS/checkPassword.jsp"
+    var urlPath = URL_PATH + "IOS/checkPassword.jsp"
     
     func checkPwd(user_password: String, completion: @escaping (Bool)->()) {
         let urlAdd = "?user_password=\(user_password)&seq=\(LOGGED_IN_SEQ)"
@@ -63,7 +63,7 @@ class UpdateUserInfoModel: NSObject {
     
     
     func updateUserPassword(user_password: String, completion: @escaping (Bool)->()) {
-        var urlPath = "http://localhost:8080/IOS/passwordUpdate_ios.jsp"
+        var urlPath = URL_PATH + "IOS/passwordUpdate_ios.jsp"
         let urlAdd = "?user_password=\(user_password)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
             // 한글 url encoding
@@ -83,7 +83,7 @@ class UpdateUserInfoModel: NSObject {
     }
     
     func updateUserProfilename(user_profilename: String, completion: @escaping (Bool)->()) {
-        var urlPath = "http://localhost:8080/IOS/profilenameUpdate_ios.jsp"
+        var urlPath = URL_PATH + "IOS/profilenameUpdate_ios.jsp"
         let urlAdd = "?user_profilename=\(user_profilename)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
             // 한글 url encoding
