@@ -99,6 +99,23 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             
             return cell
         }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sgLikeDetail"{
+            let cell = sender as! UITableViewCell
+            let indexPath = self.listTableView.indexPath(for : cell)
+            let detailView = segue.destination as! KimDetailViewController
+            let item: KimDBModel = beerArray[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            detailView.receiveId = item.beerId!
+            detailView.receiveName = item.beerName!
+            detailView.receiveStyle = item.beerStyle!
+            detailView.receiveAbv = "Abv : \(item.beerAbv!)"
+            detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+            detailView.receiveOverall = item.reviewOverall!
+    }
+
+    }
+    
 
     }
 
