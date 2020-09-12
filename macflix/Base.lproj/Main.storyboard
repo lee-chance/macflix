@@ -265,11 +265,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="35V-of-hUP">
-                                            <rect key="frame" x="357" y="13" width="37" height="37"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" red="0.83949637440000002" green="0.23836869939999999" blue="0.31982252480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A9m-68-T6G">
                                             <rect key="frame" x="128" y="123" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -321,10 +316,19 @@
                                             <rect key="frame" x="20" y="11" width="90" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-EK-5J5">
+                                            <rect key="frame" x="364" y="11" width="30" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="beer_off.png"/>
+                                            <connections>
+                                                <action selector="btnLikeAction:" destination="eih-VF-gJf" eventType="touchUpInside" id="l16-3D-We1"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="abv" destination="OZa-ca-4Hn" id="8nz-Cl-vZg"/>
+                                    <outlet property="btnLike" destination="KDn-EK-5J5" id="lgY-Sn-pH6"/>
                                     <outlet property="imgView" destination="Kyu-cJ-nSM" id="pgg-Vr-clB"/>
                                     <outlet property="name" destination="7lV-5f-xDs" id="vfO-fO-MaR"/>
                                     <outlet property="overall" destination="eZu-AJ-XFb" id="M9B-Uh-Ue3"/>
@@ -628,10 +632,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQi-aj-FGx">
-                                            <rect key="frame" x="365" y="15" width="29" height="35"/>
+                                            <rect key="frame" x="364" y="11" width="30" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="beer_on.PNG"/>
+                                            <state key="normal" image="beer_off.png"/>
                                             <connections>
                                                 <action selector="btnLikeAction:" destination="Yk4-jk-prW" eventType="touchUpInside" id="SO6-cA-whP"/>
                                             </connections>
@@ -673,6 +677,7 @@
         <!--Table View Controller-->
         <scene sceneID="mMu-Pn-3a1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cs3-oC-9VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ndq-Vw-jlH" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6QR-2f-buq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -695,7 +700,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="eiP-cP-uiD"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cs3-oC-9VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2012" y="733"/>
         </scene>
@@ -864,7 +868,6 @@
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
         <image name="beer_off.png" width="88.800003051757812" height="117.12000274658203"/>
-        <image name="beer_on.PNG" width="88.800003051757812" height="117.12000274658203"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="mac_gold.png" width="369.60000610351562" height="108"/>
