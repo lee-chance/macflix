@@ -68,17 +68,6 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
 //            }
 
         }
-        
-        
-        func heartAlert(_ msg: String) {
-            let alert = UIAlertController(title: nil, message: msg, preferredStyle: UIAlertController.Style.alert)
-            let cancelAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            
-            alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
-        }
-        
-        
 
         // MARK: - Table view data source
         

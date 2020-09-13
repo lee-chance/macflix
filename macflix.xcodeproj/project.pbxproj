@@ -26,15 +26,11 @@
 		542E29CA250CC30C00DF5E72 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */; };
 		542E29D1250CF6D700DF5E72 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */; };
 		542E29D2250CF6D700DF5E72 /* UserProfilenameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */; };
-		54FDCCC0250BBF67002E717B /* SBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB3250BBF66002E717B /* SBTableViewController.swift */; };
 		54FDCCC1250BBF67002E717B /* DBModelPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB4250BBF66002E717B /* DBModelPriority.swift */; };
 		54FDCCC2250BBF67002E717B /* UserPriorityQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */; };
 		54FDCCC3250BBF67002E717B /* PreferenceQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB6250BBF66002E717B /* PreferenceQueryModel.swift */; };
 		54FDCCC4250BBF67002E717B /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB7250BBF67002E717B /* PreferenceModel.swift */; };
-		54FDCCC5250BBF67002E717B /* SBQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB8250BBF67002E717B /* SBQueryModel.swift */; };
-		54FDCCC6250BBF67002E717B /* DBModelBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCB9250BBF67002E717B /* DBModelBeer.swift */; };
 		54FDCCC7250BBF67002E717B /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */; };
-		54FDCCC8250BBF67002E717B /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */; };
 		54FDCCCA250BBF67002E717B /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBD250BBF67002E717B /* LikeTableViewCell.swift */; };
 		54FDCCCB250BBF67002E717B /* UserPriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */; };
 		F4069A84250CB2490086DE56 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4069A83250CB2490086DE56 /* ReviewDataModel.swift */; };
@@ -91,15 +87,11 @@
 		542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
 		542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilenameModel.swift; sourceTree = "<group>"; };
-		54FDCCB3250BBF66002E717B /* SBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewController.swift; sourceTree = "<group>"; };
 		54FDCCB4250BBF66002E717B /* DBModelPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelPriority.swift; sourceTree = "<group>"; };
 		54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityQueryModel.swift; sourceTree = "<group>"; };
 		54FDCCB6250BBF66002E717B /* PreferenceQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceQueryModel.swift; sourceTree = "<group>"; };
 		54FDCCB7250BBF67002E717B /* PreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceModel.swift; sourceTree = "<group>"; };
-		54FDCCB8250BBF67002E717B /* SBQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBQueryModel.swift; sourceTree = "<group>"; };
-		54FDCCB9250BBF67002E717B /* DBModelBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelBeer.swift; sourceTree = "<group>"; };
 		54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
-		54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTableViewCell.swift; sourceTree = "<group>"; };
 		54FDCCBD250BBF67002E717B /* LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
 		54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityTableViewController.swift; sourceTree = "<group>"; };
 		72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,15 +140,11 @@
 				54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */,
 				542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */,
 				542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */,
-				54FDCCB9250BBF67002E717B /* DBModelBeer.swift */,
 				54FDCCB4250BBF66002E717B /* DBModelPriority.swift */,
 				54FDCCB7250BBF67002E717B /* PreferenceModel.swift */,
 				54FDCCB6250BBF66002E717B /* PreferenceQueryModel.swift */,
 				54FDCCB5250BBF66002E717B /* UserPriorityQueryModel.swift */,
-				54FDCCB8250BBF67002E717B /* SBQueryModel.swift */,
-				54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */,
 				54FDCCBD250BBF67002E717B /* LikeTableViewCell.swift */,
-				54FDCCB3250BBF66002E717B /* SBTableViewController.swift */,
 				542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */,
 				542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */,
 				54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */,
@@ -412,8 +400,6 @@
 				FAE5BAF1250DFBD700B62852 /* SkhDBModel.swift in Sources */,
 				2E80497E25089E3000F59E14 /* AlertService.swift in Sources */,
 				FAE5BAF3250DFBD700B62852 /* skhSearchTableViewCell.swift in Sources */,
-				54FDCCC5250BBF67002E717B /* SBQueryModel.swift in Sources */,
-				54FDCCC0250BBF67002E717B /* SBTableViewController.swift in Sources */,
 				542E29D1250CF6D700DF5E72 /* UpdateUserInfoViewController.swift in Sources */,
 				542E29C9250CC30C00DF5E72 /* UpdateUserInfoModel.swift in Sources */,
 				2E80498025089E3000F59E14 /* SignupModel.swift in Sources */,
@@ -422,8 +408,6 @@
 				54FDCCC2250BBF67002E717B /* UserPriorityQueryModel.swift in Sources */,
 				F4F9FADE250B14F8009F3D55 /* ReviewInsertModel.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
-				54FDCCC8250BBF67002E717B /* SBTableViewCell.swift in Sources */,
-				54FDCCC6250BBF67002E717B /* DBModelBeer.swift in Sources */,
 				FAE5BAF2250DFBD700B62852 /* skhSearcBeerViewController.swift in Sources */,
 				2E80497C25089E3000F59E14 /* Static.swift in Sources */,
 				2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */,

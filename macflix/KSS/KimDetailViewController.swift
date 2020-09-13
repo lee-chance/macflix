@@ -74,16 +74,16 @@ class KimDetailViewController: UIViewController{
             if btnState != 0 {
                 preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
-                        if isValid {
-                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에 추가했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        if !isValid {
+                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
                         }
                     }
                 }
             } else {
                 preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
-                        if isValid {
-                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에서 삭제했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        if !isValid {
+                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
                         }
                     }
                 }
