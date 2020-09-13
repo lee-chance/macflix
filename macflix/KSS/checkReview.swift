@@ -43,19 +43,11 @@ class CheckReviewModel: NSObject {
     
     func parseJSON(_ data: Data) -> Int {
         var jsonResult = String(data: data, encoding: .utf8)!
-//        do {
-//            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Bool
-//        } catch let error as NSError {
-//            print(error)
-//        }
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         
         return Int(jsonResult) ?? 0
         
-//        DispatchQueue.main.async(execute: {() -> Void in
-//            self.delegate.checkLogin()
-//        })
         
     }
     

@@ -73,10 +73,8 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         queryModel.delegate = self
         
         if LOGGED_IN_HEARTLIST.count > 0 {
-            print("1")
             queryModel.downloadItems()
         } else {
-            print("2")
             queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
                 if returnList.count < 4 {
                     queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
@@ -116,8 +114,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         cell.abv.text = item.beerAbv
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
-        
-        print(LOGGED_IN_HEARTLIST)
         
         if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
             cell.btnLike.setImage(heart, for: UIControl.State.normal)

@@ -33,11 +33,6 @@ class UserProfilenameModel: NSObject {
     
     func parseJSON(_ data: Data) {
         var jsonResult = String(data: data, encoding: .utf8)!
-//        do {
-//            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Bool
-//        } catch let error as NSError {
-//            print(error)
-//        }
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         

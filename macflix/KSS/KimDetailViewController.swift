@@ -150,7 +150,6 @@ class KimDetailViewController: UIViewController{
             DispatchQueue.main.async { () -> Void in
                 if resultSeq != 0 {
                     self.checkReview = resultSeq
-                    print(resultSeq)
                     let reviewdata = ReviewDataModel()
                     _ = reviewdata.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ resultlist in
                         DispatchQueue.main.async { () -> Void in
@@ -162,13 +161,11 @@ class KimDetailViewController: UIViewController{
                             self.sdLook.value = NSString(string: resultlist[2]).floatValue
                             self.tasteNum.text = resultlist[3]
                             self.sdTaste.value = NSString(string: resultlist[3]).floatValue
-                            print(resultlist[0])
                         }
                         
                     }
                 } else {
                     self.checkReview = resultSeq
-                    print(resultSeq)
                 }
             }
         }
@@ -176,25 +173,21 @@ class KimDetailViewController: UIViewController{
     @IBAction func feelSd(_ sender: UISlider) {
         if Int(sdFell.value*10) % 10 >= 0 && Int(sdFell.value*10) % 10 < 5{
             feelNum.text = String(format: "%.1f",sdFell.value)
-            print(feelNum.text!)
         }
     }
     @IBAction func lookSd(_ sender: UISlider) {
         if Int(sdLook.value*10) % 10 >= 0 && Int(sdLook.value*10) % 10 < 5{
             lookNum.text = String(format: "%.1f",sdLook.value)
-            print(lookNum.text!)
         }
     }
     @IBAction func smellSd(_ sender: UISlider) {
         if Int(sdSmell.value*10) % 10 >= 0 && Int(sdSmell.value*10) % 10 < 5{
             smellNum.text = String(format: "%.1f",sdSmell.value)
-            print(smellNum.text!)
         }
     }
     @IBAction func tasteSd(_ sender: UISlider) {
         if Int(sdTaste.value*10) % 10 >= 0 && Int(sdTaste.value*10) % 10 < 5{
             tasteNum.text = String(format: "%.1f",sdTaste.value)
-            print(tasteNum.text!)
         }
     }
     /*

@@ -139,7 +139,6 @@ class KimQueryModel: NSObject{
         var urlPath = URL_PATH + "IOS/beer_like_query_ios.jsp"
         let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-        print(urlPath)
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
