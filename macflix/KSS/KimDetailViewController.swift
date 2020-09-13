@@ -35,22 +35,28 @@ class KimDetailViewController: UIViewController{
     var receiveReview = ""
     var receiveId = ""
     var checkReview = 0
-    var feedItem : NSArray = NSArray()
+    var feedItem : [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewCheck()
         name.text = receiveName
         style.text = receiveStyle
         abv.text = receiveAbv
         overall.text = receiveOverall
         review.text = receiveReview
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.\
+        if checkReview != 0{
+
+        }
+
         }
 
 
     @IBAction func beerReview(_ sender: UIButton) {
         let alertService = AlertService()
         if checkReview != 0{
-            
             let feel =  Double(feelNum.text!)
             let smell = Double(smellNum.text!)
             let look = Double(lookNum.text!)
@@ -126,7 +132,12 @@ class KimDetailViewController: UIViewController{
             print(tasteNum.text!)
         }
     }
+    func reivewData() {
+        let reviewDataModel = ReviewDataModel()
+            reviewDataModel.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ returnList in
+             }
     
+    }
     /*
     // MARK: - Navigation
 
