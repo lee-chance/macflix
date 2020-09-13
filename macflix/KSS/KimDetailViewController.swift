@@ -11,12 +11,16 @@ import UIKit
 class KimDetailViewController: UIViewController{
     
     
+    var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
+    var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var style: UILabel!
     @IBOutlet weak var abv: UILabel!
     @IBOutlet weak var overall: UILabel!
     @IBOutlet weak var review: UILabel!
+    @IBOutlet weak var btnLike: UIButton!
     
     @IBOutlet weak var feelNum: UILabel!
     @IBOutlet weak var lookNum: UILabel!
@@ -35,8 +39,9 @@ class KimDetailViewController: UIViewController{
     var receiveReview = ""
     var receiveId = ""
     var checkReview = 0
-    var feedItem : [String] = []
     
+    var receiveHeart = 0
+    var feedItem : NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +51,38 @@ class KimDetailViewController: UIViewController{
         abv.text = receiveAbv
         overall.text = receiveOverall
         review.text = receiveReview
-        // Do any additional setup after loading the view.\
-        if checkReview != 0{
-            
+        
+        if receiveHeart == 0 {
+            btnLike.setImage(no_heart, for: UIControl.State.normal)
+        } else {
+            btnLike.setImage(heart, for: UIControl.State.normal)
         }
         
+        
+        // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnLikeAction(_ sender: UIButton) {
+        let preferenceModel = PreferenceModel()
+        
+        if receiveHeart == 0 {
+            preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        self.viewWillAppear(true)
+                        self.btnLike.setImage(self.heart, for: UIControl.State.normal)}
+                }
+            }
+        } else {
+            preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        self.viewWillAppear(true)
+                        self.btnLike.setImage(self.no_heart, for: UIControl.State.normal)}
+                }
+            }
+        }
+    }
     
     @IBAction func beerReview(_ sender: UIButton) {
         let alertService = AlertService()

@@ -114,17 +114,19 @@ class KimQueryModel: NSObject{
                 let reviewLook = jsonElement["appearance"] as? String,
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
-                let reviewOverall = jsonElement["overall"] as? String{
+                let reviewOverall = jsonElement["overall"] as? String,
+                let beerHeart = jsonElement["heart"] as? String{
 
-                    query.beerId = beerId
-                    query.beerName = beerName
-                    query.beerStyle = beerStyle
-                    query.beerAbv = beerAbv
-                    query.reviewFeel = reviewFeel
-                    query.reviewLook = reviewLook
-                    query.reviewSmell = reviewSmell
-                    query.reviewTaste = reviewTaste
-                    query.reviewOverall = reviewOverall
+                query.beerId = beerId
+                query.beerName = beerName
+                query.beerStyle = beerStyle
+                query.beerAbv = beerAbv
+                query.reviewFeel = reviewFeel
+                query.reviewLook = reviewLook
+                query.reviewSmell = reviewSmell
+                query.reviewTaste = reviewTaste
+                query.reviewOverall = reviewOverall
+                query.beerHeart = Int(beerHeart)!
             }
             
             // 배열에 넣어줌

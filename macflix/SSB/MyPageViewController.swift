@@ -8,30 +8,40 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController, ProfilenameModelProtocol {
-    
-    var profilename: String = ""
+class MyPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        let queryModel = UserProfilenameModel()
-        queryModel.delegate = self
-        queryModel.getProfilename()
-    }
+    @IBAction func btnLogout(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: "로그아웃 하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
-    func itemDownloaded(items: String) {
-        profilename = items
+        // Closure
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {ACTION in
+            UserDefaults.standard.removeObject(forKey: USER_DEFAULT_AUTO_LOGIN_SEQ)
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+        
     }
+    
+    @IBAction func btnWithdrawal(_ sender: UIButton) {
+        
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sgUpdateUserInfo"{
             let detailView = segue.destination as! UpdateUserInfoViewController
-            detailView.receiveProfilename = profilename
+            detailView.receiveProfilename = LOGGED_IN_PROFILNAME
         }
     }
     /*
