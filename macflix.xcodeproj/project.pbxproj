@@ -141,6 +141,7 @@
 		2E57EE57250B2263000540BD /* SSB */ = {
 			isa = PBXGroup;
 			children = (
+				54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */,
 				542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */,
 				542E29D0250CF6D700DF5E72 /* UserProfilenameModel.swift */,
 				54FDCCB9250BBF67002E717B /* DBModelBeer.swift */,
@@ -152,7 +153,6 @@
 				54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */,
 				54FDCCBD250BBF67002E717B /* LikeTableViewCell.swift */,
 				54FDCCB3250BBF66002E717B /* SBTableViewController.swift */,
-				54FDCCBA250BBF67002E717B /* LikeTableViewController.swift */,
 				542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */,
 				542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */,
 				54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */,

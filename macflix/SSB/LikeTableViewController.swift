@@ -13,8 +13,8 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
     @IBOutlet var listTableView: UITableView!
         var beerArray: NSArray = NSArray()
         
-        let heart : UIImage = UIImage(named:"heart.fill.png")!
-        let no_heart : UIImage = UIImage(named:"heart.png")!
+        let heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
+        let no_heart : UIImage = #imageLiteral(resourceName: "beer_off.png")
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -23,9 +23,6 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             self.listTableView.delegate = self
             self.listTableView.dataSource = self
             
-            let queryModel = PreferenceQueryModel()
-            queryModel.delegate = self
-            queryModel.downloadItems()
         }
         
         override func viewWillAppear(_ animated: Bool) {
@@ -45,11 +42,11 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             let cell = contentView?.superview as! LikeTableViewCell
             let indexPath = tableView.indexPath(for: cell)
             
-            let item: DBModelBeer = beerArray[indexPath![1]] as! DBModelBeer
+            let item: KimDBModel = beerArray[indexPath![1]] as! KimDBModel
             let preferenceModel = PreferenceModel()
             
-            if item.heart == 1 {
-                preferenceModel.deleteItems(beer_id: item.beer_id) {isValid in
+            if item.beerHeart == 1 {
+                preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
                         if isValid {
                             self.viewWillAppear(true)
@@ -86,36 +83,41 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "myLikeCell", for: indexPath) as! LikeTableViewCell
 
-            let item: DBModelBeer = beerArray[indexPath.row] as! DBModelBeer
-            cell.name.text = item.beer_name
-            cell.style.text = item.beer_style
-            cell.abv.text = "Abv \(item.beer_abv)"
-            cell.review.text = "Aroma \(item.aroma!) Appearance \(item.appearance!) \nTaste \(item.taste!) Overall \(item.overall!)"
-            cell.overall.text = item.overall
-            
-            if item.heart == 1 {
+            let item: KimDBModel = beerArray[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            cell.name.text = item.beerName
+            cell.style.text = item.beerStyle
+            cell.abv.text = item.beerAbv
+            cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+            cell.overall.text = item.reviewOverall
+                
+            if item.beerHeart == 0 {
+                cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
+            } else {
                 cell.btnLike.setImage(heart, for: UIControl.State.normal)
             }
-            
+                
             return cell
         }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sgLikeDetail"{
-            let cell = sender as! UITableViewCell
-            let indexPath = self.listTableView.indexPath(for : cell)
-            let detailView = segue.destination as! KimDetailViewController
-            let item: KimDBModel = beerArray[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
-            detailView.receiveId = item.beerId!
-            detailView.receiveName = item.beerName!
-            detailView.receiveStyle = item.beerStyle!
-            detailView.receiveAbv = "Abv : \(item.beerAbv!)"
-            detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
-            detailView.receiveOverall = item.reviewOverall!
-    }
 
-    }
+    
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "sgLikeCell"{
+                let cell = sender as! UITableViewCell
+                let indexPath = self.listTableView.indexPath(for : cell)
+                let detailView = segue.destination as! KimDetailViewController
+                let item: KimDBModel = beerArray[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+                detailView.receiveId = item.beerId!
+                detailView.receiveName = item.beerName!
+                detailView.receiveStyle = item.beerStyle!
+                detailView.receiveAbv = "Abv : \(item.beerAbv!)"
+                detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+                detailView.receiveOverall = item.reviewOverall!
+                detailView.receiveHeart = item.beerHeart
+            }
+
+        }
     
 
-    }
+}
 
