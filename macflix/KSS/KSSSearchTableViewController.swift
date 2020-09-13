@@ -97,11 +97,15 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         //          queryModel.downloadItems()
         
         // 창수 추가
-        let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
-            if returnList.count < 4 {
-                queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
-            } else {
-                queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+        if LOGGED_IN_HEARTLIST.count > 0 {
+            
+        } else {
+            queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
+                if returnList.count < 4 {
+                    queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
+                } else {
+                    queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+                }
             }
         }
     }
@@ -133,6 +137,16 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         }
         
         
+//        let urlStr = "http://www.beeradvocate.com/im/beers/\(item.beerId!).jpg"
+//        //let urlStr = "https://i.imgur.com/BMUlJrc.jpg"
+//        let url = URL(string: urlStr)
+//        print(url!)
+//
+//        if let data = try? Data(contentsOf: url!) {
+//            cell.imageView!.image = UIImage(data: data)
+//        }
+        
+        
 //        if item.beerHeart == 0 {
 //            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
 //        } else {
@@ -141,6 +155,8 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         
         return cell
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchmyCell"{

@@ -14,9 +14,8 @@ class KimQueryModel: NSObject{
     
     var delegate: KimQueryModelProtocol!
     
-    func getPriorityList(seq: Int, completion: @escaping ([String])->()) -> [String] {
+    func getPriorityList(seq: Int, completion: @escaping ([String])->()){
         var urlPath = URL_PATH + "CSJSP/getPriorityList.jsp?"
-        var result: [String] = []
         urlPath += "seq=\(seq)"
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
@@ -28,12 +27,10 @@ class KimQueryModel: NSObject{
             if error != nil {
                 completion([])
             } else {
-                result = self.parseJSON2(data!)
-                completion(result)
+                completion(self.parseJSON2(data!))
             }
         }
         task.resume()
-        return result
     }
     
     func parseJSON2(_ data: Data) -> [String] {
