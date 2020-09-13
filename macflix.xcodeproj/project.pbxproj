@@ -39,6 +39,7 @@
 		54FDCCCB250BBF67002E717B /* UserPriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */; };
 		F4069A84250CB2490086DE56 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4069A83250CB2490086DE56 /* ReviewDataModel.swift */; };
 		F425AA85250B729D00626E38 /* ReviewUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */; };
+		F4ABEFBD250E541A003FB682 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ABEFBC250E5419003FB682 /* WebKit.framework */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
 		F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */; };
@@ -106,6 +107,7 @@
 		8618DA7BE4D0AC5A9043F72C /* Pods-macflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macflix.release.xcconfig"; path = "Target Support Files/Pods-macflix/Pods-macflix.release.xcconfig"; sourceTree = "<group>"; };
 		F4069A83250CB2490086DE56 /* ReviewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010ReviewDataModel.swift"; sourceTree = "<group>"; };
 		F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewUpdateModel.swift; sourceTree = "<group>"; };
+		F4ABEFBC250E5419003FB682 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
 		F4D0F2C0250A0BB500D2F51E /* KSSSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSSSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ABEFBD250E541A003FB682 /* WebKit.framework in Frameworks */,
 				2E046AFF250BAA2C00E5120F /* Pods_macflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +222,7 @@
 		3C5BA353D82BEE649375EDF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4ABEFBC250E5419003FB682 /* WebKit.framework */,
 				72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */,
 			);
 			name = Frameworks;

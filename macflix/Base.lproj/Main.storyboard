@@ -539,6 +539,15 @@
                                     <action selector="btnLikeAction:" destination="jpQ-xd-fad" eventType="touchUpInside" id="S6W-Ej-82L"/>
                                 </connections>
                             </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-RH-5zm">
+                                <rect key="frame" x="87" y="631" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9L4-tF-1An"/>
@@ -560,6 +569,7 @@
                         <outlet property="smellNum" destination="LRe-2R-IB4" id="MgB-NI-GpN"/>
                         <outlet property="style" destination="kvB-tu-fFC" id="1tV-is-3nZ"/>
                         <outlet property="tasteNum" destination="Tbc-Kf-03k" id="2ue-Jb-DYD"/>
+                        <outlet property="webview" destination="DQ5-RH-5zm" id="2eF-UB-5hV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -877,7 +887,7 @@
         <!--Skh Searc Beer View Controller-->
         <scene sceneID="VHH-UD-Z97">
             <objects>
-                <viewController id="hgL-5z-bfv" customClass="skhSearcBeerViewController" customModule="finalBeerSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hgL-5z-bfv" customClass="skhSearcBeerViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ud-su-JH8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1013,13 +1023,13 @@
         <!--Skh Search Table View Controller-->
         <scene sceneID="ZTy-aM-nBk">
             <objects>
-                <tableViewController id="rhW-fY-EaY" customClass="skhSearchTableViewController" customModule="finalBeerSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rhW-fY-EaY" customClass="skhSearchTableViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G6L-it-EeB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mySearchCell" rowHeight="164" id="OAQ-TX-7Yj" customClass="skhSearchTableViewCell" customModule="finalBeerSearch" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mySearchCell" rowHeight="164" id="OAQ-TX-7Yj" customClass="skhSearchTableViewCell" customModule="macflix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OAQ-TX-7Yj" id="CBL-Sq-fqx">

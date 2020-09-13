@@ -100,12 +100,16 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchmyCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
         let item: KimDBModel = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+        
+
+            
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
         cell.abv.text = item.beerAbv
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
-        
+       
+
         if item.beerHeart == 0 {
             cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
         } else {
@@ -128,6 +132,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
             detailView.receiveOverall = item.reviewOverall!
             detailView.receiveHeart = item.beerHeart
+            
         }
         
     }
