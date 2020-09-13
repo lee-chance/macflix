@@ -48,24 +48,12 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
                 preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
                         if isValid {
-                            self.viewWillAppear(true)
-                            self.heartAlert("좋아요에서 삭제했습니다.")}
+                            self.viewWillAppear(true)}
                     }
                 }
             }
 
         }
-        
-        
-        func heartAlert(_ msg: String) {
-            let alert = UIAlertController(title: nil, message: msg, preferredStyle: UIAlertController.Style.alert)
-            let cancelAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            
-            alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
-        }
-        
-        
 
         // MARK: - Table view data source
         

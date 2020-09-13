@@ -8,13 +8,15 @@
 
 import UIKit
 
-class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol {
+class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol, BeerLikeQueryModelProtocol {
+    
     
     var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
     var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
     
     @IBOutlet var listTableView: UITableView!
     var feedItem: NSArray = NSArray()
+    var beerLikeItem: NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,11 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     }
     func itemDownloaded(items: NSArray) {
         feedItem = items
+        self.listTableView.reloadData()
+    }
+    
+    func beerItemDownloaded(items: NSArray) {
+        beerLikeItem = items
         self.listTableView.reloadData()
     }
     
@@ -82,28 +89,36 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
 //        }
     }
     
-    func heartAlert(_ msg: String) {
-        let alert = UIAlertController(title: nil, message: msg, preferredStyle: UIAlertController.Style.alert)
-        let cancelAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-        
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
-    }
-    
     // 다른 화면에서 이동후에 첫 실행되는 Method
     override func viewWillAppear(_ animated: Bool) {
+        print(LOGGED_IN_HEARTLIST)
         let queryModel = KimQueryModel()
-        queryModel.delegate = self
+        let queryModel2 = BeerLikeQueryModel()
+        
         //          queryModel.downloadItems()
         
-        // 창수 추가
-        let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
-            if returnList.count < 4 {
-                queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
-            } else {
-                queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+        if LOGGED_IN_HEARTLIST.count > 0 {
+            queryModel2.delegate = self
+            queryModel2.downloadItems()
+        } else {
+            queryModel.delegate = self
+            let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
+                if returnList.count < 4 {
+                    queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
+                } else {
+                    queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+                }
             }
         }
+        
+          // 창수 추가
+//        let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
+//            if returnList.count < 4 {
+//                queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
+//            } else {
+//                queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+//            }
+//        }
     }
     
     // MARK: - Table view data source
@@ -119,7 +134,13 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchmyCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
-        let item: KimDBModel = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+        let item: KimDBModel
+        if LOGGED_IN_HEARTLIST.count > 0 {
+            item = beerLikeItem[indexPath.row] as! KimDBModel
+        } else {
+            item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+        }
+        
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
         cell.abv.text = item.beerAbv
@@ -147,7 +168,13 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             let cell = sender as! UITableViewCell
             let indexPath = self.listTableView.indexPath(for : cell)
             let detailView = segue.destination as! KimDetailViewController
-            let item: KimDBModel = feedItem[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            let item: KimDBModel
+            if LOGGED_IN_HEARTLIST.count > 0 {
+                item = beerLikeItem[indexPath!.row] as! KimDBModel
+            } else {
+                item = feedItem[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            }
+
             detailView.receiveId = item.beerId!
             detailView.receiveName = item.beerName!
             detailView.receiveStyle = item.beerStyle!
