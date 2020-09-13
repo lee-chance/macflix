@@ -13,7 +13,7 @@ protocol SkhQueryModelProtocol: class {
 
 class SkhQueryModel: NSObject {
     var delegate: SkhQueryModelProtocol!
-    var urlPath = "http://localhost:8080/test/beerSearch_query_ios.jsp"
+    var urlPath = URL_PATH + "SKHJSP/beerSearch_query_ios.jsp"
     
     func downloadItems(aroma: String, appearance: String, palate: String, taste: String){
         let urlAdd = "?aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)"
