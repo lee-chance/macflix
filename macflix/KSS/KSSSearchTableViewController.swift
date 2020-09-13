@@ -39,16 +39,28 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         let indexPath = tableView.indexPath(for: cell)
         
         let item: KimDBModel = feedItem[indexPath![1]] as! KimDBModel
-        //let preferenceModel = PreferenceModel()
+        let preferenceModel = PreferenceModel()
         
         // 창수 수정
         let beerId = Int(item.beerId!)!
         if LOGGED_IN_HEARTLIST.contains(beerId) {
-            LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId)!)
-            sender.setImage(no_heart, for: UIControl.State.normal)
+            preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId)!)
+                        sender.setImage(self.no_heart, for: UIControl.State.normal)
+                    }
+                }
+            }
         } else {
-            LOGGED_IN_HEARTLIST.append(beerId)
-            sender.setImage(heart, for: UIControl.State.normal)
+            preferenceModel.insertItems(beer_id: Int(item.beerId!)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.append(beerId)
+                        sender.setImage(self.heart, for: UIControl.State.normal)
+                    }
+                }
+            }
         }
         
 //        if item.beerHeart == 0 {
