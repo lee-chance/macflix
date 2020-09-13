@@ -20,7 +20,7 @@ class UserPriorityQueryModel: NSObject{
     func getPriorityList() {
         
         let url: URL = URL(string: urlPath)!
-        print(urlPath)
+//        print(urlPath)
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) {(data, respone, error) in

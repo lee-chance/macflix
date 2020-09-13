@@ -8,18 +8,10 @@
 
 import Foundation
 
-protocol LoginModelProtocol: class {
-    func checkLogin()
-}
-
 class LoginModel: NSObject {
     
-    var delegate: LoginModelProtocol!
-    var urlPath = URL_PATH + "CSJSP/checkLogin.jsp"
-    
     func actionLogin(email: String, password: String, completion: @escaping (Int)->()) {
-        let urlAdd = "?email=\(email)&password=\(password)"
-        urlPath += urlAdd
+        var urlPath = URL_PATH + "CSJSP/checkLogin.jsp?email=\(email)&password=\(password)"
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
@@ -44,20 +36,36 @@ class LoginModel: NSObject {
     
     func parseJSON(_ data: Data) -> Int {
         var jsonResult = String(data: data, encoding: .utf8)!
-//        do {
-//            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! Bool
-//        } catch let error as NSError {
-//            print(error)
-//        }
+        
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         
         return Int(jsonResult) ?? 0
+    }
+    
+    func getUserProfilename(seq: Int, completion: @escaping (String) -> ()) {
+        let urlPath = URL_PATH + "IOS/getUserProfilename.jsp?seq=\(seq)"
         
-//        DispatchQueue.main.async(execute: {() -> Void in
-//            self.delegate.checkLogin()
-//        })
+        let url: URL = URL(string: urlPath)!
+        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
+        let task = defaultSession.dataTask(with: url) {(data, respone, error) in
+            if error != nil {
+                completion("")
+            } else {
+                completion(self.parseUserProfliename(data!))
+            }
+        }
+        task.resume()
+    }
+    
+    func parseUserProfliename(_ data: Data) -> String {
+        var jsonResult = String(data: data, encoding: .utf8)!
+        
+        jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
+        jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
+        
+        return jsonResult
     }
     
 }
