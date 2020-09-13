@@ -37,6 +37,7 @@
 		54FDCCC8250BBF67002E717B /* SBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBB250BBF67002E717B /* SBTableViewCell.swift */; };
 		54FDCCCA250BBF67002E717B /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBD250BBF67002E717B /* LikeTableViewCell.swift */; };
 		54FDCCCB250BBF67002E717B /* UserPriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */; };
+		F4069A84250CB2490086DE56 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4069A83250CB2490086DE56 /* ReviewDataModel.swift */; };
 		F425AA85250B729D00626E38 /* ReviewUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */; };
 		F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */; };
 		F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */; };
@@ -102,6 +103,7 @@
 		54FDCCBE250BBF67002E717B /* UserPriorityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPriorityTableViewController.swift; sourceTree = "<group>"; };
 		72059BF11B5AC3BA0B74ADD4 /* Pods_macflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8618DA7BE4D0AC5A9043F72C /* Pods-macflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macflix.release.xcconfig"; path = "Target Support Files/Pods-macflix/Pods-macflix.release.xcconfig"; sourceTree = "<group>"; };
+		F4069A83250CB2490086DE56 /* ReviewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010ReviewDataModel.swift"; sourceTree = "<group>"; };
 		F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewUpdateModel.swift; sourceTree = "<group>"; };
 		F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimDBModel.swift; sourceTree = "<group>"; };
 		F4D0F2BE250A0BA500D2F51E /* KimQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KimQueryModel.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				F425AA84250B729D00626E38 /* ReviewUpdateModel.swift */,
 				F4D0F2BC250A0B9900D2F51E /* KimDBModel.swift */,
 				F4F9FAE4250B4648009F3D55 /* checkReview.swift */,
+				F4069A83250CB2490086DE56 /* ReviewDataModel.swift */,
 			);
 			path = KSS;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				54FDCCCA250BBF67002E717B /* LikeTableViewCell.swift in Sources */,
 				F4D0F2BD250A0B9900D2F51E /* KimDBModel.swift in Sources */,
 				F4D0F2C7250A0D0C00D2F51E /* KimTableViewCell.swift in Sources */,
+				F4069A84250CB2490086DE56 /* ReviewDataModel.swift in Sources */,
 				54FDCCCB250BBF67002E717B /* UserPriorityTableViewController.swift in Sources */,
 				F4D0F2C1250A0BB500D2F51E /* KSSSearchTableViewController.swift in Sources */,
 				FAE5BAA3250A0FDC00B62852 /* SearchTableViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 class KimDetailViewController: UIViewController{
-
+    
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -35,22 +35,28 @@ class KimDetailViewController: UIViewController{
     var receiveReview = ""
     var receiveId = ""
     var checkReview = 0
-    var feedItem : NSArray = NSArray()
+    var feedItem : [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewCheck()
         name.text = receiveName
         style.text = receiveStyle
         abv.text = receiveAbv
         overall.text = receiveOverall
         review.text = receiveReview
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.\
+        if checkReview != 0{
+            
         }
-
-
+        
+    }
+    
+    
     @IBAction func beerReview(_ sender: UIButton) {
         let alertService = AlertService()
         if checkReview != 0{
-            
             let feel =  Double(feelNum.text!)
             let smell = Double(smellNum.text!)
             let look = Double(lookNum.text!)
@@ -88,20 +94,35 @@ class KimDetailViewController: UIViewController{
             }
         }
     }
-        func reviewCheck() {
-                let checkReviewModel = CheckReviewModel()
-                checkReviewModel.actioncheckReview(seq: String(LOGGED_IN_SEQ), beerid: receiveId) { resultSeq in
-                    DispatchQueue.main.async { () -> Void in
-                        if resultSeq != 0 {
-                            self.checkReview = resultSeq
-                            print(resultSeq)
-                        } else {
-                            self.checkReview = resultSeq
-                            print(resultSeq)
+    func reviewCheck() {
+        let checkReviewModel = CheckReviewModel()
+        checkReviewModel.actioncheckReview(seq: String(LOGGED_IN_SEQ), beerid: receiveId) { resultSeq in
+            DispatchQueue.main.async { () -> Void in
+                if resultSeq != 0 {
+                    self.checkReview = resultSeq
+                    print(resultSeq)
+                    let reviewdata = ReviewDataModel()
+                    _ = reviewdata.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ resultlist in
+                        DispatchQueue.main.async { () -> Void in
+                            self.smellNum.text = resultlist[0]
+                            self.sdSmell.value = NSString(string: resultlist[0]).floatValue
+                            self.feelNum.text = resultlist[1]
+                            self.sdFell.value = NSString(string: resultlist[1]).floatValue
+                            self.lookNum.text = resultlist[2]
+                            self.sdLook.value = NSString(string: resultlist[2]).floatValue
+                            self.tasteNum.text = resultlist[3]
+                            self.sdTaste.value = NSString(string: resultlist[3]).floatValue
+                            print(resultlist[0])
                         }
+                        
                     }
+                } else {
+                    self.checkReview = resultSeq
+                    print(resultSeq)
                 }
             }
+        }
+    }
     @IBAction func feelSd(_ sender: UISlider) {
         if Int(sdFell.value*10) % 10 >= 0 && Int(sdFell.value*10) % 10 < 5{
             feelNum.text = String(format: "%.1f",sdFell.value)
@@ -126,15 +147,14 @@ class KimDetailViewController: UIViewController{
             print(tasteNum.text!)
         }
     }
-    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

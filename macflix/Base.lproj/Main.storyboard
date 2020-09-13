@@ -685,6 +685,35 @@
             </objects>
             <point key="canvasLocation" x="1337.68115942029" y="732.58928571428567"/>
         </scene>
+        <!--Table View Controller-->
+<!--        <scene sceneID="mMu-Pn-3a1">-->
+<!--            <objects>-->
+<!--                <tableViewController id="Ndq-Vw-jlH" sceneMemberID="viewController">-->
+<!--                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6QR-2f-buq">-->
+<!--                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>-->
+<!--                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>-->
+<!--                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>-->
+<!--                        <prototypes>-->
+<!--                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ezQ-OX-vM8">-->
+<!--                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>-->
+<!--                                <autoresizingMask key="autoresizingMask"/>-->
+<!--                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ezQ-OX-vM8" id="21E-g6-A61">-->
+<!--                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>-->
+<!--                                    <autoresizingMask key="autoresizingMask"/>-->
+<!--                                </tableViewCellContentView>-->
+<!--                            </tableViewCell>-->
+<!--                        </prototypes>-->
+<!--                        <connections>-->
+<!--                            <outlet property="dataSource" destination="Ndq-Vw-jlH" id="R3c-12-1Ew"/>-->
+<!--                            <outlet property="delegate" destination="Ndq-Vw-jlH" id="afq-1U-dde"/>-->
+<!--                        </connections>-->
+<!--                    </tableView>-->
+<!--                    <navigationItem key="navigationItem" id="eiP-cP-uiD"/>-->
+<!--                </tableViewController>-->
+<!--                <placeholder placeholderIdentifier="IBFirstResponder" id="cs3-oC-9VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>-->
+<!--            </objects>-->
+<!--            <point key="canvasLocation" x="2407" y="733"/>-->
+<!--        </scene>-->
         <!--내정보-->
         <scene sceneID="YnJ-ah-VqA">
             <objects>
