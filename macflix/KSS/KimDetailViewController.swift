@@ -39,9 +39,10 @@ class KimDetailViewController: UIViewController{
     var receiveReview = ""
     var receiveId = ""
     var checkReview = 0
-    
     var receiveHeart = 0
     var feedItem : NSArray = NSArray()
+    
+    var btnState: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,35 +53,54 @@ class KimDetailViewController: UIViewController{
         overall.text = receiveOverall
         review.text = receiveReview
         
-        if receiveHeart == 0 {
-            btnLike.setImage(no_heart, for: UIControl.State.normal)
-        } else {
+        if receiveHeart != 0 {
             btnLike.setImage(heart, for: UIControl.State.normal)
+        } else {
+            btnLike.setImage(no_heart, for: UIControl.State.normal)
         }
         
-        
+        btnState = receiveHeart
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnLikeAction(_ sender: UIButton) {
+    
+    override func viewWillDisappear(_ animated: Bool) {
         let preferenceModel = PreferenceModel()
+        let alertService = AlertService()
         
-        if receiveHeart == 0 {
-            preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
-                DispatchQueue.main.async { () -> Void in
-                    if isValid {
-                        self.viewWillAppear(true)
-                        self.btnLike.setImage(self.heart, for: UIControl.State.normal)}
-                }
-            }
+        if receiveHeart == btnState {
+            
         } else {
-            preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
-                DispatchQueue.main.async { () -> Void in
-                    if isValid {
-                        self.viewWillAppear(true)
-                        self.btnLike.setImage(self.no_heart, for: UIControl.State.normal)}
+            if btnState != 0 {
+                preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
+                    DispatchQueue.main.async { () -> Void in
+                        if isValid {
+                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에 추가했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        }
+                    }
+                }
+            } else {
+                preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
+                    DispatchQueue.main.async { () -> Void in
+                        if isValid {
+                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에서 삭제했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        }
+                    }
                 }
             }
+
+            
+        }
+    }
+    
+    @IBAction func btnLikeAction(_ sender: UIButton) {
+        
+        if btnState == 0 {
+            btnLike.setImage(heart, for: UIControl.State.normal)
+            btnState = 1
+        } else {
+            btnLike.setImage(no_heart, for: UIControl.State.normal)
+            btnState = 0
         }
     }
     
