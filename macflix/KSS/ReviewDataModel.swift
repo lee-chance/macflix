@@ -41,6 +41,8 @@ func parseJSON2(_ data: Data) -> [String] {
     for i in 0..<splitedList.count {
         resultList.append(splitedList[i])
     }
+
     return resultList
 }
+    
 }

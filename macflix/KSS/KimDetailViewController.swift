@@ -81,7 +81,7 @@ class KimDetailViewController: UIViewController{
             let taste = Double(tasteNum.text!)
             let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
             let reviewInsert = ReviewInsertModel()
-            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: "zzz", aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILNAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
@@ -101,6 +101,21 @@ class KimDetailViewController: UIViewController{
                         if resultSeq != 0 {
                             self.checkReview = resultSeq
                             print(resultSeq)
+                            let reviewdata = ReviewDataModel()
+                            reviewdata.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ resultlist in
+                                DispatchQueue.main.async { () -> Void in
+                                    self.smellNum.text = resultlist[0]
+                                    self.sdSmell.value = NSString(string: resultlist[0]).floatValue
+                                    self.feelNum.text = resultlist[1]
+                                    self.sdFell.value = NSString(string: resultlist[1]).floatValue
+                                    self.lookNum.text = resultlist[2]
+                                    self.sdLook.value = NSString(string: resultlist[2]).floatValue
+                                    self.tasteNum.text = resultlist[3]
+                                    self.sdTaste.value = NSString(string: resultlist[3]).floatValue
+                                    print(resultlist[0])
+                                }
+                                
+                                }
                         } else {
                             self.checkReview = resultSeq
                             print(resultSeq)
@@ -131,12 +146,6 @@ class KimDetailViewController: UIViewController{
             tasteNum.text = String(format: "%.1f",sdTaste.value)
             print(tasteNum.text!)
         }
-    }
-    func reivewData() {
-        let reviewDataModel = ReviewDataModel()
-            reviewDataModel.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ returnList in
-             }
-    
     }
     /*
     // MARK: - Navigation
