@@ -47,31 +47,29 @@ class PreferenceQueryModel: NSObject{
 
         for i in 0..<jsonResult.count {
             jsonElement = jsonResult[i] as! NSDictionary
-            let query = DBModelBeer()
+            let query = KimDBModel()
             
-            if let beer_id = jsonElement["beer_id"] as? String,
-                let beer_name = jsonElement["beer_name"] as? String,
-                let beer_style = jsonElement["beer_style"] as? String,
-                let beer_abv = jsonElement["beer_abv"] as? String,
-                let calc = jsonElement["calc"] as? String,
-                let aroma = jsonElement["aroma"] as? String,
-                let appearance = jsonElement["appearance"] as? String,
-                let palate = jsonElement["palate"] as? String,
-                let taste = jsonElement["taste"] as? String,
-                let overall = jsonElement["overall"] as? String,
-                let heart = jsonElement["heart"] as? String {
-                query.beer_id = Int(beer_id)!
-                query.beer_name = beer_name
-                query.beer_style = beer_style
-                query.beer_abv = Double(beer_abv)!
-                query.calc = calc
-                query.aroma = aroma
-                query.appearance = appearance
-                query.palate = palate
-                query.taste = taste
-                query.overall = overall
-                query.heart = Int(heart)!
-                
+            if  let beerId = jsonElement["beer_id"] as? String,
+                let beerName = jsonElement["beer_name"] as? String,
+                let beerStyle = jsonElement["beer_style"] as? String,
+                let beerAbv = jsonElement["beer_abv"] as? String,
+                let reviewSmell = jsonElement["aroma"] as? String,
+                let reviewLook = jsonElement["appearance"] as? String,
+                let reviewFeel = jsonElement["palate"] as? String,
+                let reviewTaste = jsonElement["taste"] as? String,
+                let reviewOverall = jsonElement["overall"] as? String,
+                let beerHeart = jsonElement["heart"] as? String{
+
+                query.beerId = beerId
+                query.beerName = beerName
+                query.beerStyle = beerStyle
+                query.beerAbv = beerAbv
+                query.reviewFeel = reviewFeel
+                query.reviewLook = reviewLook
+                query.reviewSmell = reviewSmell
+                query.reviewTaste = reviewTaste
+                query.reviewOverall = reviewOverall
+                query.beerHeart = Int(beerHeart)!
             }
             
             locations.add(query)

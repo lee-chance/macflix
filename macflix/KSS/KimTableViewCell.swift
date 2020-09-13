@@ -16,6 +16,7 @@ class KimTableViewCell: UITableViewCell {
     @IBOutlet weak var abv: UILabel!
     @IBOutlet weak var overall: UILabel!
     @IBOutlet weak var review: UILabel!
+    @IBOutlet weak var btnLike: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

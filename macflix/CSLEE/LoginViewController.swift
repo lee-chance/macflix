@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     
     var autoLogin = false
     
+    let loginModel = LoginModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,17 +35,23 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        lblEmail.text = ""
+        lblPassword.text = ""
+    }
+    
     func loginWithStaticDatas(user_seq: Int) {
         self.performSegue(withIdentifier: "sgLogin", sender: self)
         LOGGED_IN_SEQ = user_seq
-        
+        loginModel.getUserProfilename(seq: user_seq) { (profileName) in
+            LOGGED_IN_PROFILNAME = profileName
+        }
         UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
         if let email = lblEmail.text,
             let password = lblPassword.text {
-            let loginModel = LoginModel()
             loginModel.actionLogin(email: email, password: password) { resultSeq in
                 DispatchQueue.main.async { () -> Void in
                     if resultSeq != 0 {
