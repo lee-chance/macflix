@@ -22,10 +22,6 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             
             self.listTableView.delegate = self
             self.listTableView.dataSource = self
-            
-            let queryModel = PreferenceQueryModel()
-            queryModel.delegate = self
-            queryModel.downloadItems()
         }
         
         override func viewWillAppear(_ animated: Bool) {
