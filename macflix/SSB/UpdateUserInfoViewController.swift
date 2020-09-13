@@ -18,13 +18,13 @@ class UpdateUserInfoViewController: UIViewController {
     @IBOutlet weak var lblUserNewPassword: UITextField!
     @IBOutlet weak var lblUserNewPasswordCheck: UITextField!
 
-    var receiveProfilename : String = ""
+    //var receiveProfilename : String = ""
     var passwordResult : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lblUserNickname.text = receiveProfilename
+        lblUserNickname.text = LOGGED_IN_PROFILNAME
     }
 
     
@@ -42,6 +42,7 @@ class UpdateUserInfoViewController: UIViewController {
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.present(alertService.mAlert(alertTitle: "", alertMessage: "Nickname change complete.", actionTitle: "Ok", handler: {Void in
+                            LOGGED_IN_PROFILNAME = profilename
                             self.navigationController?.popViewController(animated: true)
                         }), animated: true, completion: nil)
                     } else {

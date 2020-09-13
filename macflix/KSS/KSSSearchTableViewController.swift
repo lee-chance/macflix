@@ -9,23 +9,23 @@
 import UIKit
 
 class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol {
-
+    
     var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
     var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
-
+    
     @IBOutlet var listTableView: UITableView!
     var feedItem: NSArray = NSArray()
-       
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // 디비 연결
-            self.listTableView.delegate = self
-            self.listTableView.dataSource = self
-            
-            // 백버튼 지우기
-            self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
     
-            listTableView.rowHeight = 164
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 디비 연결
+        self.listTableView.delegate = self
+        self.listTableView.dataSource = self
+        
+        // 백버튼 지우기
+        self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
+        
+        listTableView.rowHeight = 164
     }
     func itemDownloaded(items: NSArray) {
         feedItem = items
@@ -70,20 +70,18 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         present(alert, animated: true, completion: nil)
     }
     
-    
-
-        // 다른 화면에서 이동후에 첫 실행되는 Method
+    // 다른 화면에서 이동후에 첫 실행되는 Method
     override func viewWillAppear(_ animated: Bool) {
         let queryModel = KimQueryModel()
         queryModel.delegate = self
-//          queryModel.downloadItems()
-            
-            // 창수 추가
+        //          queryModel.downloadItems()
+        
+        // 창수 추가
         let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
-                if returnList.count < 4 {
-                    queryModel.downloadItems()
-                } else {
-                    queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
+            if returnList.count < 4 {
+                queryModel.downloadItems()
+            } else {
+                queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
             }
         }
     }
@@ -131,6 +129,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             detailView.receiveOverall = item.reviewOverall!
             detailView.receiveHeart = item.beerHeart
         }
-
+        
     }
 }
