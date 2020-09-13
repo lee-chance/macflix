@@ -75,7 +75,6 @@ class PreferenceModel: NSObject{
         var urlPath = URL_PATH + "IOS/userDelete_ios.jsp"
         let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-        print(urlPath)
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         

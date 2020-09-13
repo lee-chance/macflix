@@ -35,6 +35,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        lblEmail.text = ""
+        lblPassword.text = ""
+    }
+    
     func loginWithStaticDatas(user_seq: Int) {
         self.performSegue(withIdentifier: "sgLogin", sender: self)
         LOGGED_IN_SEQ = user_seq

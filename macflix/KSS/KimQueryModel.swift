@@ -62,40 +62,36 @@ class KimQueryModel: NSObject{
             if error != nil {
                 completion(false)
             } else {
-                self.parseJSON(data!)
-                completion(true)
+                completion(self.parseJSON(data!))
             }
         }
         task.resume()
         
     }
     
-    func downloadItems(){
-        let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp"
+    func downloadItems(seq: Int, completion: @escaping (Bool)->()){
+        let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp?seq=\(seq)"
         let url: URL = URL(string: urlPath)!
-        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
+        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil { // 에러코드가 없을 때 실행
-                print("Failed to download data")
+                completion(false)
             }else{
-                print("Data is downloaded")
-                
-                //parse JSON
-                self.parseJSON(data!)
+                completion(self.parseJSON(data!))
             }
         }
         task.resume()
     }
     
-    func parseJSON(_ data: Data){
+    func parseJSON(_ data: Data) -> Bool{
         var jsonResult = NSArray()
         
         do{
             jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray
-            
         }catch let error as NSError{
             print(error)
+            return false
         }
         
         var jsonElement = NSDictionary()
@@ -137,6 +133,8 @@ class KimQueryModel: NSObject{
         DispatchQueue.main.async(execute: {() -> Void in
             self.delegate.itemDownloaded(items: locations)
         })
+        
+        return true
         
     }
     

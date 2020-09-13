@@ -17,7 +17,6 @@ class SignupModel: NSObject {
         let strPriority = priority.joined(separator: ", ")
         let urlAdd = "?email=\(email)&password=\(password)&nickname=\(nickname)&priority=\(strPriority)"
         urlPath += urlAdd
-        print(urlPath)
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         

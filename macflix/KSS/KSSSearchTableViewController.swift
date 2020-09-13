@@ -79,7 +79,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         // 창수 추가
         let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
             if returnList.count < 4 {
-                queryModel.downloadItems()
+                queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
             } else {
                 queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
             }
