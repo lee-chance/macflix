@@ -70,5 +70,28 @@ class PreferenceModel: NSObject{
         }
         task.resume()
     }
+    
+    func UserDelete(completion: @escaping (Bool)->()) {
+        var urlPath = URL_PATH + "IOS/userDelete_ios.jsp"
+        let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
+        urlPath += urlAdd
+        print(urlPath)
+        // 한글 url encoding
+        urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        let url: URL = URL(string: urlPath)!
+        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
+    
+        let task = defaultSession.dataTask(with: url){(data, response, error) in
+            if error != nil {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+        task.resume()
+    }
+    
+    
 
 }
