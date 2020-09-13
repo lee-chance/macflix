@@ -15,7 +15,7 @@ class KimDetailViewController: UIViewController{
     var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
     var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
     
-    @IBOutlet weak var imgView: UIImageView!
+
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var style: UILabel!
     @IBOutlet weak var abv: UILabel!

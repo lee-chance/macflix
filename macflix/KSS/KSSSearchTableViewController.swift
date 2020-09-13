@@ -108,6 +108,9 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         cell.abv.text = item.beerAbv
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
+        let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
+        let myRequest = URLRequest(url: myURL!)
+        cell.webView.load(myRequest)
        
 
         if item.beerHeart == 0 {

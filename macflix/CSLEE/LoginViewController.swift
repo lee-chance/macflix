@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
                         self.loginWithStaticDatas(user_seq: resultSeq)
                     } else {
                         let alertService = AlertService()
-                        self.present(alertService.mAlert(alertTitle: "Login Failed", alertMessage: "Check your e-mail or password.", actionTitle: "Ok", handler: nil), animated: true)
+                        self.present(alertService.mAlert(alertTitle: "로그인 실패", alertMessage: "이메일과 비밀번호를 확인하세요.", actionTitle: "확인", handler: nil), animated: true)
                     }
                 }
             }
@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
     
     @objc func defaultAlert(_ sender: Any){
         //알림창을 정의
-        let alert = UIAlertController(title: "Find Password", message: "send a new password to your email", preferredStyle: .alert)
+        let alert = UIAlertController(title: "비밀번호 찾기", message: "이메일로 새로운 비밀번호를 전송하겠습니다.", preferredStyle: .alert)
         alert.addTextField(configurationHandler: {myTextField in
             myTextField.placeholder = "email"
         })

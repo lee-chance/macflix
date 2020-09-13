@@ -330,10 +330,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyu-cJ-nSM">
-                                            <rect key="frame" x="20" y="11" width="90" height="120"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-EK-5J5">
                                             <rect key="frame" x="364" y="11" width="30" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -342,16 +338,25 @@
                                                 <action selector="btnLikeAction:" destination="eih-VF-gJf" eventType="touchUpInside" id="i9Q-Fd-hzZ"/>
                                             </connections>
                                         </button>
+                                        <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-YD-Mbw">
+                                            <rect key="frame" x="10" y="11" width="98" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <wkWebViewConfiguration key="configuration">
+                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                <wkPreferences key="preferences"/>
+                                            </wkWebViewConfiguration>
+                                        </wkWebView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="abv" destination="OZa-ca-4Hn" id="8nz-Cl-vZg"/>
                                     <outlet property="btnLike" destination="KDn-EK-5J5" id="o5H-E8-JEX"/>
-                                    <outlet property="imgView" destination="Kyu-cJ-nSM" id="pgg-Vr-clB"/>
                                     <outlet property="name" destination="7lV-5f-xDs" id="vfO-fO-MaR"/>
                                     <outlet property="overall" destination="eZu-AJ-XFb" id="M9B-Uh-Ue3"/>
                                     <outlet property="review" destination="Kcz-US-ubo" id="6E3-iu-Heu"/>
                                     <outlet property="style" destination="AOV-S3-xc7" id="BwZ-gv-gau"/>
+                                    <outlet property="webView" destination="K7a-YD-Mbw" id="baG-cg-hQm"/>
                                     <segue destination="jpQ-xd-fad" kind="show" identifier="searchmyCell" id="xgB-VG-LI9"/>
                                 </connections>
                             </tableViewCell>
@@ -385,17 +390,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NIs-5o-VtC">
-                                <rect key="frame" x="128" y="259.5" width="25" height="25"/>
+                                <rect key="frame" x="126" y="143" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-RL-YMA">
-                                <rect key="frame" x="128" y="147.5" width="233" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knh-sk-fq1">
                                 <rect key="frame" x="128" y="203.5" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -418,16 +416,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rz-in-BBE">
-                                <rect key="frame" x="161" y="261.5" width="51" height="21"/>
+                                <rect key="frame" x="155" y="147" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkk-sk-RAu">
-                                <rect key="frame" x="20" y="147.5" width="90" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvB-tu-fFC">
                                 <rect key="frame" x="128" y="176" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -539,8 +533,15 @@
                                     <action selector="btnLikeAction:" destination="jpQ-xd-fad" eventType="touchUpInside" id="S6W-Ej-82L"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-RL-YMA">
+                                <rect key="frame" x="35" y="284" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-RH-5zm">
-                                <rect key="frame" x="87" y="631" width="240" height="128"/>
+                                <rect key="frame" x="20" y="133" width="98" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -557,7 +558,6 @@
                         <outlet property="abv" destination="knh-sk-fq1" id="5hB-bl-2m7"/>
                         <outlet property="btnLike" destination="wLP-03-NJS" id="bw1-B7-hEw"/>
                         <outlet property="feelNum" destination="w7B-X5-cKk" id="DIy-yE-lPH"/>
-                        <outlet property="imgView" destination="Rkk-sk-RAu" id="y2G-64-Ben"/>
                         <outlet property="lookNum" destination="56l-g8-53j" id="sCR-mE-M0R"/>
                         <outlet property="name" destination="0Qd-RL-YMA" id="8KH-0y-JHt"/>
                         <outlet property="overall" destination="5Rz-in-BBE" id="U1q-x1-FNk"/>
@@ -574,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="1479"/>
+            <point key="canvasLocation" x="37.681159420289859" y="1478.5714285714284"/>
         </scene>
         <!--MACFLIX-->
         <scene sceneID="KvT-hi-QRc">
