@@ -24,7 +24,7 @@ class MyPageViewController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         })
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
         
         alert.addAction(cancelAction)
         alert.addAction(okAction)

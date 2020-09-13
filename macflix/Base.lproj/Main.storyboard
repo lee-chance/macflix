@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -229,7 +229,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t2-YP-Ica" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="-752"/>
+            <point key="canvasLocation" x="2412" y="-752"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tv5-28-xrS">
@@ -371,7 +371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONw-bC-FJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.68115942029" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="-391" y="733"/>
         </scene>
         <!--Kim Detail View Controller-->
         <scene sceneID="adI-aP-EYa">
@@ -563,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="382"/>
+            <point key="canvasLocation" x="38" y="1479"/>
         </scene>
         <!--MACFLIX-->
         <scene sceneID="KvT-hi-QRc">
@@ -691,37 +691,8 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAb-XJ-UyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.68115942029" y="732.58928571428567"/>
+            <point key="canvasLocation" x="519" y="733"/>
         </scene>
-        <!--Table View Controller-->
-<!--        <scene sceneID="mMu-Pn-3a1">-->
-<!--            <objects>-->
-<!--                <tableViewController id="Ndq-Vw-jlH" sceneMemberID="viewController">-->
-<!--                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6QR-2f-buq">-->
-<!--                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>-->
-<!--                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>-->
-<!--                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>-->
-<!--                        <prototypes>-->
-<!--                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ezQ-OX-vM8">-->
-<!--                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>-->
-<!--                                <autoresizingMask key="autoresizingMask"/>-->
-<!--                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ezQ-OX-vM8" id="21E-g6-A61">-->
-<!--                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>-->
-<!--                                    <autoresizingMask key="autoresizingMask"/>-->
-<!--                                </tableViewCellContentView>-->
-<!--                            </tableViewCell>-->
-<!--                        </prototypes>-->
-<!--                        <connections>-->
-<!--                            <outlet property="dataSource" destination="Ndq-Vw-jlH" id="R3c-12-1Ew"/>-->
-<!--                            <outlet property="delegate" destination="Ndq-Vw-jlH" id="afq-1U-dde"/>-->
-<!--                        </connections>-->
-<!--                    </tableView>-->
-<!--                    <navigationItem key="navigationItem" id="eiP-cP-uiD"/>-->
-<!--                </tableViewController>-->
-<!--                <placeholder placeholderIdentifier="IBFirstResponder" id="cs3-oC-9VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>-->
-<!--            </objects>-->
-<!--            <point key="canvasLocation" x="2407" y="733"/>-->
-<!--        </scene>-->
         <!--내정보-->
         <scene sceneID="YnJ-ah-VqA">
             <objects>
@@ -747,7 +718,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Preference for Beer"/>
                                 <connections>
-                                    <segue destination="hIg-m1-824" kind="show" id="4Bg-oQ-6Dd"/>
+                                    <segue destination="hIg-m1-824" kind="show" id="gvM-Xm-r6a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v6-a8-BV4">
@@ -777,7 +748,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDE-6C-k3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391.304347826087" y="732.58928571428567"/>
+            <point key="canvasLocation" x="1338" y="1"/>
         </scene>
         <!--회원정보 수정-->
         <scene sceneID="MIB-3q-nPy">
@@ -859,7 +830,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7M-ys-cG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391" y="1501"/>
+            <point key="canvasLocation" x="2412" y="1"/>
         </scene>
         <!--Preference for Beer-->
         <scene sceneID="oi3-Ci-rMP">
@@ -899,22 +870,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AON-TH-0w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="733"/>
+            <point key="canvasLocation" x="1338" y="733"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Eqb-WA-L0x"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>
         <image name="beer_off" width="185" height="244"/>
         <image name="beer_on" width="185" height="244"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="macflix_logo" width="149" height="187"/>
         <image name="macflix_title" width="770" height="225"/>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="r.circle" catalog="system" width="64" height="60"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="r.circle" catalog="system" width="128" height="121"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Eqb-WA-L0x"/>
-    </inferredMetricsTieBreakers>
 </document>
