@@ -39,27 +39,35 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         let indexPath = tableView.indexPath(for: cell)
         
         let item: KimDBModel = feedItem[indexPath![1]] as! KimDBModel
-        let preferenceModel = PreferenceModel()
+        //let preferenceModel = PreferenceModel()
         
-        print(item.beerHeart)
-        
-        if item.beerHeart == 0 {
-            preferenceModel.insertItems(beer_id: Int(item.beerId!)!) {isValid in
-                DispatchQueue.main.async { () -> Void in
-                    if isValid {
-                        self.viewWillAppear(true)
-                        self.heartAlert("좋아요에 추가했습니다.")}
-                }
-            }
+        // 창수 수정
+        let beerId = Int(item.beerId!)!
+        if LOGGED_IN_HEARTLIST.contains(beerId) {
+            LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId)!)
+            sender.setImage(no_heart, for: UIControl.State.normal)
         } else {
-            preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
-                DispatchQueue.main.async { () -> Void in
-                    if isValid {
-                        self.viewWillAppear(true)
-                        self.heartAlert("좋아요에서 삭제했습니다.")}
-                }
-            }
+            LOGGED_IN_HEARTLIST.append(beerId)
+            sender.setImage(heart, for: UIControl.State.normal)
         }
+        
+//        if item.beerHeart == 0 {
+//            preferenceModel.insertItems(beer_id: Int(item.beerId!)!) {isValid in
+//                DispatchQueue.main.async { () -> Void in
+//                    if isValid {
+//                        self.viewWillAppear(true)
+//                        self.heartAlert("좋아요에 추가했습니다.")}
+//                }
+//            }
+//        } else {
+//            preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
+//                DispatchQueue.main.async { () -> Void in
+//                    if isValid {
+//                        self.viewWillAppear(true)
+//                        self.heartAlert("좋아요에서 삭제했습니다.")}
+//                }
+//            }
+//        }
     }
     
     func heartAlert(_ msg: String) {
@@ -106,11 +114,18 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
         
-        if item.beerHeart == 0 {
-            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
-        } else {
+        if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
             cell.btnLike.setImage(heart, for: UIControl.State.normal)
+        } else {
+            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
         }
+        
+        
+//        if item.beerHeart == 0 {
+//            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
+//        } else {
+//            cell.btnLike.setImage(heart, for: UIControl.State.normal)
+//        }
         
         return cell
     }

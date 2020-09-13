@@ -362,12 +362,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="모아보기" image="house" catalog="system" id="76P-1n-FtO"/>
-                    <navigationItem key="navigationItem" title="맥주 검색" id="mqv-zi-fA9">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="search" id="B37-dn-cLK"/>
-                            <barButtonItem title="Item" id="9LI-cx-w6w"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="맥주 검색" id="mqv-zi-fA9"/>
                     <connections>
                         <outlet property="listTableView" destination="5lW-vF-0P7" id="yWP-4S-8Ld"/>
                     </connections>
@@ -566,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="1479"/>
+            <point key="canvasLocation" x="62" y="1479"/>
         </scene>
         <!--MACFLIX-->
         <scene sceneID="KvT-hi-QRc">
@@ -834,7 +829,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7M-ys-cG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="1"/>
+            <point key="canvasLocation" x="1338" y="733"/>
         </scene>
         <!--Preference for Beer-->
         <scene sceneID="oi3-Ci-rMP">
@@ -874,12 +869,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AON-TH-0w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="733"/>
+            <point key="canvasLocation" x="2412" y="1"/>
         </scene>
         <!--Skh Searc Beer View Controller-->
         <scene sceneID="VHH-UD-Z97">
             <objects>
-                <viewController id="hgL-5z-bfv" customClass="skhSearcBeerViewController" customModule="finalBeerSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hgL-5z-bfv" customClass="skhSearcBeerViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ud-su-JH8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -984,7 +979,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자신의 취향에 맞는 맥주를 검색하세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW0-YB-4NG">
-                                <rect key="frame" x="20" y="306" width="374" height="556"/>
+                                <rect key="frame" x="20" y="306" width="374" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1010,18 +1005,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgA-vq-YgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1562" y="733"/>
+            <point key="canvasLocation" x="-1562.3188405797102" y="732.58928571428567"/>
         </scene>
         <!--Skh Search Table View Controller-->
         <scene sceneID="ZTy-aM-nBk">
             <objects>
-                <tableViewController id="rhW-fY-EaY" customClass="skhSearchTableViewController" customModule="finalBeerSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rhW-fY-EaY" customClass="skhSearchTableViewController" customModule="macflix" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G6L-it-EeB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mySearchCell" rowHeight="164" id="OAQ-TX-7Yj" customClass="skhSearchTableViewCell" customModule="finalBeerSearch" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mySearchCell" rowHeight="164" id="OAQ-TX-7Yj" customClass="skhSearchTableViewCell" customModule="macflix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OAQ-TX-7Yj" id="CBL-Sq-fqx">
@@ -1105,7 +1100,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xgB-VG-LI9"/>
+        <segue reference="Eqb-WA-L0x"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Sausa Weizen.png" width="16" height="16"/>

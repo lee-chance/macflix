@@ -42,7 +42,7 @@ class UserProfilenameModel: NSObject {
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         
 //        return Int(jsonResult) ?? 0
-        LOGGED_IN_PROFILNAME = jsonResult
+        LOGGED_IN_PROFILENAME = jsonResult
         
         DispatchQueue.main.async(execute: {() -> Void in
             self.delegate.itemDownloaded(items: jsonResult)

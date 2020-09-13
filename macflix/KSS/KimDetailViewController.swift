@@ -131,7 +131,7 @@ class KimDetailViewController: UIViewController{
             let taste = Double(tasteNum.text!)
             let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
             let reviewInsert = ReviewInsertModel()
-            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILNAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILENAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
