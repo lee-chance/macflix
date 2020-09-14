@@ -14,7 +14,7 @@ class PriorityTableViewController: UITableViewController {
 
     @IBOutlet var listView: UITableView!
     
-    var items = ["Smell", "Appearance", "Taste", "Palate"]
+    var items = ["Feel", "Look", "Smell", "Taste"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

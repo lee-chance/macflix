@@ -20,8 +20,13 @@ class KimDetailViewController: UIViewController{
     @IBOutlet weak var style: UILabel!
     @IBOutlet weak var abv: UILabel!
     @IBOutlet weak var overall: UILabel!
-    @IBOutlet weak var review: UILabel!
+    @IBOutlet weak var brewery_name: UILabel!
+    @IBOutlet weak var feel: UILabel!
+    @IBOutlet weak var look: UILabel!
+    @IBOutlet weak var smell: UILabel!
+    @IBOutlet weak var taste: UILabel!
     @IBOutlet weak var btnLike: UIButton!
+    
     @IBOutlet weak var webview: WKWebView!
     
     @IBOutlet weak var feelNum: UILabel!
@@ -38,7 +43,11 @@ class KimDetailViewController: UIViewController{
     var receiveStyle = ""
     var receiveAbv = ""
     var receiveOverall = ""
-    var receiveReview = ""
+    var receiveFeel = ""
+    var receiveLook = ""
+    var receiveSmell = ""
+    var receiveTaste = ""
+    var receivebreweryName = ""
     var receiveId = ""
     var checkReview = 0
     var receiveHeart = 0
@@ -52,8 +61,13 @@ class KimDetailViewController: UIViewController{
         name.text = receiveName
         style.text = receiveStyle
         abv.text = receiveAbv
+        brewery_name.text = receivebreweryName
+        feel.text = receiveFeel
+        look.text = receiveLook
+        smell.text = receiveSmell
+        taste.text = receiveTaste
         overall.text = receiveOverall
-        review.text = receiveReview
+        
         let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(receiveId).jpg")
         let myRequest = URLRequest(url: myURL!)
         webview.load(myRequest)
@@ -70,43 +84,29 @@ class KimDetailViewController: UIViewController{
     }
     
     
-    override func viewWillDisappear(_ animated: Bool) {
+    @IBAction func btnLikeAction(_ sender: UIButton) {
         let preferenceModel = PreferenceModel()
-        let alertService = AlertService()
         
-        if receiveHeart == btnState {
-            
-        } else {
-            if btnState != 0 {
-                preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
-                    DispatchQueue.main.async { () -> Void in
-                        if !isValid {
-                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
-                        }
-                    }
-                }
-            } else {
-                preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
-                    DispatchQueue.main.async { () -> Void in
-                        if !isValid {
-                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
-                        }
+        // 창수 수정
+        let beerId = Int(receiveId)
+        if LOGGED_IN_HEARTLIST.contains(beerId!) {
+            preferenceModel.deleteItems(beer_id: beerId!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId!)!)
+                        sender.setImage(self.no_heart, for: UIControl.State.normal)
                     }
                 }
             }
-
-            
-        }
-    }
-    
-    @IBAction func btnLikeAction(_ sender: UIButton) {
-        
-        if btnState == 0 {
-            btnLike.setImage(heart, for: UIControl.State.normal)
-            btnState = 1
         } else {
-            btnLike.setImage(no_heart, for: UIControl.State.normal)
-            btnState = 0
+            preferenceModel.insertItems(beer_id: beerId!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.append(beerId!)
+                        sender.setImage(self.heart, for: UIControl.State.normal)
+                    }
+                }
+            }
         }
     }
     

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class LikeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imgView: UIImageView!
+    
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var style: UILabel!
     @IBOutlet weak var abv: UILabel!

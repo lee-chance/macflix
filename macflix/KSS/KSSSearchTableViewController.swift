@@ -28,7 +28,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         // 백버튼 지우기
         self.tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
         
-        listTableView.rowHeight = 164
+        listTableView.rowHeight = 165
     }
     func itemDownloaded(items: NSArray) {
         feedItem = items
@@ -132,8 +132,12 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             detailView.receiveId = item.beerId!
             detailView.receiveName = item.beerName!
             detailView.receiveStyle = item.beerStyle!
-            detailView.receiveAbv = "Abv : \(item.beerAbv!)"
-            detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+            detailView.receiveAbv = item.beerAbv!
+            detailView.receivebreweryName = item.brewery_name!
+            detailView.receiveFeel = item.reviewFeel!
+            detailView.receiveLook = item.reviewLook!
+            detailView.receiveSmell = item.reviewSmell!
+            detailView.receiveTaste = item.reviewTaste!
             detailView.receiveOverall = item.reviewOverall!
             detailView.receiveHeart = item.beerHeart
             

@@ -21,6 +21,7 @@ class KimDBModel: NSObject{
     var reviewOverall: String?
     var beerHeart: Int = 0
     var beerImg : String?
+    var brewery_name: String?
     
     //Empty Constructor
     override init() {
@@ -28,7 +29,7 @@ class KimDBModel: NSObject{
     }
     
     // Constructor
-    init(beerId: String, beerName: String, beerStyle:String, beerAbv:String,reviewSmell: String,reviewFeel: String,reviewLook: String,reviewTaste: String,reviewOverall: String, beerHeart: Int, beerImg: String) {
+    init(beerId: String, beerName: String, beerStyle:String, beerAbv:String,reviewSmell: String,reviewFeel: String,reviewLook: String,reviewTaste: String,reviewOverall: String, beerHeart: Int, beerImg: String, brewery_name: String) {
         self.beerId = beerId
         self.beerName = beerName
         self.beerStyle = beerStyle
@@ -40,6 +41,7 @@ class KimDBModel: NSObject{
         self.reviewOverall = reviewOverall
         self.beerHeart = beerHeart
         self.beerImg = beerImg
+        self.brewery_name = brewery_name
     }
 
     

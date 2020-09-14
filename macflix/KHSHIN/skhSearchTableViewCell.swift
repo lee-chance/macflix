@@ -10,7 +10,7 @@ import UIKit
 
 class skhSearchTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var ivBeerImage: UIImageView!
+
     @IBOutlet weak var lblBeerName: UILabel!
     @IBOutlet weak var lblBeerStyle: UILabel!
     @IBOutlet weak var lblAbv: UILabel!

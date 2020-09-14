@@ -28,7 +28,7 @@ class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol
         queryModel.delegate = self
         queryModel.downloadItems(aroma: receivedAroma, appearance: receivedApperance, palate: receivedPalate, taste: receivedTaste)
         
-        listTableView.rowHeight = 164
+        listTableView.rowHeight = 165
     }
 
     // MARK: - Table view data source

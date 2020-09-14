@@ -50,6 +50,7 @@ class KimQueryModel: NSObject{
         let urlAdd = "first=\(first)&second=\(second)&third=\(third)&fourth=\(fourth)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
         // 한글 url encoding
+//        print(urlPath)
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         let url: URL = URL(string: urlPath)!
@@ -69,7 +70,7 @@ class KimQueryModel: NSObject{
     func downloadItems(seq: Int, completion: @escaping (Bool)->()){
         let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp?seq=\(seq)"
         let url: URL = URL(string: urlPath)!
-        
+//        print(urlPath)
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil { // 에러코드가 없을 때 실행
@@ -108,7 +109,8 @@ class KimQueryModel: NSObject{
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
                 let reviewOverall = jsonElement["overall"] as? String,
-                let beerHeart = jsonElement["heart"] as? String{
+                let beerHeart = jsonElement["heart"] as? String,
+                let brewery_name = jsonElement["brewery_name"] as? String{
 
                 query.beerId = beerId
                 query.beerName = beerName
@@ -120,6 +122,7 @@ class KimQueryModel: NSObject{
                 query.reviewTaste = reviewTaste
                 query.reviewOverall = reviewOverall
                 query.beerHeart = Int(beerHeart)!
+                query.brewery_name = brewery_name
             }
             
             // 배열에 넣어줌
@@ -139,14 +142,14 @@ class KimQueryModel: NSObject{
         var urlPath = URL_PATH + "IOS/beer_like_query_ios.jsp"
         let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-        
+        print(urlPath)
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
             } else {
-                self.parseJSON3(data!)
+                _ = self.parseJSON(data!)
             }
         }
         task.resume()
