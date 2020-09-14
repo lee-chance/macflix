@@ -49,8 +49,8 @@ class KimQueryModel: NSObject{
         var urlPath = URL_PATH + "KSSJSP/beer_query_ios.jsp?"
         let urlAdd = "first=\(first)&second=\(second)&third=\(third)&fourth=\(fourth)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
+        print(urlPath)
         // 한글 url encoding
-//        print(urlPath)
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         let url: URL = URL(string: urlPath)!
@@ -70,7 +70,7 @@ class KimQueryModel: NSObject{
     func downloadItems(seq: Int, completion: @escaping (Bool)->()){
         let urlPath = URL_PATH + "CSJSP/selectSampleBeer.jsp?seq=\(seq)"
         let url: URL = URL(string: urlPath)!
-//        print(urlPath)
+        print(urlPath)
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil { // 에러코드가 없을 때 실행
@@ -142,7 +142,9 @@ class KimQueryModel: NSObject{
         var urlPath = URL_PATH + "IOS/beer_like_query_ios.jsp"
         let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
+        
         print(urlPath)
+        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         

@@ -21,7 +21,6 @@ class SkhQueryModel: NSObject {
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
-        
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
             } else {
@@ -45,23 +44,25 @@ class SkhQueryModel: NSObject {
         for i in 0..<jsonResult.count {
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let query = SkhDBModel()
+            let query = KimDBModel()
             
-            if let beerName = jsonElement["beername"] as? String,
-               let beerStyle = jsonElement["style"] as? String,
-               let beerAbv = jsonElement["abv"] as? String,
-               let reviewAroma = jsonElement["aroma"] as? String,
-               let reviewAppear = jsonElement["appear"] as? String,
-               let reviewPalate = jsonElement["palate"] as? String,
-               let reviewTaste = jsonElement["taste"] as? String,
-               let reviewOverall = jsonElement["overall"] as? String {
-                
+            if  let beerId = jsonElement["beer_id"] as? String,
+                let beerName = jsonElement["beer_name"] as? String,
+                let beerStyle = jsonElement["beer_style"] as? String,
+                let beerAbv = jsonElement["beer_abv"] as? String,
+                let reviewSmell = jsonElement["aroma"] as? String,
+                let reviewLook = jsonElement["appearance"] as? String,
+                let reviewFeel = jsonElement["palate"] as? String,
+                let reviewTaste = jsonElement["taste"] as? String,
+                let reviewOverall = jsonElement["overall"] as? String{
+
+                query.beerId = beerId
                 query.beerName = beerName
                 query.beerStyle = beerStyle
                 query.beerAbv = beerAbv
-                query.reviewAroma = reviewAroma
-                query.reviewAppear = reviewAppear
-                query.reviewPalate = reviewPalate
+                query.reviewFeel = reviewFeel
+                query.reviewLook = reviewLook
+                query.reviewSmell = reviewSmell
                 query.reviewTaste = reviewTaste
                 query.reviewOverall = reviewOverall
             }

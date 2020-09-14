@@ -1205,6 +1205,15 @@
                                         </wkWebView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="abv" destination="AWn-dM-SXv" id="cAk-B5-MnB"/>
+                                    <outlet property="btnLike" destination="8P6-hf-j7c" id="mce-lR-aJI"/>
+                                    <outlet property="name" destination="2Az-RK-6pj" id="2Sj-xk-grM"/>
+                                    <outlet property="overall" destination="Wcg-OQ-6kY" id="0N4-pT-dPl"/>
+                                    <outlet property="review" destination="nwu-0F-O7d" id="wLQ-ix-9TZ"/>
+                                    <outlet property="style" destination="1Oc-1u-N8B" id="90V-Aj-q74"/>
+                                    <outlet property="webView" destination="dKS-AT-klK" id="8ho-pt-NZe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1300,6 +1309,15 @@
                                         </wkWebView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="abv" destination="2rT-c7-wm7" id="dmw-pt-wuB"/>
+                                    <outlet property="btnLike" destination="zzh-X5-ejC" id="L8P-B2-yLi"/>
+                                    <outlet property="name" destination="Pq2-xy-nF3" id="4qc-it-vD2"/>
+                                    <outlet property="overall" destination="3UX-hn-YOj" id="ng9-3b-0on"/>
+                                    <outlet property="review" destination="mXA-xw-Nn9" id="bbM-UZ-b55"/>
+                                    <outlet property="style" destination="m0W-Mw-E4g" id="82p-b4-t4B"/>
+                                    <outlet property="webView" destination="5PG-Cz-oYS" id="ubr-o2-rgC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

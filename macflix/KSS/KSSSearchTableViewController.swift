@@ -16,8 +16,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     
     @IBOutlet var listTableView: UITableView!
     var feedItem: NSArray = NSArray()
-    var beerLikeItem: NSArray = NSArray()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +67,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     
     // 다른 화면에서 이동후에 첫 실행되는 Method
     override func viewWillAppear(_ animated: Bool) {
-        print(LOGGED_IN_HEARTLIST)
         let queryModel = KimQueryModel()
         queryModel.delegate = self
         
