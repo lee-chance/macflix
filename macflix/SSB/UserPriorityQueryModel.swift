@@ -20,7 +20,6 @@ class UserPriorityQueryModel: NSObject{
     func getPriorityList() {
         
         let url: URL = URL(string: urlPath)!
-//        print(urlPath)
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) {(data, respone, error) in
@@ -34,11 +33,6 @@ class UserPriorityQueryModel: NSObject{
     
     func parseJSON2(_ data: Data) {
         var jsonResult = String(data: data, encoding: .utf8)!
-        //        do {
-        //            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! String
-        //        } catch let error as NSError {
-        //            print(error)
-        //        }
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         let splitedList = jsonResult.components(separatedBy: ", ")
         var resultList: [String] = []

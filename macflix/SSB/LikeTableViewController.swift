@@ -44,28 +44,30 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             let item: KimDBModel = beerArray[indexPath![1]] as! KimDBModel
             let preferenceModel = PreferenceModel()
             
-            if item.beerHeart == 1 {
-                preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
+            let beerId = Int(item.beerId!)!
+            
+            if LOGGED_IN_HEARTLIST.contains(beerId) {
+                preferenceModel.deleteItems(beer_id: beerId) {isValid in
                     DispatchQueue.main.async { () -> Void in
                         if isValid {
+                            LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId)!)
                             self.viewWillAppear(true)
-                            self.heartAlert("좋아요에서 삭제했습니다.")}
+                        }
                     }
                 }
             }
+            
+//            if item.beerHeart == 1 {
+//                preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
+//                    DispatchQueue.main.async { () -> Void in
+//                        if isValid {
+//                            self.viewWillAppear(true)
+//                            self.heartAlert("좋아요에서 삭제했습니다.")}
+//                    }
+//                }
+//            }
 
         }
-        
-        
-        func heartAlert(_ msg: String) {
-            let alert = UIAlertController(title: nil, message: msg, preferredStyle: UIAlertController.Style.alert)
-            let cancelAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            
-            alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
-        }
-        
-        
 
         // MARK: - Table view data source
         
@@ -88,12 +90,18 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             cell.abv.text = item.beerAbv
             cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
             cell.overall.text = item.reviewOverall
-                
-            if item.beerHeart == 0 {
-                cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
-            } else {
+            
+            if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
                 cell.btnLike.setImage(heart, for: UIControl.State.normal)
+            } else {
+                cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
             }
+                
+//            if item.beerHeart == 0 {
+//                cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
+//            } else {
+//                cell.btnLike.setImage(heart, for: UIControl.State.normal)
+//            }
                 
             return cell
         }

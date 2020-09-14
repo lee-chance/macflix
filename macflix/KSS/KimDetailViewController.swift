@@ -80,16 +80,16 @@ class KimDetailViewController: UIViewController{
             if btnState != 0 {
                 preferenceModel.insertItems(beer_id: Int(receiveId)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
-                        if isValid {
-                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에 추가했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        if !isValid {
+                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
                         }
                     }
                 }
             } else {
                 preferenceModel.deleteItems(beer_id: Int(receiveId)!) {isValid in
                     DispatchQueue.main.async { () -> Void in
-                        if isValid {
-                            self.present(alertService.mAlert(alertTitle: "", alertMessage: "좋아요에서 삭제했습니다.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+                        if !isValid {
+                            self.present(alertService.mAlert(alertTitle: "Error", alertMessage: "An error has occurred.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
                         }
                     }
                 }
@@ -137,7 +137,7 @@ class KimDetailViewController: UIViewController{
             let taste = Double(tasteNum.text!)
             let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
             let reviewInsert = ReviewInsertModel()
-            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILNAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILENAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
@@ -156,7 +156,6 @@ class KimDetailViewController: UIViewController{
             DispatchQueue.main.async { () -> Void in
                 if resultSeq != 0 {
                     self.checkReview = resultSeq
-                    print(resultSeq)
                     let reviewdata = ReviewDataModel()
                     _ = reviewdata.getReviewData(seq: LOGGED_IN_SEQ, beerid: Int(self.receiveId)!){ resultlist in
                         DispatchQueue.main.async { () -> Void in
@@ -168,13 +167,11 @@ class KimDetailViewController: UIViewController{
                             self.sdLook.value = NSString(string: resultlist[2]).floatValue
                             self.tasteNum.text = resultlist[3]
                             self.sdTaste.value = NSString(string: resultlist[3]).floatValue
-                            print(resultlist[0])
                         }
                         
                     }
                 } else {
                     self.checkReview = resultSeq
-                    print(resultSeq)
                 }
             }
         }
@@ -182,25 +179,21 @@ class KimDetailViewController: UIViewController{
     @IBAction func feelSd(_ sender: UISlider) {
         if Int(sdFell.value*10) % 10 >= 0 && Int(sdFell.value*10) % 10 < 5{
             feelNum.text = String(format: "%.1f",sdFell.value)
-            print(feelNum.text!)
         }
     }
     @IBAction func lookSd(_ sender: UISlider) {
         if Int(sdLook.value*10) % 10 >= 0 && Int(sdLook.value*10) % 10 < 5{
             lookNum.text = String(format: "%.1f",sdLook.value)
-            print(lookNum.text!)
         }
     }
     @IBAction func smellSd(_ sender: UISlider) {
         if Int(sdSmell.value*10) % 10 >= 0 && Int(sdSmell.value*10) % 10 < 5{
             smellNum.text = String(format: "%.1f",sdSmell.value)
-            print(smellNum.text!)
         }
     }
     @IBAction func tasteSd(_ sender: UISlider) {
         if Int(sdTaste.value*10) % 10 >= 0 && Int(sdTaste.value*10) % 10 < 5{
             tasteNum.text = String(format: "%.1f",sdTaste.value)
-            print(tasteNum.text!)
         }
     }
 

@@ -18,16 +18,13 @@ class SkhQueryModel: NSObject {
     func downloadItems(aroma: String, appearance: String, palate: String, taste: String){
         let urlAdd = "?aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)"
         urlPath += urlAdd
-        print(urlPath)
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
-                print("Failed to download data")
             } else {
-                print("Data is downloaded")
                 self.parseJSON(data!)
             }
         }

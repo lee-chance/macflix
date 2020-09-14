@@ -88,7 +88,6 @@ class skhSearcBeerViewController: UIViewController {
             searchDestination.receivedTaste = taste2
             
             searchDestination.receivedItems(smell2, look2, feel2, taste2)
-            //print("smell2 = \(smell2), look2 = \(look2), feel2 = \(feel2), taste2 = \(taste2)")
         }
     }
     

@@ -43,8 +43,12 @@ class LoginViewController: UIViewController {
     func loginWithStaticDatas(user_seq: Int) {
         self.performSegue(withIdentifier: "sgLogin", sender: self)
         LOGGED_IN_SEQ = user_seq
-        loginModel.getUserProfilename(seq: user_seq) { (profileName) in
-            LOGGED_IN_PROFILNAME = profileName
+        loginModel.getUserData(seq: user_seq) { (returnList) in
+            LOGGED_IN_HEARTLIST = []
+            LOGGED_IN_PROFILENAME = returnList![0]
+            for i in 1..<returnList!.count-1 {
+                LOGGED_IN_HEARTLIST.append(Int(returnList![i])!)
+            }
         }
         UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
     }
@@ -96,13 +100,6 @@ class LoginViewController: UIViewController {
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        // Get the new view controller using segue.destination.
 //        // Pass the selected object to the new view controller.
-//        if segue.identifier == "sgLogin" {
-//            if loginResult {
-//                print("ok")
-//            } else {
-//                print("not ok")
-//            }
-//        }
 //    }
 
 

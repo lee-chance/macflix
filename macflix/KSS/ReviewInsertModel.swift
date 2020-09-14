@@ -15,7 +15,6 @@ class ReviewInsertModel: NSObject {
         
         let urlAdd = "?user_seq=\(seq)&beerid=\(beerid)&profilename=\(profilename)&aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)&overall=\(overall)"
         urlPath += urlAdd
-        print(urlPath)
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         

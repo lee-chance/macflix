@@ -367,12 +367,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="모아보기" image="house" catalog="system" id="76P-1n-FtO"/>
-                    <navigationItem key="navigationItem" title="맥주 검색" id="mqv-zi-fA9">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="search" id="B37-dn-cLK"/>
-                            <barButtonItem title="Item" id="9LI-cx-w6w"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="맥주 검색" id="mqv-zi-fA9"/>
                     <connections>
                         <outlet property="listTableView" destination="5lW-vF-0P7" id="yWP-4S-8Ld"/>
                     </connections>
@@ -574,7 +569,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="37.681159420289859" y="1478.5714285714284"/>
+=======
+            <point key="canvasLocation" x="62" y="1479"/>
+>>>>>>> b979379d640e0f3e16af515101870cc9436dd7e5
         </scene>
         <!--MACFLIX-->
         <scene sceneID="KvT-hi-QRc">
@@ -842,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7M-ys-cG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="1"/>
+            <point key="canvasLocation" x="1338" y="733"/>
         </scene>
         <!--Preference for Beer-->
         <scene sceneID="oi3-Ci-rMP">
@@ -882,7 +881,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AON-TH-0w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="733"/>
+            <point key="canvasLocation" x="2412" y="1"/>
         </scene>
         <!--Skh Searc Beer View Controller-->
         <scene sceneID="VHH-UD-Z97">
@@ -992,7 +991,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자신의 취향에 맞는 맥주를 검색하세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW0-YB-4NG">
-                                <rect key="frame" x="20" y="306" width="374" height="556"/>
+                                <rect key="frame" x="20" y="306" width="374" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1018,7 +1017,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgA-vq-YgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1562" y="733"/>
+            <point key="canvasLocation" x="-1562.3188405797102" y="732.58928571428567"/>
         </scene>
         <!--Skh Search Table View Controller-->
         <scene sceneID="ZTy-aM-nBk">
