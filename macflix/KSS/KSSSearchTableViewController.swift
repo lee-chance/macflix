@@ -107,21 +107,15 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchmyCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
-<<<<<<< HEAD
-        let item: KimDBModel = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
-        
 
-            
-=======
+        let item: KimDBModel = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
         let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
-        
->>>>>>> b979379d640e0f3e16af515101870cc9436dd7e5
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
         cell.abv.text = item.beerAbv
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
-<<<<<<< HEAD
+
         let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
         let myRequest = URLRequest(url: myURL!)
         cell.webView.load(myRequest)
@@ -130,10 +124,10 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         if item.beerHeart == 0 {
             cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
         } else {
-=======
+
         
         if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
->>>>>>> b979379d640e0f3e16af515101870cc9436dd7e5
+
             cell.btnLike.setImage(heart, for: UIControl.State.normal)
         } else {
             cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
@@ -161,5 +155,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             
         }
         
+    }
+
     }
 }
