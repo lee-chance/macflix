@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class KimDetailViewController: UIViewController{
     
@@ -14,13 +15,14 @@ class KimDetailViewController: UIViewController{
     var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
     var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
     
-    @IBOutlet weak var imgView: UIImageView!
+
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var style: UILabel!
     @IBOutlet weak var abv: UILabel!
     @IBOutlet weak var overall: UILabel!
     @IBOutlet weak var review: UILabel!
     @IBOutlet weak var btnLike: UIButton!
+    @IBOutlet weak var webview: WKWebView!
     
     @IBOutlet weak var feelNum: UILabel!
     @IBOutlet weak var lookNum: UILabel!
@@ -52,6 +54,10 @@ class KimDetailViewController: UIViewController{
         abv.text = receiveAbv
         overall.text = receiveOverall
         review.text = receiveReview
+        let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(receiveId).jpg")
+        let myRequest = URLRequest(url: myURL!)
+        webview.load(myRequest)
+        
         
         if receiveHeart != 0 {
             btnLike.setImage(heart, for: UIControl.State.normal)
@@ -190,6 +196,9 @@ class KimDetailViewController: UIViewController{
             tasteNum.text = String(format: "%.1f",sdTaste.value)
         }
     }
+
+
+    
     /*
      // MARK: - Navigation
      

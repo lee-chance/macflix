@@ -84,14 +84,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             }
         }
         
-          // 창수 추가
-//        let _ = queryModel.getPriorityList(seq: LOGGED_IN_SEQ) { returnList in
-//            if returnList.count < 4 {
-//                queryModel.downloadItems(seq: LOGGED_IN_SEQ) { isValid in }
-//            } else {
-//                queryModel.setItems(first: returnList[0], second: returnList[1], third: returnList[2], fourth: returnList[3]) { isValid in }
-//            }
-//        }
     }
     
     // MARK: - Table view data source
@@ -107,13 +99,17 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchmyCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
-        let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
         
+        let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
         cell.abv.text = item.beerAbv
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
+        
+        let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
+        let myRequest = URLRequest(url: myURL!)
+        cell.webView.load(myRequest)
         
         if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
             cell.btnLike.setImage(heart, for: UIControl.State.normal)
@@ -132,7 +128,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             let indexPath = self.listTableView.indexPath(for : cell)
             let detailView = segue.destination as! KimDetailViewController
             let item = feedItem[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
-
+            
             detailView.receiveId = item.beerId!
             detailView.receiveName = item.beerName!
             detailView.receiveStyle = item.beerStyle!
@@ -140,7 +136,10 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
             detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
             detailView.receiveOverall = item.reviewOverall!
             detailView.receiveHeart = item.beerHeart
+            
         }
         
     }
+    
 }
+
