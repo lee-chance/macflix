@@ -104,7 +104,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
-        cell.abv.text = item.beerAbv
+        cell.abv.text = "도수 : \(item.beerAbv!)"
         cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
         cell.overall.text = item.reviewOverall
         

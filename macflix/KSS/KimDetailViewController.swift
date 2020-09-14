@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import Kanna
+
 
 class KimDetailViewController: UIViewController{
     
