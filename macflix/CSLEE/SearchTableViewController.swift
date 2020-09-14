@@ -1,40 +1,42 @@
 //
-//  PriorityTableViewController.swift
-//  KNNTest
+//  SearchTableViewController.swift
+//  macflix
 //
-//  Created by Changsu Lee on 2020/09/07.
+//  Created by Changsu Lee on 2020/09/14.
 //  Copyright © 2020 Changsu Lee. All rights reserved.
 //
 
 import UIKit
 
-var priority: [String] = []
-
-class PriorityTableViewController: UITableViewController {
-
-    @IBOutlet var listView: UITableView!
+class SearchTableViewController: UITableViewController, SkhQueryModelProtocol {
     
-    var items = ["Feel", "Look", "Smell", "Taste"]
+    @IBOutlet var listTableView: UITableView!
     
+    var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
+    var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
+    
+    var feedItem: NSArray = NSArray()
+    
+    var keyword = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
 
-    @IBAction func btnSubmit(_ sender: UIButton) {
-        priority.removeAll()
-        for i in 0..<items.count {
-            priority.append(((listView.visibleCells[i].textLabel?.text)! as String))
-        }
+        self.listTableView.delegate = self
+        self.listTableView.dataSource = self
         
-        let alertService = AlertService()
-        present(alertService.mAlert(alertTitle: "", alertMessage: "Set up!", actionTitle: "Ok", handler: {Void in
-            self.navigationController?.popViewController(animated: true)
-        }), animated: true)
+        listTableView.rowHeight = 164
         
+        let searchModel = SearchModel()
+        searchModel.delegate = self
+        searchModel.searchKeyword(keyword: keyword) { (returnstr) in }
     }
     
+    func itemDownloaded(items: NSArray) {
+        feedItem = items
+        self.listTableView.reloadData()
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,20 +46,31 @@ class PriorityTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return feedItem.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "preferenceCell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mySearchCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
-        if priority.isEmpty {
-            cell.textLabel?.text = items[(indexPath as NSIndexPath).row]
+        
+        let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+        cell.name.text = item.beerName
+        cell.style.text = item.beerStyle
+        cell.abv.text = item.beerAbv
+        cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+        cell.overall.text = item.reviewOverall
+        
+        let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
+        let myRequest = URLRequest(url: myURL!)
+        cell.webView.load(myRequest)
+        
+        if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
+            cell.btnLike.setImage(heart, for: UIControl.State.normal)
         } else {
-            cell.textLabel?.text = priority[(indexPath as NSIndexPath).row]
+            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
         }
-
+        
         return cell
     }
     
@@ -82,12 +95,12 @@ class PriorityTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    
+    */
 
     /*
     // Override to support conditional rearranging of the table view.

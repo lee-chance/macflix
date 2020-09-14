@@ -10,6 +10,9 @@ import UIKit
 
 class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol {
     
+    var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
+    var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
+    
     @IBOutlet var listTableView: UITableView!
     var feedItem: NSArray = NSArray()
     var receivedAroma = ""
@@ -29,7 +32,7 @@ class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol
         queryModel.delegate = self
         queryModel.downloadItems(aroma: receivedAroma, appearance: receivedApperance, palate: receivedPalate, taste: receivedTaste)
         
-        listTableView.rowHeight = 164
+        listTableView.rowHeight = 165
     }
 
     // MARK: - Table view data source
@@ -57,16 +60,26 @@ class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mySearchCell", for: indexPath) as! skhSearchTableViewCell
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mySearchCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
-        let item: SkhDBModel = feedItem[indexPath.row] as! SkhDBModel
-        cell.lblBeerName.text = item.beerName
-        cell.lblBeerStyle.text = item.beerStyle
-        cell.lblAbv.text = "Abv : \(item.beerAbv!), Feel :\(item.reviewPalate!)"
-        cell.lblEvaluation.text = "Look :\(item.reviewAppear!), Smell :\(item.reviewAroma!), Taste :\(item.reviewTaste!)"
-        cell.lblOverall.text = item.reviewOverall
-
+        
+        let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+        cell.name.text = item.beerName
+        cell.style.text = item.beerStyle
+        cell.abv.text = item.beerAbv
+        cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+        cell.overall.text = item.reviewOverall
+        
+        let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
+        let myRequest = URLRequest(url: myURL!)
+        cell.webView.load(myRequest)
+        
+        if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
+            cell.btnLike.setImage(heart, for: UIControl.State.normal)
+        } else {
+            cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
+        }
+        
         return cell
     }
     

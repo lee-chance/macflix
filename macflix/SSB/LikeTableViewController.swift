@@ -18,7 +18,7 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            listTableView.rowHeight = 175
+            listTableView.rowHeight = 165
             
             self.listTableView.delegate = self
             self.listTableView.dataSource = self
@@ -91,17 +91,15 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
             cell.review.text = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
             cell.overall.text = item.reviewOverall
             
+            let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(item.beerId!).jpg")
+            let myRequest = URLRequest(url: myURL!)
+            cell.webView.load(myRequest)
+            
             if LOGGED_IN_HEARTLIST.contains(Int(item.beerId!)!) {
                 cell.btnLike.setImage(heart, for: UIControl.State.normal)
             } else {
                 cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
             }
-                
-//            if item.beerHeart == 0 {
-//                cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
-//            } else {
-//                cell.btnLike.setImage(heart, for: UIControl.State.normal)
-//            }
                 
             return cell
         }
@@ -117,8 +115,12 @@ class LikeTableViewController: UITableViewController, PreferenceQueryModelProtoc
                 detailView.receiveId = item.beerId!
                 detailView.receiveName = item.beerName!
                 detailView.receiveStyle = item.beerStyle!
-                detailView.receiveAbv = "Abv : \(item.beerAbv!)"
-                detailView.receiveReview = "Feel :\(item.reviewFeel!) Look : \(item.reviewLook!) Smell : \(item.reviewSmell!) Taste : \(item.reviewTaste!)"
+                detailView.receiveAbv = item.beerAbv!
+                detailView.receivebreweryName = item.brewery_name!
+                detailView.receiveFeel = item.reviewFeel!
+                detailView.receiveLook = item.reviewLook!
+                detailView.receiveSmell = item.reviewSmell!
+                detailView.receiveTaste = item.reviewTaste!
                 detailView.receiveOverall = item.reviewOverall!
                 detailView.receiveHeart = item.beerHeart
             }

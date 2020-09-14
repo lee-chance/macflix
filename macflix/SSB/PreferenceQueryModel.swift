@@ -58,7 +58,8 @@ class PreferenceQueryModel: NSObject{
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
                 let reviewOverall = jsonElement["overall"] as? String,
-                let beerHeart = jsonElement["heart"] as? String{
+                let beerHeart = jsonElement["heart"] as? String,
+                let brewery_name = jsonElement["brewery_name"] as? String{
 
                 query.beerId = beerId
                 query.beerName = beerName
@@ -70,6 +71,7 @@ class PreferenceQueryModel: NSObject{
                 query.reviewTaste = reviewTaste
                 query.reviewOverall = reviewOverall
                 query.beerHeart = Int(beerHeart)!
+                query.brewery_name = brewery_name
             }
             
             locations.add(query)

@@ -22,6 +22,8 @@
 		2E80498125089E3000F59E14 /* PriorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497825089E3000F59E14 /* PriorityTableViewController.swift */; };
 		2E80498225089E3000F59E14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497925089E3000F59E14 /* LoginModel.swift */; };
 		2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80497A25089E3000F59E14 /* LoginViewController.swift */; };
+		2EC2687D250F41E200968411 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2687C250F41E200968411 /* SearchModel.swift */; };
+		2EC2687F250F41F400968411 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2687E250F41F400968411 /* SearchTableViewController.swift */; };
 		542E29C9250CC30C00DF5E72 /* UpdateUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */; };
 		542E29CA250CC30C00DF5E72 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */; };
 		542E29D1250CF6D700DF5E72 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */; };
@@ -82,6 +84,8 @@
 		2E80497925089E3000F59E14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2E80497A25089E3000F59E14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E80498825089E5D00F59E14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		2EC2687C250F41E200968411 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		2EC2687E250F41F400968411 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		542E29C5250CC30C00DF5E72 /* UpdateUserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoModel.swift; sourceTree = "<group>"; };
 		542E29C6250CC30C00DF5E72 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		542E29CF250CF6D700DF5E72 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
@@ -192,12 +196,14 @@
 		2E80498525089E3800F59E14 /* CSLEE */ = {
 			isa = PBXGroup;
 			children = (
+				2EC2687C250F41E200968411 /* SearchModel.swift */,
 				2E80497925089E3000F59E14 /* LoginModel.swift */,
 				2E80497725089E3000F59E14 /* SignupModel.swift */,
 				2E80497A25089E3000F59E14 /* LoginViewController.swift */,
 				2E80497825089E3000F59E14 /* PriorityTableViewController.swift */,
 				2E80497625089E3000F59E14 /* SignupViewController.swift */,
 				2E80497525089E3000F59E14 /* AlertService.swift */,
+				2EC2687E250F41F400968411 /* SearchTableViewController.swift */,
 			);
 			path = CSLEE;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				F425AA85250B729D00626E38 /* ReviewUpdateModel.swift in Sources */,
 				54FDCCC3250BBF67002E717B /* PreferenceQueryModel.swift in Sources */,
 				54FDCCC1250BBF67002E717B /* DBModelPriority.swift in Sources */,
+				2EC2687D250F41E200968411 /* SearchModel.swift in Sources */,
 				F4D0F2C9250A0D1400D2F51E /* KimDetailViewController.swift in Sources */,
 				F4D0F2BF250A0BA500D2F51E /* KimQueryModel.swift in Sources */,
 				2E80498325089E3000F59E14 /* LoginViewController.swift in Sources */,
@@ -394,6 +401,7 @@
 				54FDCCC7250BBF67002E717B /* LikeTableViewController.swift in Sources */,
 				2E80495D25089D4900F59E14 /* AppDelegate.swift in Sources */,
 				54FDCCC2250BBF67002E717B /* UserPriorityQueryModel.swift in Sources */,
+				2EC2687F250F41F400968411 /* SearchTableViewController.swift in Sources */,
 				F4F9FADE250B14F8009F3D55 /* ReviewInsertModel.swift in Sources */,
 				2E80495F25089D4900F59E14 /* SceneDelegate.swift in Sources */,
 				FAE5BAF2250DFBD700B62852 /* skhSearcBeerViewController.swift in Sources */,
