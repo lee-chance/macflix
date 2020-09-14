@@ -569,11 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-Ny-b9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="37.681159420289859" y="1478.5714285714284"/>
-=======
-            <point key="canvasLocation" x="62" y="1479"/>
->>>>>>> b979379d640e0f3e16af515101870cc9436dd7e5
         </scene>
         <!--MACFLIX-->
         <scene sceneID="KvT-hi-QRc">
@@ -648,7 +644,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sausa Weizen.png" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-vo-WKi">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-vo-WKi">
                                             <rect key="frame" x="20" y="11" width="90" height="155"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -1112,10 +1108,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xgB-VG-LI9"/>
+        <segue reference="Eqb-WA-L0x"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Sausa Weizen.png" width="16" height="16"/>
         <image name="beer_off" width="185" height="244"/>
         <image name="beer_on" width="185" height="244"/>
         <image name="heart" catalog="system" width="128" height="109"/>
@@ -1123,6 +1118,7 @@
         <image name="macflix_logo" width="149" height="187"/>
         <image name="macflix_title" width="770" height="225"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="r.circle" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

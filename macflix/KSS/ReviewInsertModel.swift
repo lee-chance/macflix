@@ -11,9 +11,9 @@ class ReviewInsertModel: NSObject {
     
     var urlPath = URL_PATH + "KSSJSP/insertReview.jsp"
     
-    func actionReview(seq: String, beerid : String, profilename: String, aroma: String, appearance : String, palate : String, taste : String ,overall : String , completion: @escaping (Bool)->()) {
+    func actionReview(seq: String, beerid : String, profilename: String, aroma: String, appearance : String, palate : String, taste : String ,overall : String ,breweryId : String, completion: @escaping (Bool)->()) {
         
-        let urlAdd = "?user_seq=\(seq)&beerid=\(beerid)&profilename=\(profilename)&aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)&overall=\(overall)"
+        let urlAdd = "?user_seq=\(seq)&beerid=\(beerid)&profilename=\(profilename)&aroma=\(aroma)&appearance=\(appearance)&palate=\(palate)&taste=\(taste)&overall=\(overall)&breweryId=\(breweryId)"
         urlPath += urlAdd
         // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!

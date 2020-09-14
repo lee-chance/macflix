@@ -41,16 +41,18 @@ class LoginViewController: UIViewController {
     }
     
     func loginWithStaticDatas(user_seq: Int) {
-        self.performSegue(withIdentifier: "sgLogin", sender: self)
         LOGGED_IN_SEQ = user_seq
         loginModel.getUserData(seq: user_seq) { (returnList) in
-            LOGGED_IN_HEARTLIST = []
-            LOGGED_IN_PROFILENAME = returnList![0]
-            for i in 1..<returnList!.count-1 {
-                LOGGED_IN_HEARTLIST.append(Int(returnList![i])!)
+            DispatchQueue.main.async { () -> Void in
+                LOGGED_IN_HEARTLIST = []
+                LOGGED_IN_PROFILENAME = returnList![0]
+                for i in 1..<returnList!.count-1 {
+                    LOGGED_IN_HEARTLIST.append(Int(returnList![i])!)
+                }
+                self.performSegue(withIdentifier: "sgLogin", sender: self)
             }
         }
-        UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
+        //UserDefaults.standard.set(1, forKey: USER_DEFAULT_QUERY_STATE)
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {

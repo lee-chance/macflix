@@ -7,21 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C42DB4672733FDC71B2E978C2A5C024 /* Pods-macflix-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD27F939509EAF500C9C1FB07B4B9EE /* Pods-macflix-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CFFBD55760461439DCD2E287895CF0C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB8112F7A637A988B1546DC49E834F /* Animations.swift */; };
-		2D796693C82C88B236B517CC3BF3DD81 /* RevealingSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = BB35D7B87DEC17877D5DF91D4E50C57E /* RevealingSplashView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		334B4420C1D35AB5E97786B7EC59AF53 /* SplashAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCAF2EAD657790506754D67562720EE /* SplashAnimatable.swift */; };
-		345301588CE2D5818996472BA109A6B2 /* RevealingSplashView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E862CED369B320225C56FFE8D265B1 /* RevealingSplashView-dummy.m */; };
-		60D66439D7E87D5FC249D0347FDED2F6 /* Pods-macflix-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D2C389F1EBF6C3A3E96F5B8A54B0B /* Pods-macflix-dummy.m */; };
+		0CFFBD55760461439DCD2E287895CF0C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466BB8B086E7F0D06C8190FCC674E15 /* Animations.swift */; };
+		183ED56ED5A304D31BF95FB4FF100E09 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D891685FB1F124A868C17D9C8682FB /* libxmlHTMLNode.swift */; };
+		1F5E8CC0E12AED9DEF1FA149713B3D29 /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E646F35D353CC454B01E9F3E641B9F91 /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D796693C82C88B236B517CC3BF3DD81 /* RevealingSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C55B04999D2C1773750B19F10A1C4E69 /* RevealingSplashView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		334B4420C1D35AB5E97786B7EC59AF53 /* SplashAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7EA0FB81768B1B2207EDC449C25EA /* SplashAnimatable.swift */; };
+		345301588CE2D5818996472BA109A6B2 /* RevealingSplashView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B8994485B4C115DB630C60A1C6F36 /* RevealingSplashView-dummy.m */; };
+		4931A0D52921C13D6BE42385AB5F9A62 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E504529FEE44ECC0D54568FA5FFD61 /* CSS.swift */; };
+		5649DC8F3E785DB6136A408EAE854679 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC549405217C362BA88B7F3F34E2FB /* libxmlParserOption.swift */; };
+		58A328D01B096B9E3E0F581121F36637 /* Pods-macflix-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD27F939509EAF500C9C1FB07B4B9EE /* Pods-macflix-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6897DDF84D928ACEAF2FE190AD5A7A00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		713679F510BE0BF69B3B198C0199C469 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A4EE264FF6C008546772D8CB7E329F /* libxmlHTMLDocument.swift */; };
 		770168DE52B4855A94437E5EB527EC84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		776C8675E6F20EE4F8C7D7344D670BB1 /* SplashAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E8FF4273B7801F61A12F7C0033813 /* SplashAnimationType.swift */; };
-		83DCF1EF1E31537F6DA2583BCE6182F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		941CF8600D86F37CEF165DA6E7F3134A /* RevealingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1853A81B7960BDA0EF56FE69431B5E /* RevealingSplashView.swift */; };
-		F5314F2BB4EBA2C5AC7C3EFB485C16DD /* RevealingSplashView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BA22FA68FC89064C68294C8F0AE5C5 /* RevealingSplashView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		776C8675E6F20EE4F8C7D7344D670BB1 /* SplashAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A654FFD5295B3613E5F62CFBEB213D1 /* SplashAnimationType.swift */; };
+		7ED44C37C99B94B44B988CAB252D17AD /* Pods-macflix-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D2C389F1EBF6C3A3E96F5B8A54B0B /* Pods-macflix-dummy.m */; };
+		941CF8600D86F37CEF165DA6E7F3134A /* RevealingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C951DADB328922312BEB3FCCEA78A02 /* RevealingSplashView.swift */; };
+		98A80A975711A029440E5197142990E9 /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = E61570518CA384027CC8F726D1B9BEAE /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1523B4EDB43ABF65ADB49E3CDB823F /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EFDB7999FB45CAD679AF5B8427653E /* Kanna-dummy.m */; };
+		C414C055E9CD3328226A5404D384EB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C9BE9617EFABC5E589FADF6F81B08EEE /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D09E2F30FB36683A9448AA8289E2DC /* Kanna.swift */; };
+		EC33DD6EFB5A6494B059FD762316B939 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12244FE1EECB965F84FF260C8DC8F592 /* Deprecated.swift */; };
+		F5314F2BB4EBA2C5AC7C3EFB485C16DD /* RevealingSplashView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD3D3DBD9233746C2D0F49D6169E3FB /* RevealingSplashView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C5F8C8952490A03A1404665B6CE084AB /* PBXContainerItemProxy */ = {
+		4DE8B6A59F54B9AF56C9C773CC616A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93AC747EDE1EE56F89BBF405C1D67027;
+			remoteInfo = Kanna;
+		};
+		8D85F50C3B158725755571C67DBEEA5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -31,34 +48,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		089C807E6687CA03F2B8CEDA41A08477 /* RevealingSplashView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevealingSplashView-prefix.pch"; sourceTree = "<group>"; };
+		12244FE1EECB965F84FF260C8DC8F592 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/Kanna/Deprecated.swift; sourceTree = "<group>"; };
 		1A50D36F2F11E915688C17DED25D8E3E /* Pods-macflix.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-macflix.modulemap"; sourceTree = "<group>"; };
-		285C163241981FB673CC2FE70BD9E6B1 /* RevealingSplashView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevealingSplashView.debug.xcconfig; sourceTree = "<group>"; };
+		1D1B8994485B4C115DB630C60A1C6F36 /* RevealingSplashView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RevealingSplashView-dummy.m"; sourceTree = "<group>"; };
+		1DD3D3DBD9233746C2D0F49D6169E3FB /* RevealingSplashView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevealingSplashView-umbrella.h"; sourceTree = "<group>"; };
+		2A654FFD5295B3613E5F62CFBEB213D1 /* SplashAnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplashAnimationType.swift; path = RevealingSplashView/SplashAnimationType.swift; sourceTree = "<group>"; };
+		30BB8CB05D96CFFD4F20897632AA9EBA /* Kanna-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kanna-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3D241934DE2963BE13B821027EF08693 /* RevealingSplashView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RevealingSplashView.modulemap; sourceTree = "<group>"; };
+		3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kanna.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D891685FB1F124A868C17D9C8682FB /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Sources/Kanna/libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		40E504529FEE44ECC0D54568FA5FFD61 /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Sources/Kanna/CSS.swift; sourceTree = "<group>"; };
 		43E8899FB1E3FDF5F73BC655DFD093E7 /* Pods_macflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_macflix.framework; path = "Pods-macflix.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D3CB690203950EA77469EB162E4DFB9 /* RevealingSplashView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RevealingSplashView-Info.plist"; sourceTree = "<group>"; };
-		5A1853A81B7960BDA0EF56FE69431B5E /* RevealingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RevealingSplashView.swift; path = RevealingSplashView/RevealingSplashView.swift; sourceTree = "<group>"; };
-		6BCAF2EAD657790506754D67562720EE /* SplashAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplashAnimatable.swift; path = RevealingSplashView/SplashAnimatable.swift; sourceTree = "<group>"; };
-		785747E469F593FF3D3D6987D260F295 /* RevealingSplashView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RevealingSplashView.modulemap; sourceTree = "<group>"; };
-		80BA22FA68FC89064C68294C8F0AE5C5 /* RevealingSplashView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevealingSplashView-umbrella.h"; sourceTree = "<group>"; };
+		4485C8EB67903C0202A0F37DA8A6ACB3 /* RevealingSplashView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevealingSplashView.release.xcconfig; sourceTree = "<group>"; };
+		44B2CD69A211E2F0EB58A369FD537F9D /* Kanna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.debug.xcconfig; sourceTree = "<group>"; };
+		55A7EA0FB81768B1B2207EDC449C25EA /* SplashAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplashAnimatable.swift; path = RevealingSplashView/SplashAnimatable.swift; sourceTree = "<group>"; };
+		5C951DADB328922312BEB3FCCEA78A02 /* RevealingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RevealingSplashView.swift; path = RevealingSplashView/RevealingSplashView.swift; sourceTree = "<group>"; };
+		67EFDB7999FB45CAD679AF5B8427653E /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
+		68DA4A691EF74B8F1B1C0CF8C0181154 /* RevealingSplashView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RevealingSplashView-Info.plist"; sourceTree = "<group>"; };
+		6BF4315A12FD830FBEE052469F70ED01 /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kanna.modulemap; sourceTree = "<group>"; };
 		8762DA1ADFDC73FA4CB68D81475004F8 /* Pods-macflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-macflix.debug.xcconfig"; sourceTree = "<group>"; };
 		8C951D7FBA7926AD00692194D5E9691E /* Pods-macflix-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-macflix-acknowledgements.markdown"; sourceTree = "<group>"; };
-		99068E4DBFE2F83B2DA87181CCAE4A43 /* RevealingSplashView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevealingSplashView.release.xcconfig; sourceTree = "<group>"; };
 		9CE3821D99E1E24517198D7031544165 /* Pods-macflix-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-macflix-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0BA993DBB9EB3AFC6FBC2727F7915B /* Pods-macflix-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-macflix-Info.plist"; sourceTree = "<group>"; };
-		B3FB8112F7A637A988B1546DC49E834F /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animations.swift; path = RevealingSplashView/Animations.swift; sourceTree = "<group>"; };
-		BA1E8FF4273B7801F61A12F7C0033813 /* SplashAnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplashAnimationType.swift; path = RevealingSplashView/SplashAnimationType.swift; sourceTree = "<group>"; };
-		BB35D7B87DEC17877D5DF91D4E50C57E /* RevealingSplashView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RevealingSplashView.h; path = RevealingSplashView/RevealingSplashView.h; sourceTree = "<group>"; };
+		A466BB8B086E7F0D06C8190FCC674E15 /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animations.swift; path = RevealingSplashView/Animations.swift; sourceTree = "<group>"; };
+		A7A4EE264FF6C008546772D8CB7E329F /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Sources/Kanna/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		B4D09E2F30FB36683A9448AA8289E2DC /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Sources/Kanna/Kanna.swift; sourceTree = "<group>"; };
+		B780B567CAC19CF68E8B4C7F2AA8F8D0 /* RevealingSplashView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevealingSplashView-prefix.pch"; sourceTree = "<group>"; };
 		BD56534C888FE385363934C9ABE6E7B4 /* RevealingSplashView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RevealingSplashView.framework; path = RevealingSplashView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD27F939509EAF500C9C1FB07B4B9EE /* Pods-macflix-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-macflix-umbrella.h"; sourceTree = "<group>"; };
-		C6E862CED369B320225C56FFE8D265B1 /* RevealingSplashView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RevealingSplashView-dummy.m"; sourceTree = "<group>"; };
+		C1EC549405217C362BA88B7F3F34E2FB /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Sources/Kanna/libxmlParserOption.swift; sourceTree = "<group>"; };
+		C55B04999D2C1773750B19F10A1C4E69 /* RevealingSplashView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RevealingSplashView.h; path = RevealingSplashView/RevealingSplashView.h; sourceTree = "<group>"; };
+		CD26745412E3223009418B22CFB7237F /* Kanna-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-prefix.pch"; sourceTree = "<group>"; };
 		D601F872D148B6A7F8978377A694EB30 /* Pods-macflix-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-macflix-acknowledgements.plist"; sourceTree = "<group>"; };
 		D95D2C389F1EBF6C3A3E96F5B8A54B0B /* Pods-macflix-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-macflix-dummy.m"; sourceTree = "<group>"; };
 		E156831EC9031422833B7F8CE7C103DB /* Pods-macflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-macflix.release.xcconfig"; sourceTree = "<group>"; };
+		E473E2824A0E1DAD7E5E504AC99DD841 /* RevealingSplashView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevealingSplashView.debug.xcconfig; sourceTree = "<group>"; };
+		E61570518CA384027CC8F726D1B9BEAE /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Sources/Kanna/Kanna.h; sourceTree = "<group>"; };
+		E646F35D353CC454B01E9F3E641B9F91 /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
+		FC0F5A6F0F014350A4B0F270F5410836 /* Kanna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		11556284C3E9256C0FE8526F97BEE6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6897DDF84D928ACEAF2FE190AD5A7A00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B759B2C53D4AFDA53541B04006E90D81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,29 +107,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F658B3569764714163615468BFA9AC03 /* Frameworks */ = {
+		BD040212932C464BD48E25437FBFD03C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DCF1EF1E31537F6DA2583BCE6182F7 /* Foundation.framework in Frameworks */,
+				C414C055E9CD3328226A5404D384EB0D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		206B2FDB5CDEE08F33E7108209298F86 /* RevealingSplashView */ = {
+		0F9978ABFFF09E174EFD50CC72760CA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3FB8112F7A637A988B1546DC49E834F /* Animations.swift */,
-				BB35D7B87DEC17877D5DF91D4E50C57E /* RevealingSplashView.h */,
-				5A1853A81B7960BDA0EF56FE69431B5E /* RevealingSplashView.swift */,
-				6BCAF2EAD657790506754D67562720EE /* SplashAnimatable.swift */,
-				BA1E8FF4273B7801F61A12F7C0033813 /* SplashAnimationType.swift */,
-				FCA2F58C63A5E8A98CF4C969B062FF80 /* Support Files */,
+				3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */,
+				43E8899FB1E3FDF5F73BC655DFD093E7 /* Pods_macflix.framework */,
+				BD56534C888FE385363934C9ABE6E7B4 /* RevealingSplashView.framework */,
 			);
-			name = RevealingSplashView;
-			path = RevealingSplashView;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		156F423E9729135D708988698A9D771B /* Kanna */ = {
+			isa = PBXGroup;
+			children = (
+				40E504529FEE44ECC0D54568FA5FFD61 /* CSS.swift */,
+				12244FE1EECB965F84FF260C8DC8F592 /* Deprecated.swift */,
+				E61570518CA384027CC8F726D1B9BEAE /* Kanna.h */,
+				B4D09E2F30FB36683A9448AA8289E2DC /* Kanna.swift */,
+				A7A4EE264FF6C008546772D8CB7E329F /* libxmlHTMLDocument.swift */,
+				40D891685FB1F124A868C17D9C8682FB /* libxmlHTMLNode.swift */,
+				C1EC549405217C362BA88B7F3F34E2FB /* libxmlParserOption.swift */,
+				7DA2A792F3AB85E6A18321AC37327311 /* Support Files */,
+			);
+			name = Kanna;
+			path = Kanna;
 			sourceTree = "<group>";
 		};
 		45713E1A5712381CA4A818F9D4702E3C /* Pods-macflix */ = {
@@ -109,20 +161,41 @@
 			path = "Target Support Files/Pods-macflix";
 			sourceTree = "<group>";
 		};
-		4AA12F0BE7E0D48CE0EEA588D0A1000D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				206B2FDB5CDEE08F33E7108209298F86 /* RevealingSplashView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6ACE526FF19256EA70B2BCE4A9823DBA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				45713E1A5712381CA4A818F9D4702E3C /* Pods-macflix */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DA2A792F3AB85E6A18321AC37327311 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4315A12FD830FBEE052469F70ED01 /* Kanna.modulemap */,
+				67EFDB7999FB45CAD679AF5B8427653E /* Kanna-dummy.m */,
+				30BB8CB05D96CFFD4F20897632AA9EBA /* Kanna-Info.plist */,
+				CD26745412E3223009418B22CFB7237F /* Kanna-prefix.pch */,
+				E646F35D353CC454B01E9F3E641B9F91 /* Kanna-umbrella.h */,
+				44B2CD69A211E2F0EB58A369FD537F9D /* Kanna.debug.xcconfig */,
+				FC0F5A6F0F014350A4B0F270F5410836 /* Kanna.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kanna";
+			sourceTree = "<group>";
+		};
+		BD533B84247FC80FA9F75B1B1EE2BE02 /* RevealingSplashView */ = {
+			isa = PBXGroup;
+			children = (
+				A466BB8B086E7F0D06C8190FCC674E15 /* Animations.swift */,
+				C55B04999D2C1773750B19F10A1C4E69 /* RevealingSplashView.h */,
+				5C951DADB328922312BEB3FCCEA78A02 /* RevealingSplashView.swift */,
+				55A7EA0FB81768B1B2207EDC449C25EA /* SplashAnimatable.swift */,
+				2A654FFD5295B3613E5F62CFBEB213D1 /* SplashAnimationType.swift */,
+				E6544A5DA3BF1E75E09DF534F63905EA /* Support Files */,
+			);
+			name = RevealingSplashView;
+			path = RevealingSplashView;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -133,22 +206,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C6DA50E07204DD87DB8BCF4DE5852D8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				43E8899FB1E3FDF5F73BC655DFD093E7 /* Pods_macflix.framework */,
-				BD56534C888FE385363934C9ABE6E7B4 /* RevealingSplashView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				4AA12F0BE7E0D48CE0EEA588D0A1000D /* Pods */,
-				C6DA50E07204DD87DB8BCF4DE5852D8E /* Products */,
+				F9EE0E3BB24DC8A20937E111B50C7925 /* Pods */,
+				0F9978ABFFF09E174EFD50CC72760CA3 /* Products */,
 				6ACE526FF19256EA70B2BCE4A9823DBA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -161,19 +225,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FCA2F58C63A5E8A98CF4C969B062FF80 /* Support Files */ = {
+		E6544A5DA3BF1E75E09DF534F63905EA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				785747E469F593FF3D3D6987D260F295 /* RevealingSplashView.modulemap */,
-				C6E862CED369B320225C56FFE8D265B1 /* RevealingSplashView-dummy.m */,
-				4D3CB690203950EA77469EB162E4DFB9 /* RevealingSplashView-Info.plist */,
-				089C807E6687CA03F2B8CEDA41A08477 /* RevealingSplashView-prefix.pch */,
-				80BA22FA68FC89064C68294C8F0AE5C5 /* RevealingSplashView-umbrella.h */,
-				285C163241981FB673CC2FE70BD9E6B1 /* RevealingSplashView.debug.xcconfig */,
-				99068E4DBFE2F83B2DA87181CCAE4A43 /* RevealingSplashView.release.xcconfig */,
+				3D241934DE2963BE13B821027EF08693 /* RevealingSplashView.modulemap */,
+				1D1B8994485B4C115DB630C60A1C6F36 /* RevealingSplashView-dummy.m */,
+				68DA4A691EF74B8F1B1C0CF8C0181154 /* RevealingSplashView-Info.plist */,
+				B780B567CAC19CF68E8B4C7F2AA8F8D0 /* RevealingSplashView-prefix.pch */,
+				1DD3D3DBD9233746C2D0F49D6169E3FB /* RevealingSplashView-umbrella.h */,
+				E473E2824A0E1DAD7E5E504AC99DD841 /* RevealingSplashView.debug.xcconfig */,
+				4485C8EB67903C0202A0F37DA8A6ACB3 /* RevealingSplashView.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RevealingSplashView";
+			sourceTree = "<group>";
+		};
+		F9EE0E3BB24DC8A20937E111B50C7925 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				156F423E9729135D708988698A9D771B /* Kanna */,
+				BD533B84247FC80FA9F75B1B1EE2BE02 /* RevealingSplashView */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +261,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A933F299842EACEC10CE28612EAECEBC /* Headers */ = {
+		E051C2FED2B76294071BFA50D9FA719D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C42DB4672733FDC71B2E978C2A5C024 /* Pods-macflix-umbrella.h in Headers */,
+				1F5E8CC0E12AED9DEF1FA149713B3D29 /* Kanna-umbrella.h in Headers */,
+				98A80A975711A029440E5197142990E9 /* Kanna.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED839ED8116FC17856D6B4B54704CDC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A328D01B096B9E3E0F581121F36637 /* Pods-macflix-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,21 +283,40 @@
 /* Begin PBXNativeTarget section */
 		740EC0E120C81FDDB505B70F16792ED5 /* Pods-macflix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59F4971323CC6D5FD7E985C5C6E23582 /* Build configuration list for PBXNativeTarget "Pods-macflix" */;
+			buildConfigurationList = 33649D0D160515E6039E7FFCB62E2A5B /* Build configuration list for PBXNativeTarget "Pods-macflix" */;
 			buildPhases = (
-				A933F299842EACEC10CE28612EAECEBC /* Headers */,
-				59CAD448CDD4F95FAE62BB0A57BC3331 /* Sources */,
-				F658B3569764714163615468BFA9AC03 /* Frameworks */,
-				560C538E07C4A605DF8FC257363B607F /* Resources */,
+				ED839ED8116FC17856D6B4B54704CDC5 /* Headers */,
+				33610B928016F2D9477A438EF03E33E4 /* Sources */,
+				11556284C3E9256C0FE8526F97BEE6EA /* Frameworks */,
+				F84A550B96D4B4E828A7AF9595179C5B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD250C4D69DA42B0E94CD4EA2FEF2ED3 /* PBXTargetDependency */,
+				A84C9C2CDDBC7C4BE4828AD74E72E61D /* PBXTargetDependency */,
+				033EAACF7C06F5016DEDABE54359274F /* PBXTargetDependency */,
 			);
 			name = "Pods-macflix";
 			productName = "Pods-macflix";
 			productReference = 43E8899FB1E3FDF5F73BC655DFD093E7 /* Pods_macflix.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4AEBE015FDE4C158608D0B493CB29F /* Build configuration list for PBXNativeTarget "Kanna" */;
+			buildPhases = (
+				E051C2FED2B76294071BFA50D9FA719D /* Headers */,
+				16CE5D8FE9C68C5D927D695CD44D7F84 /* Sources */,
+				BD040212932C464BD48E25437FBFD03C /* Frameworks */,
+				D20FACCE86A71BB5A35B83189D2F40FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kanna;
+			productName = Kanna;
+			productReference = 3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A16BB753FC705C22DAFCD8B7C1071A09 /* RevealingSplashView */ = {
@@ -254,10 +355,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = C6DA50E07204DD87DB8BCF4DE5852D8E /* Products */;
+			productRefGroup = 0F9978ABFFF09E174EFD50CC72760CA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */,
 				740EC0E120C81FDDB505B70F16792ED5 /* Pods-macflix */,
 				A16BB753FC705C22DAFCD8B7C1071A09 /* RevealingSplashView */,
 			);
@@ -265,14 +367,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		560C538E07C4A605DF8FC257363B607F /* Resources */ = {
+		A806A1901A533170B0EEC9017A39D069 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A806A1901A533170B0EEC9017A39D069 /* Resources */ = {
+		D20FACCE86A71BB5A35B83189D2F40FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F84A550B96D4B4E828A7AF9595179C5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,6 +391,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		16CE5D8FE9C68C5D927D695CD44D7F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4931A0D52921C13D6BE42385AB5F9A62 /* CSS.swift in Sources */,
+				EC33DD6EFB5A6494B059FD762316B939 /* Deprecated.swift in Sources */,
+				9F1523B4EDB43ABF65ADB49E3CDB823F /* Kanna-dummy.m in Sources */,
+				C9BE9617EFABC5E589FADF6F81B08EEE /* Kanna.swift in Sources */,
+				713679F510BE0BF69B3B198C0199C469 /* libxmlHTMLDocument.swift in Sources */,
+				183ED56ED5A304D31BF95FB4FF100E09 /* libxmlHTMLNode.swift in Sources */,
+				5649DC8F3E785DB6136A408EAE854679 /* libxmlParserOption.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F38E196797C73D328B4B719F776DF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,29 +417,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59CAD448CDD4F95FAE62BB0A57BC3331 /* Sources */ = {
+		33610B928016F2D9477A438EF03E33E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D66439D7E87D5FC249D0347FDED2F6 /* Pods-macflix-dummy.m in Sources */,
+				7ED44C37C99B94B44B988CAB252D17AD /* Pods-macflix-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD250C4D69DA42B0E94CD4EA2FEF2ED3 /* PBXTargetDependency */ = {
+		033EAACF7C06F5016DEDABE54359274F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RevealingSplashView;
 			target = A16BB753FC705C22DAFCD8B7C1071A09 /* RevealingSplashView */;
-			targetProxy = C5F8C8952490A03A1404665B6CE084AB /* PBXContainerItemProxy */;
+			targetProxy = 8D85F50C3B158725755571C67DBEEA5B /* PBXContainerItemProxy */;
+		};
+		A84C9C2CDDBC7C4BE4828AD74E72E61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kanna;
+			target = 93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */;
+			targetProxy = 4DE8B6A59F54B9AF56C9C773CC616A41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0A60012F7B818B1E570D4B25CEA7B316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B2CD69A211E2F0EB58A369FD537F9D /* Kanna.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kanna/Kanna-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
+				PRODUCT_MODULE_NAME = Kanna;
+				PRODUCT_NAME = Kanna;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3701F1C15F937E45022657FD5AB3A793 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 285C163241981FB673CC2FE70BD9E6B1 /* RevealingSplashView.debug.xcconfig */;
+			baseConfigurationReference = E473E2824A0E1DAD7E5E504AC99DD841 /* RevealingSplashView.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -349,9 +513,47 @@
 			};
 			name = Debug;
 		};
+		6887C538085E287C0D2357D3EAC8F98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8762DA1ADFDC73FA4CB68D81475004F8 /* Pods-macflix.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-macflix/Pods-macflix-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-macflix/Pods-macflix.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		7BEC699ABFDADC58C05F2EF32F28D405 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99068E4DBFE2F83B2DA87181CCAE4A43 /* RevealingSplashView.release.xcconfig */;
+			baseConfigurationReference = 4485C8EB67903C0202A0F37DA8A6ACB3 /* RevealingSplashView.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -449,7 +651,7 @@
 			};
 			name = Debug;
 		};
-		B2A023A7357B922C8421E985B584097D /* Release */ = {
+		973899E773EB9802C390ADA3CC074593 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E156831EC9031422833B7F8CE7C103DB /* Pods-macflix.release.xcconfig */;
 			buildSettings = {
@@ -488,12 +690,10 @@
 			};
 			name = Release;
 		};
-		CAF20976173F30082455773629F6F66C /* Debug */ = {
+		DA7218D9A82DC00C8EC04E3A5B9F17D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8762DA1ADFDC73FA4CB68D81475004F8 /* Pods-macflix.debug.xcconfig */;
+			baseConfigurationReference = FC0F5A6F0F014350A4B0F270F5410836 /* Kanna.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -503,28 +703,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-macflix/Pods-macflix-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kanna/Kanna-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-macflix/Pods-macflix.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
+				PRODUCT_MODULE_NAME = Kanna;
+				PRODUCT_NAME = Kanna;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -589,6 +789,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33649D0D160515E6039E7FFCB62E2A5B /* Build configuration list for PBXNativeTarget "Pods-macflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6887C538085E287C0D2357D3EAC8F98E /* Debug */,
+				973899E773EB9802C390ADA3CC074593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -598,11 +807,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59F4971323CC6D5FD7E985C5C6E23582 /* Build configuration list for PBXNativeTarget "Pods-macflix" */ = {
+		8A4AEBE015FDE4C158608D0B493CB29F /* Build configuration list for PBXNativeTarget "Kanna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAF20976173F30082455773629F6F66C /* Debug */,
-				B2A023A7357B922C8421E985B584097D /* Release */,
+				0A60012F7B818B1E570D4B25CEA7B316 /* Debug */,
+				DA7218D9A82DC00C8EC04E3A5B9F17D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
