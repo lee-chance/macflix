@@ -91,12 +91,14 @@ class skhSearcBeerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchBeer" {
             let searchDestination = segue.destination as! skhSearchTableViewController
-            searchDestination.receivedPalate = feel2
-            searchDestination.receivedApperance = look2
-            searchDestination.receivedAroma = smell2
-            searchDestination.receivedTaste = taste2
-            
-            searchDestination.receivedItems(smell2, look2, feel2, taste2)
+                searchDestination.receivedPalate = feel2
+                searchDestination.receivedApperance = look2
+                searchDestination.receivedAroma = smell2
+                searchDestination.receivedTaste = taste2
+                
+                searchDestination.receivedItems(smell2, look2, feel2, taste2)
+
+
         }
         if segue.identifier == "searchKeyword" {
             let searchDestination = segue.destination as! SearchTableViewController

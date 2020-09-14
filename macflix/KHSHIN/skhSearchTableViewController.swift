@@ -19,6 +19,7 @@ class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol
     var receivedApperance = ""
     var receivedPalate = ""
     var receivedTaste = ""
+    var receivedSerarch = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

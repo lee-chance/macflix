@@ -46,6 +46,8 @@ class LoginModel: NSObject {
     func getUserData(seq: Int, completion: @escaping ([String]?) -> ()) {
         let urlPath = URL_PATH + "CSJSP/getUserData.jsp?seq=\(seq)"
         
+        print(urlPath)
+        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         

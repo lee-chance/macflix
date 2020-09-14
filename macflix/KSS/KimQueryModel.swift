@@ -101,6 +101,7 @@ class KimQueryModel: NSObject{
             let query = KimDBModel()
             
             if  let beerId = jsonElement["beer_id"] as? String,
+                let breweryId = jsonElement["brewery_id"] as? String,
                 let beerName = jsonElement["beer_name"] as? String,
                 let beerStyle = jsonElement["beer_style"] as? String,
                 let beerAbv = jsonElement["beer_abv"] as? String,
@@ -113,6 +114,7 @@ class KimQueryModel: NSObject{
                 let brewery_name = jsonElement["brewery_name"] as? String{
 
                 query.beerId = beerId
+                query.breweryId = breweryId
                 query.beerName = beerName
                 query.beerStyle = beerStyle
                 query.beerAbv = beerAbv
@@ -175,6 +177,7 @@ class KimQueryModel: NSObject{
             let query = KimDBModel()
             
             if  let beerId = jsonElement["beer_id"] as? String,
+                let breweryId = jsonElement["brewery_id"] as? String,
                 let beerName = jsonElement["beer_name"] as? String,
                 let beerStyle = jsonElement["beer_style"] as? String,
                 let beerAbv = jsonElement["beer_abv"] as? String,
@@ -186,6 +189,7 @@ class KimQueryModel: NSObject{
                 let beerHeart = jsonElement["heart"] as? String{
                 
                 query.beerId = beerId
+                query.breweryId = breweryId
                 query.beerName = beerName
                 query.beerStyle = beerStyle
                 query.beerAbv = beerAbv

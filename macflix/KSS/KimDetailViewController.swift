@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Kanna
 
 class KimDetailViewController: UIViewController{
     
@@ -51,6 +52,7 @@ class KimDetailViewController: UIViewController{
     var receiveId = ""
     var checkReview = 0
     var receiveHeart = 0
+    var receiveBrewery = ""
     var feedItem : NSArray = NSArray()
     
     var btnState: Int = 0
@@ -71,8 +73,6 @@ class KimDetailViewController: UIViewController{
         let myURL = URL(string:"https://cdn.beeradvocate.com/im/beers/\(receiveId).jpg")
         let myRequest = URLRequest(url: myURL!)
         webview.load(myRequest)
-        
-        
         if receiveHeart != 0 {
             btnLike.setImage(heart, for: UIControl.State.normal)
         } else {
@@ -82,6 +82,31 @@ class KimDetailViewController: UIViewController{
         btnState = receiveHeart
         // Do any additional setup after loading the view.
     }
+//    func dataCrawling(link : String){
+//        guard let main = URL(string: link) else {
+//            print("Error, \(link) is not a valid URL")
+//            return
+//        }
+//        do{
+//            let htmlData = try String(contentsOf: main, encoding: .utf8)
+//            let doc = try HTML(html: htmlData, encoding: .utf8)
+//
+//
+//            for picture in doc.xpath("//*[@id='main_pic_norm']/div/img"){
+//                let imgURL = URL(string: picture["data-src"]!)
+//                print(picture["data-src"]!)
+//                URLSession.shared.dataTask(with: imgURL!) { data, response, error in
+//                  guard let data = data else { return }
+//                  let image = UIImage(data: data)!
+//                  DispatchQueue.main.async {
+//                    self.imgView.image = image
+//                  }
+//                  }.resume()
+//            }
+//        }catch let error{
+//            print (error)
+//        }
+//    }
     
     
     @IBAction func btnLikeAction(_ sender: UIButton) {
@@ -137,7 +162,7 @@ class KimDetailViewController: UIViewController{
             let taste = Double(tasteNum.text!)
             let ovarall  = String(format: "%.1f",(feel!+look!+smell!+taste!)/4)
             let reviewInsert = ReviewInsertModel()
-            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILENAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
+            reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILENAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall, breweryId: receiveBrewery){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
                         self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
@@ -196,6 +221,20 @@ class KimDetailViewController: UIViewController{
             tasteNum.text = String(format: "%.1f",sdTaste.value)
         }
     }
+
+//    func setImage(from url: String) {
+//        guard let imageURL = URL(string: url) else { return }
+//
+//            // just not to cause a deadlock in UI!
+//        DispatchQueue.global().async {
+//            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+//
+//            let image = UIImage(data: imageData)
+//            DispatchQueue.main.async {
+//                self.imgView.image = image
+//            }
+//        }
+//    }
 
 
     

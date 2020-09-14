@@ -1340,7 +1340,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xgB-VG-LI9"/>
+<!--        <segue reference="Eqb-WA-L0x"/>-->
     </inferredMetricsTieBreakers>
     <resources>
         <image name="beer_off" width="185" height="244"/>

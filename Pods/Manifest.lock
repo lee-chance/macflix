@@ -1,16 +1,20 @@
 PODS:
+  - Kanna (5.0.0)
   - RevealingSplashView (0.6.0)
 
 DEPENDENCIES:
+  - Kanna (~> 5.0.0)
   - RevealingSplashView
 
 SPEC REPOS:
   trunk:
+    - Kanna
     - RevealingSplashView
 
 SPEC CHECKSUMS:
+  Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
 
-PODFILE CHECKSUM: 0298becdac450b6023756fd65935fa3315c6ea72
+PODFILE CHECKSUM: 9ef853af0de4eebead08b91e214e275919d1bd7e
 
 COCOAPODS: 1.9.3
