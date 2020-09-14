@@ -109,7 +109,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         // Configure the cell...
 
         let item: KimDBModel = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
-        let item = feedItem[indexPath.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
         cell.name.text = item.beerName
         cell.style.text = item.beerStyle
         cell.abv.text = item.beerAbv
