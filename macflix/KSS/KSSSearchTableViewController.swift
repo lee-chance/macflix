@@ -131,6 +131,7 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         } else {
             cell.btnLike.setImage(no_heart, for: UIControl.State.normal)
         }
+        }
         
         return cell
     }
@@ -157,4 +158,4 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     }
 
     }
-}
+
