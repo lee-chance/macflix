@@ -81,7 +81,6 @@ class skhSearcBeerViewController: UIViewController {
     }
     
     @IBAction func btnSearch(_ sender: UIButton) {
-
         performSegue(withIdentifier: "searchBeer", sender: self)
     }
     
