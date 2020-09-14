@@ -82,31 +82,6 @@ class KimDetailViewController: UIViewController{
         btnState = receiveHeart
         // Do any additional setup after loading the view.
     }
-//    func dataCrawling(link : String){
-//        guard let main = URL(string: link) else {
-//            print("Error, \(link) is not a valid URL")
-//            return
-//        }
-//        do{
-//            let htmlData = try String(contentsOf: main, encoding: .utf8)
-//            let doc = try HTML(html: htmlData, encoding: .utf8)
-//
-//
-//            for picture in doc.xpath("//*[@id='main_pic_norm']/div/img"){
-//                let imgURL = URL(string: picture["data-src"]!)
-//                print(picture["data-src"]!)
-//                URLSession.shared.dataTask(with: imgURL!) { data, response, error in
-//                  guard let data = data else { return }
-//                  let image = UIImage(data: data)!
-//                  DispatchQueue.main.async {
-//                    self.imgView.image = image
-//                  }
-//                  }.resume()
-//            }
-//        }catch let error{
-//            print (error)
-//        }
-//    }
     
     
     @IBAction func btnLikeAction(_ sender: UIButton) {

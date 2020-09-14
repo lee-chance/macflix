@@ -29,7 +29,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
         listTableView.rowHeight = 165
     }
     func itemDownloaded(items: NSArray) {
-        print("itemDownloaded")
         feedItem = items
         self.listTableView.reloadData()
     }
@@ -68,7 +67,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     
     // 다른 화면에서 이동후에 첫 실행되는 Method
     override func viewWillAppear(_ animated: Bool) {
-        print(LOGGED_IN_HEARTLIST)
         let queryModel = KimQueryModel()
         queryModel.delegate = self
         
@@ -97,7 +95,6 @@ class KSSSearchTableViewController: UITableViewController, KimQueryModelProtocol
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("table")
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchmyCell", for: indexPath) as! KimTableViewCell
         // Configure the cell...
         
