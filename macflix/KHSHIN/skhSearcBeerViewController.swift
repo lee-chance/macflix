@@ -30,7 +30,10 @@ class skhSearcBeerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        lblFeel.text = String(format: "%.1f", floor(slFeel.value))
+        lblLook.text = String(format: "%.1f", floor(slLook.value))
+        lblSmell.text = String(format: "%.1f", floor(slSmell.value))
+        lblTaste.text = String(format: "%.1f", floor(slTaste.value))
     }
     
     @IBAction func feelChanged(_ sender: UISlider) {
