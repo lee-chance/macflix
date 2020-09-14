@@ -44,15 +44,11 @@ class LoginViewController: UIViewController {
         LOGGED_IN_SEQ = user_seq
         loginModel.getUserData(seq: user_seq) { (returnList) in
             DispatchQueue.main.async { () -> Void in
-                print("1",returnList)
                 LOGGED_IN_HEARTLIST = []
-                print("2",LOGGED_IN_HEARTLIST)
                 LOGGED_IN_PROFILENAME = returnList![0]
-                print("3",LOGGED_IN_HEARTLIST)
                 for i in 1..<returnList!.count-1 {
                     LOGGED_IN_HEARTLIST.append(Int(returnList![i])!)
                 }
-                print("4",LOGGED_IN_HEARTLIST)
                 self.performSegue(withIdentifier: "sgLogin", sender: self)
             }
         }
