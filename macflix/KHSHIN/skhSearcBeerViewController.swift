@@ -78,7 +78,13 @@ class skhSearcBeerViewController: UIViewController {
     }
     
     @IBAction func btnSearch(_ sender: UIButton) {
+        performSegue(withIdentifier: "searchBeer", sender: self)
     }
+    
+    @IBAction func actionKeyword(_ sender: UIButton) {
+        performSegue(withIdentifier: "searchKeyword", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchBeer" {
             let searchDestination = segue.destination as! skhSearchTableViewController
@@ -88,6 +94,10 @@ class skhSearcBeerViewController: UIViewController {
             searchDestination.receivedTaste = taste2
             
             searchDestination.receivedItems(smell2, look2, feel2, taste2)
+        }
+        if segue.identifier == "searchKeyword" {
+            let searchDestination = segue.destination as! SearchTableViewController
+            searchDestination.keyword = tfSerarch.text!
         }
     }
     

@@ -1,51 +1,43 @@
 //
-//  skhSearchTableViewController.swift
-//  finalBeerSearch
+//  SearchTableViewController.swift
+//  macflix
 //
-//  Created by 신경환 on 2020/09/11.
-//  Copyright © 2020 신경환. All rights reserved.
+//  Created by Changsu Lee on 2020/09/14.
+//  Copyright © 2020 Changsu Lee. All rights reserved.
 //
 
 import UIKit
 
-class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol {
+class SearchTableViewController: UITableViewController, SkhQueryModelProtocol {
+    
+    @IBOutlet var listTableView: UITableView!
     
     var heart : UIImage = #imageLiteral(resourceName: "beer_on.png")
     var no_heart: UIImage = #imageLiteral(resourceName: "beer_off.png")
     
-    @IBOutlet var listTableView: UITableView!
     var feedItem: NSArray = NSArray()
-    var receivedAroma = ""
-    var receivedApperance = ""
-    var receivedPalate = ""
-    var receivedTaste = ""
     
+    var keyword = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        let queryModel = SkhQueryModel()
-        //receivedTaste = re
-        queryModel.delegate = self
-        queryModel.downloadItems(aroma: receivedAroma, appearance: receivedApperance, palate: receivedPalate, taste: receivedTaste)
+        listTableView.rowHeight = 164
         
-        listTableView.rowHeight = 165
+        let searchModel = SearchModel()
+        searchModel.delegate = self
+        searchModel.searchKeyword(keyword: keyword) { (returnstr) in }
     }
-
-    // MARK: - Table view data source
     
     func itemDownloaded(items: NSArray) {
         feedItem = items
         self.listTableView.reloadData()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let queryModel = SkhQueryModel()
-        queryModel.delegate = self
-        queryModel.downloadItems(aroma: receivedAroma, appearance: receivedApperance, palate: receivedPalate, taste: receivedTaste)
-    }
+
+    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -80,13 +72,6 @@ class skhSearchTableViewController: UITableViewController, SkhQueryModelProtocol
         }
         
         return cell
-    }
-    
-    func receivedItems(_ aroma:String, _ apperance:String, _ palate:String, _ taste:String) {
-        receivedAroma = aroma
-        receivedApperance = apperance
-        receivedPalate = palate
-        receivedTaste = taste
     }
     
 
