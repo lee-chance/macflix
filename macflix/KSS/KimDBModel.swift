@@ -30,6 +30,7 @@ class KimDBModel: NSObject{
     
     // Constructor
     init(beerId: String, beerName: String, beerStyle:String, beerAbv:String,reviewSmell: String,reviewFeel: String,reviewLook: String,reviewTaste: String,reviewOverall: String, beerHeart: Int, breweryId: String,brewery_name:String) {
+
         self.beerId = beerId
         self.beerName = beerName
         self.beerStyle = beerStyle
@@ -42,6 +43,7 @@ class KimDBModel: NSObject{
         self.beerHeart = beerHeart
         self.breweryId = breweryId
         self.brewery_name = brewery_name
+
     }
 
     
