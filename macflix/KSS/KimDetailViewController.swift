@@ -122,7 +122,7 @@ class KimDetailViewController: UIViewController{
             updateReview.actionReviewUpdate(seq: String(checkReview), aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
-                        self.present(alertService.mAlert(alertTitle: "ReviewUpdate!", alertMessage: "ReviewUpdate successfully.", actionTitle: "Ok", handler: {Void in
+                        self.present(alertService.mAlert(alertTitle: "리뷰 업데이트", alertMessage: "리뷰 업데이트가 완료되었습니다.", actionTitle: "Ok", handler: {Void in
                             self.navigationController?.popViewController(animated: true)
                         }), animated: true, completion: nil)
                     } else {
@@ -140,7 +140,7 @@ class KimDetailViewController: UIViewController{
             reviewInsert.actionReview(seq: String(LOGGED_IN_SEQ),beerid: receiveId, profilename: LOGGED_IN_PROFILENAME, aroma: self.smellNum.text!, appearance: self.feelNum.text!, palate: self.lookNum.text!, taste: self.tasteNum.text!, overall: ovarall, breweryId: receiveBrewery){ isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
-                        self.present(alertService.mAlert(alertTitle: "ReviewInsert!", alertMessage: "ReviewInsert successfully.", actionTitle: "Ok", handler: {Void in
+                        self.present(alertService.mAlert(alertTitle: "리뷰입력", alertMessage: "리뷰입력이 완료되었습니다.", actionTitle: "Ok", handler: {Void in
                             self.navigationController?.popViewController(animated: true)
                         }), animated: true, completion: nil)
                     } else {
