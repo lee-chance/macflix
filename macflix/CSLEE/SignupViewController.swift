@@ -24,17 +24,17 @@ class SignupViewController: UIViewController {
         let alertService = AlertService()
         
         guard lblEmail.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out E-MAIL field!", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "오류", alertMessage: "이메일을 입력해주세요.", actionTitle: "확인", handler: nil), animated: true, completion: nil)
             return
         }
         
         guard validateEmail(email: lblEmail.text!) else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Invalid E-MAIL.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "오류", alertMessage: "올바르지 않은 형태의 이메일입니다.", actionTitle: "확인", handler: nil), animated: true, completion: nil)
             return
         }
         
         guard lblPassword.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out PASSWORD field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "오류", alertMessage: "비밀번호를 입력해주세요.", actionTitle: "확인", handler: nil), animated: true, completion: nil)
             return
         }
         
@@ -44,7 +44,7 @@ class SignupViewController: UIViewController {
 //        }
         
         guard lblNickname.text!.count > 0 else {
-            present(alertService.mAlert(alertTitle: "Error", alertMessage: "Fill out NICKNAME field.", actionTitle: "Ok", handler: nil), animated: true, completion: nil)
+            present(alertService.mAlert(alertTitle: "오류", alertMessage: "닉네임을 입력해주세요.", actionTitle: "확인", handler: nil), animated: true, completion: nil)
             return
         }
         
@@ -56,7 +56,7 @@ class SignupViewController: UIViewController {
             signupModel.actionSignup(email: email, password: password, nickname: nickname, priority: priority) { isValid in
                 DispatchQueue.main.async { () -> Void in
                     if isValid {
-                        self.present(alertService.mAlert(alertTitle: "Signed up!", alertMessage: "Signed up successfully.", actionTitle: "Ok", handler: {Void in
+                        self.present(alertService.mAlert(alertTitle: "회원가입!", alertMessage: "회원가입 성공.", actionTitle: "확인", handler: {Void in
                             self.navigationController?.popViewController(animated: true)
                         }), animated: true, completion: nil)
                     } else {

@@ -41,8 +41,8 @@ class UserPriorityTableViewController: UITableViewController, PriorityModelProto
     }
     
     func alert() {
-        let alert = UIAlertController(title: nil, message: "Set up!", preferredStyle: UIAlertController.Style.alert)
-        let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {ACTION in
+        let alert = UIAlertController(title: nil, message: "선택완료!", preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: {ACTION in
             self.navigationController?.popViewController(animated: true)
         })
         

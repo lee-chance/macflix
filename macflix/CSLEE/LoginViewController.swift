@@ -80,13 +80,13 @@ class LoginViewController: UIViewController {
     
     @objc func defaultAlert(_ sender: Any){
         //알림창을 정의
-        let alert = UIAlertController(title: "비밀번호 찾기", message: "이메일로 새로운 비밀번호를 전송하겠습니다.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "새로운 비밀번호전송", message: "이메일로 새로운 비밀번호를 전송힙니다.", preferredStyle: .alert)
         alert.addTextField(configurationHandler: {myTextField in
             myTextField.placeholder = "email"
         })
         //버튼을 정의
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         
         //알림창에 버튼 추가
         alert.addAction(cancelAction)
