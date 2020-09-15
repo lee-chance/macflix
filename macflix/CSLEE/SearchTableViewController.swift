@@ -25,7 +25,7 @@ class SearchTableViewController: UITableViewController, SkhQueryModelProtocol {
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        listTableView.rowHeight = 164
+        listTableView.rowHeight = 165
         
         let searchModel = SearchModel()
         searchModel.delegate = self
@@ -49,6 +49,36 @@ class SearchTableViewController: UITableViewController, SkhQueryModelProtocol {
         return feedItem.count
     }
 
+    @IBAction func btnLikeAction(_ sender: UIButton) {
+        let contentView = sender.superview
+        let cell = contentView?.superview as! KimTableViewCell
+        let indexPath = tableView.indexPath(for: cell)
+        
+        let item: KimDBModel = feedItem[indexPath![1]] as! KimDBModel
+        let preferenceModel = PreferenceModel()
+        
+        // 창수 수정
+        let beerId = Int(item.beerId!)!
+        if LOGGED_IN_HEARTLIST.contains(beerId) {
+            preferenceModel.deleteItems(beer_id: Int(item.beerId!)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.remove(at: LOGGED_IN_HEARTLIST.firstIndex(of: beerId)!)
+                        sender.setImage(self.no_heart, for: UIControl.State.normal)
+                    }
+                }
+            }
+        } else {
+            preferenceModel.insertItems(beer_id: Int(item.beerId!)!) {isValid in
+                DispatchQueue.main.async { () -> Void in
+                    if isValid {
+                        LOGGED_IN_HEARTLIST.append(beerId)
+                        sender.setImage(self.heart, for: UIControl.State.normal)
+                    }
+                }
+            }
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mySearchCell", for: indexPath) as! KimTableViewCell
@@ -110,14 +140,30 @@ class SearchTableViewController: UITableViewController, SkhQueryModelProtocol {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "sgSearch1"{
+            let cell = sender as! UITableViewCell
+            let indexPath = self.listTableView.indexPath(for : cell)
+            let detailView = segue.destination as! KimDetailViewController
+            let item = feedItem[indexPath!.row] as! KimDBModel // DB 모델타입으로 바꾸고, data 뽑아 쓸 수 있음
+            
+            detailView.receiveId = item.beerId!
+            detailView.receiveName = item.beerName!
+            detailView.receiveStyle = item.beerStyle!
+            detailView.receiveAbv = item.beerAbv!
+            detailView.receivebreweryName = item.brewery_name!
+            detailView.receiveFeel = item.reviewFeel!
+            detailView.receiveLook = item.reviewLook!
+            detailView.receiveSmell = item.reviewSmell!
+            detailView.receiveTaste = item.reviewTaste!
+            detailView.receiveOverall = item.reviewOverall!
+            detailView.receiveHeart = item.beerHeart
+            detailView.receiveBrewery = item.breweryId!
+            
+        }
+        
     }
-    */
 
 }

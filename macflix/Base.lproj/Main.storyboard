@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz2-KZ-dS5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1203,6 +1203,9 @@
                                             <rect key="frame" x="364" y="11" width="30" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button" image="beer_off"/>
+                                            <connections>
+                                                <action selector="btnLikeAction:" destination="rhW-fY-EaY" eventType="touchUpInside" id="yze-TY-fJG"/>
+                                            </connections>
                                         </button>
                                         <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKS-AT-klK">
                                             <rect key="frame" x="10" y="11" width="98" height="128"/>
@@ -1223,6 +1226,7 @@
                                     <outlet property="review" destination="nwu-0F-O7d" id="wLQ-ix-9TZ"/>
                                     <outlet property="style" destination="1Oc-1u-N8B" id="90V-Aj-q74"/>
                                     <outlet property="webView" destination="dKS-AT-klK" id="8ho-pt-NZe"/>
+                                    <segue destination="jpQ-xd-fad" kind="show" identifier="sgSearch2" id="JBy-FI-cK9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1307,6 +1311,9 @@
                                             <rect key="frame" x="364" y="11" width="30" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button" image="beer_off"/>
+                                            <connections>
+                                                <action selector="btnLikeAction:" destination="4l2-kG-I1x" eventType="touchUpInside" id="W6c-jd-ge3"/>
+                                            </connections>
                                         </button>
                                         <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-Cz-oYS">
                                             <rect key="frame" x="10" y="11" width="98" height="128"/>
@@ -1327,6 +1334,7 @@
                                     <outlet property="review" destination="mXA-xw-Nn9" id="bbM-UZ-b55"/>
                                     <outlet property="style" destination="m0W-Mw-E4g" id="82p-b4-t4B"/>
                                     <outlet property="webView" destination="5PG-Cz-oYS" id="ubr-o2-rgC"/>
+                                    <segue destination="jpQ-xd-fad" kind="show" identifier="sgSearch1" id="XO4-yR-yNa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1345,23 +1353,23 @@
             <point key="canvasLocation" x="-2439" y="1479"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="21t-tk-yGc"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="beer_off" width="185" height="244"/>
         <image name="feel" width="176" height="178"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="look" width="179" height="184"/>
-        <image name="m.square" catalog="system" width="128" height="114"/>
+        <image name="m.square" catalog="system" width="64" height="56"/>
         <image name="macflix_logo" width="149" height="187"/>
         <image name="macflix_title" width="770" height="225"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="person" catalog="system" width="128" height="117"/>
-        <image name="r.circle" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="r.circle" catalog="system" width="64" height="60"/>
         <image name="smell" width="182" height="183"/>
         <image name="star" width="512" height="512"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="taste" width="177" height="176"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JBy-FI-cK9"/>
+    </inferredMetricsTieBreakers>
 </document>

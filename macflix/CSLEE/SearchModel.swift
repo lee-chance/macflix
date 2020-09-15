@@ -15,6 +15,7 @@ class SearchModel: NSObject {
     func searchKeyword(keyword: String, completion: @escaping (Bool)->()){
         var urlPath = URL_PATH + "CSJSP/selectSearchKeywords.jsp?keyword=\(keyword)"
         // 한글 url encoding
+        print(urlPath)
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         let url: URL = URL(string: urlPath)!
@@ -56,7 +57,9 @@ class SearchModel: NSObject {
                 let reviewLook = jsonElement["appearance"] as? String,
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
-                let reviewOverall = jsonElement["overall"] as? String{
+                let reviewOverall = jsonElement["overall"] as? String,
+                let breweryId = jsonElement["brewery_id"] as? String,
+                let brewery_name = jsonElement["brewery_name"] as? String{
 
                 query.beerId = beerId
                 query.beerName = beerName
@@ -67,6 +70,8 @@ class SearchModel: NSObject {
                 query.reviewSmell = reviewSmell
                 query.reviewTaste = reviewTaste
                 query.reviewOverall = reviewOverall
+                query.breweryId = breweryId
+                query.brewery_name = brewery_name
             }
             
             // 배열에 넣어줌

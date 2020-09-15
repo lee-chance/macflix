@@ -54,7 +54,9 @@ class SkhQueryModel: NSObject {
                 let reviewLook = jsonElement["appearance"] as? String,
                 let reviewFeel = jsonElement["palate"] as? String,
                 let reviewTaste = jsonElement["taste"] as? String,
-                let reviewOverall = jsonElement["overall"] as? String{
+                let reviewOverall = jsonElement["overall"] as? String,
+                let breweryId = jsonElement["brewery_id"] as? String,
+                let brewery_name = jsonElement["brewery_name"] as? String{
 
                 query.beerId = beerId
                 query.beerName = beerName
@@ -65,6 +67,8 @@ class SkhQueryModel: NSObject {
                 query.reviewSmell = reviewSmell
                 query.reviewTaste = reviewTaste
                 query.reviewOverall = reviewOverall
+                query.breweryId = breweryId
+                query.brewery_name = brewery_name
             }
             locations.add(query)
             
