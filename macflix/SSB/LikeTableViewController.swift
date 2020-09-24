@@ -6,6 +6,7 @@
 //  Copyright © 2020 SSB. All rights reserved.
 //
 
+// 안뇽 나는 수빈 
 import UIKit
 
 class LikeTableViewController: UITableViewController, PreferenceQueryModelProtocol {
