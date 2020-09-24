@@ -15,10 +15,11 @@ protocol ProfilenameModelProtocol: class {
 class UserProfilenameModel: NSObject {
     
     var delegate: ProfilenameModelProtocol!
-    var urlPath = URL_PATH + "IOS/getUserProfilename.jsp?seq=\(LOGGED_IN_SEQ)"
+    var urlPath = URL_PATH + "IOS/getUserProfilename.jsp"
     
     func getProfilename() {
-        
+        let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
+        urlPath += urlAdd
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
@@ -36,7 +37,6 @@ class UserProfilenameModel: NSObject {
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
         
-//        return Int(jsonResult) ?? 0
         LOGGED_IN_PROFILENAME = jsonResult
         
         DispatchQueue.main.async(execute: {() -> Void in

@@ -22,7 +22,7 @@ class PreferenceQueryModel: NSObject{
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-    
+        
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
             } else {
@@ -44,7 +44,7 @@ class PreferenceQueryModel: NSObject{
         
         var jsonElement = NSDictionary()
         let locations = NSMutableArray()
-
+        
         for i in 0..<jsonResult.count {
             jsonElement = jsonResult[i] as! NSDictionary
             let query = KimDBModel()
@@ -60,7 +60,7 @@ class PreferenceQueryModel: NSObject{
                 let reviewOverall = jsonElement["overall"] as? String,
                 let beerHeart = jsonElement["heart"] as? String,
                 let brewery_name = jsonElement["brewery_name"] as? String{
-
+                
                 query.beerId = beerId
                 query.beerName = beerName
                 query.beerStyle = beerStyle
@@ -76,11 +76,11 @@ class PreferenceQueryModel: NSObject{
             
             locations.add(query)
         }
-            DispatchQueue.main.async(execute: {() -> Void in
-                self.delegate.itemDownloaded(items: locations)
-                
-            })
-        }
-        
-}
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.delegate.itemDownloaded(items: locations)
+            
+        })
+    }
     
+}
+

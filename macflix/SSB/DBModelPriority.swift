@@ -14,16 +14,9 @@ class DBModelPriority: NSObject {
     var user_password: String?
     var user_profilename: String?
     var user_priority: String?
-
+    
     override init() {
         
-    }
-    
-    init(user_email: String, user_password: String, user_profilename: String, user_priority: String) {
-        self.user_email = user_email
-        self.user_password = user_password
-        self.user_profilename = user_profilename
-        self.user_priority = user_priority
     }
     
 }

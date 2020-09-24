@@ -9,7 +9,7 @@
 import Foundation
 
 class PreferenceModel: NSObject{
-
+    
     func insertItems(beer_id: Int, completion: @escaping (Bool)->()) {
         var urlPath = URL_PATH + "IOS/beer_preferenceInsert_ios.jsp"
         let urlAdd = "?User_seq=\(LOGGED_IN_SEQ)&beer_id=\(beer_id)"
@@ -19,7 +19,7 @@ class PreferenceModel: NSObject{
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-    
+        
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
                 completion(false)
@@ -39,7 +39,7 @@ class PreferenceModel: NSObject{
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-    
+        
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
                 completion(false)
@@ -55,9 +55,9 @@ class PreferenceModel: NSObject{
         var urlPath = URL_PATH + "IOS/priorityUpdate_ios.jsp"
         let urlAdd = "?user_priority=\(user_priority)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-            // 한글 url encoding
+        // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-            
+        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
@@ -80,7 +80,7 @@ class PreferenceModel: NSObject{
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-    
+        
         let task = defaultSession.dataTask(with: url){(data, response, error) in
             if error != nil {
                 completion(false)
@@ -92,5 +92,5 @@ class PreferenceModel: NSObject{
     }
     
     
-
+    
 }

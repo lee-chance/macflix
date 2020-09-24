@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class LikeTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var name: UILabel!
@@ -24,11 +24,11 @@ class LikeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

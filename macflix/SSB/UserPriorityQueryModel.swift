@@ -13,25 +13,25 @@ protocol PriorityModelProtocol: class {
 }
 
 class UserPriorityQueryModel: NSObject{
-    
     var delegate: PriorityModelProtocol!
-    let urlPath = URL_PATH + "CSJSP/getPriorityList.jsp?seq=\(LOGGED_IN_SEQ)"
+    var urlPath = URL_PATH + "CSJSP/getPriorityList.jsp"
     
     func getPriorityList() {
-        
+        let urlAdd = "?seq=\(LOGGED_IN_SEQ)"
+        urlPath += urlAdd
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) {(data, respone, error) in
             if error != nil {
             } else {
-                self.parseJSON2(data!)
+                self.parseJSON(data!)
             }
         }
         task.resume()
     }
     
-    func parseJSON2(_ data: Data) {
+    func parseJSON(_ data: Data) {
         var jsonResult = String(data: data, encoding: .utf8)!
         jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
         let splitedList = jsonResult.components(separatedBy: ", ")

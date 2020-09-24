@@ -40,17 +40,17 @@ class UpdateUserInfoModel: NSObject {
         }
         task.resume()
     }
-        
+    
     func parseJSON(_ data: Data) -> String {
-            var jsonResult = String(data: data, encoding: .utf8)!
-            jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
-            jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
-            jsonResult = jsonResult.replacingOccurrences(of: "\t", with: "")
-            jsonResult = jsonResult.replacingOccurrences(of: "\n", with: "")
-
-            return jsonResult
-            
-        }
+        var jsonResult = String(data: data, encoding: .utf8)!
+        jsonResult = jsonResult.replacingOccurrences(of: "\r\n", with: "")
+        jsonResult = jsonResult.replacingOccurrences(of: " ", with: "")
+        jsonResult = jsonResult.replacingOccurrences(of: "\t", with: "")
+        jsonResult = jsonResult.replacingOccurrences(of: "\n", with: "")
+        
+        return jsonResult
+        
+    }
     
     
     
@@ -58,9 +58,9 @@ class UpdateUserInfoModel: NSObject {
         var urlPath = URL_PATH + "IOS/passwordUpdate_ios.jsp"
         let urlAdd = "?user_password=\(user_password)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-            // 한글 url encoding
+        // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-            
+        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
@@ -78,9 +78,9 @@ class UpdateUserInfoModel: NSObject {
         var urlPath = URL_PATH + "IOS/profilenameUpdate_ios.jsp"
         let urlAdd = "?user_profilename=\(user_profilename)&seq=\(LOGGED_IN_SEQ)"
         urlPath += urlAdd
-            // 한글 url encoding
+        // 한글 url encoding
         urlPath = urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-            
+        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
